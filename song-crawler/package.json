@@ -1,0 +1,23 @@
+{
+  "name": "song-crawler",
+  "version": "1.0.0",
+  "description": "Spotify 華語金曲爬蟲 — 自動搜尋並建立猜歌王歌單",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "dry-run": "node index.js --dry-run",
+    "verify": "node verify.js",
+    "verify:report": "node verify.js --report",
+    "verify:auto": "node verify.js --auto",
+    "verify-year": "node verify-year.js",
+    "verify-year:report": "node verify-year.js --report",
+    "youtube": "node youtube-crawler.js",
+    "youtube:report": "node youtube-crawler.js --report"
+  },
+  "dependencies": {
+    "@google/genai": "^1.45.0",
+    "axios": "^1.13.6",
+    "dotenv": "^17.3.1",
+    "opencc-js": "^1.0.5"
+  }
+}

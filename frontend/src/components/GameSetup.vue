@@ -1,0 +1,308 @@
+<template>
+  <div class="game-setup">
+    <CosmicBackground />
+    <div class="setup-container">
+      <h1 class="setup-logo">Listen Up!</h1>
+      <p class="setup-subtitle">Music Timeline Game</p>
+
+      <div class="form-group">
+        <label>Players</label>
+        <select v-model.number="playerCount">
+          <option v-for="n in 7" :key="n + 1" :value="n + 1">{{ n + 1 }} players</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Cards to Win</label>
+        <select v-model.number="winningCards">
+          <option v-for="n in 8" :key="n + 2" :value="n + 2">{{ n + 2 }} cards</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label>Player Names</label>
+        <div class="player-names">
+          <input
+            v-for="(_, idx) in playerNames"
+            :key="idx"
+            v-model="playerNames[idx]"
+            class="name-input"
+            :placeholder="`Player ${idx + 1}`"
+          />
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label>Music Tags</label>
+        <div class="tags-container">
+          <button
+            v-for="tag in availableTags"
+            :key="tag"
+            :class="['tag-btn', { active: selectedTags.includes(tag) }]"
+            @click="toggleTag(tag)"
+          >
+            {{ tag }}
+          </button>
+        </div>
+      </div>
+
+      <button
+        @click="startGame"
+        :disabled="selectedTags.length === 0 || isLoading"
+        class="btn-start"
+      >
+        {{ isLoading ? 'Starting...' : 'Start Game' }}
+      </button>
+
+      <p v-if="error" class="error-message">{{ error }}</p>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { ref, watch, onMounted } from 'vue'
+import { useGameStore } from '@/stores/gameStore'
+import { apiService } from '@/api/client'
+import CosmicBackground from './CosmicBackground.vue'
+
+const gameStore = useGameStore()
+const emit = defineEmits(['game-started'])
+
+const playerCount = ref(4)
+const playerNames = ref<string[]>(['Player 1', 'Player 2', 'Player 3', 'Player 4'])
+const winningCards = ref(5)
+
+watch(playerCount, (count) => {
+  while (playerNames.value.length < count) {
+    playerNames.value.push(`Player ${playerNames.value.length + 1}`)
+  }
+  while (playerNames.value.length > count) {
+    playerNames.value.pop()
+  }
+})
+const selectedTags = ref<string[]>(['2000s', '2010s', '1990s'])
+const availableTags = ref<string[]>([])
+const isLoading = ref(false)
+const error = ref<string | null>(null)
+
+onMounted(async () => {
+  try {
+    const tagsResponse = await apiService.getMusicTags()
+    availableTags.value = tagsResponse.tags || defaultTags()
+  } catch {
+    availableTags.value = defaultTags()
+  }
+})
+
+function defaultTags() {
+  return ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s']
+}
+
+function toggleTag(tag: string) {
+  const idx = selectedTags.value.indexOf(tag)
+  if (idx > -1) {
+    selectedTags.value.splice(idx, 1)
+  } else {
+    selectedTags.value.push(tag)
+  }
+}
+
+async function startGame() {
+  isLoading.value = true
+  error.value = null
+  try {
+    const config = {
+      maxPlayers: playerCount.value,
+      minPlayers: 2,
+      winningCards: winningCards.value,
+      musicTags: selectedTags.value,
+      maxRounds: 100
+    }
+
+    await gameStore.createGame(config)
+
+    for (let i = 0; i < playerCount.value; i++) {
+      const name = playerNames.value[i]?.trim() || `Player ${i + 1}`
+      await gameStore.addPlayer(name)
+    }
+
+    await gameStore.startGame()
+    await gameStore.loadCurrentMusic()
+    emit('game-started')
+  } catch (err: any) {
+    error.value = err.message || 'Failed to start game'
+  } finally {
+    isLoading.value = false
+  }
+}
+</script>
+
+<style scoped>
+.game-setup {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.setup-container {
+  position: relative;
+  z-index: 1;
+  background: rgba(15, 12, 40, 0.9);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 40px;
+  max-width: 460px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.setup-logo {
+  text-align: center;
+  font-family: 'Segoe Script', 'Brush Script MT', cursive;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 2.5em;
+  margin-bottom: 4px;
+}
+
+.setup-subtitle {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85em;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.82em;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+select {
+  width: 100%;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  font-size: 0.95em;
+  color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+  appearance: auto;
+}
+
+select:focus {
+  outline: none;
+  border-color: rgba(0, 255, 255, 0.4);
+}
+
+select option {
+  background: #1a1a3e;
+  color: white;
+}
+
+.player-names {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name-input {
+  width: 100%;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 8px;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.9);
+  box-sizing: border-box;
+  transition: border-color 0.2s;
+}
+
+.name-input:focus {
+  outline: none;
+  border-color: rgba(0, 255, 255, 0.4);
+}
+
+.name-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.tag-btn {
+  padding: 6px 12px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(255, 255, 255, 0.5);
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-size: 0.82em;
+  font-weight: 500;
+}
+
+.tag-btn:hover {
+  border-color: rgba(0, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.tag-btn.active {
+  background: rgba(0, 255, 255, 0.15);
+  color: #00ffff;
+  border-color: rgba(0, 255, 255, 0.4);
+}
+
+.btn-start {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: all 0.2s;
+}
+
+.btn-start:hover:not(:disabled) {
+  filter: brightness(1.1);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(102, 126, 234, 0.3);
+}
+
+.btn-start:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff7c7c;
+  text-align: center;
+  margin-top: 12px;
+  padding: 10px;
+  background: rgba(245, 101, 101, 0.1);
+  border-radius: 8px;
+  font-size: 0.9em;
+}
+</style>

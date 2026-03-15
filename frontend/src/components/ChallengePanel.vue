@@ -1,0 +1,300 @@
+<template>
+  <Transition name="panel">
+    <div v-if="visible" class="bottom-panel">
+      <div class="panel-card">
+        <p class="panel-title">Card placed! Any challengers?</p>
+        <p class="panel-hint">
+          Think it's wrong? Spend 1 token and guess the correct position on {{ currentPlayerName }}'s timeline to steal it!
+        </p>
+
+        <!-- Show current player's timeline for reference -->
+        <div class="challenge-timeline">
+          <div class="timeline-label">{{ currentPlayerName }}'s timeline:</div>
+          <div class="timeline-row">
+            <div
+              class="insert-slot"
+              :class="{ active: selectedPos === 0 }"
+              @click="selectPos(0)"
+            >+</div>
+
+            <template v-for="(card, idx) in currentPlayerCards" :key="card.id">
+              <TimelineCard :card="card" :is-flipped="true" size="sm" color="#00ffff" />
+              <div
+                class="insert-slot"
+                :class="{ active: selectedPos === idx + 1 }"
+                @click="selectPos(idx + 1)"
+              >+</div>
+            </template>
+          </div>
+        </div>
+
+        <!-- Challenger selection -->
+        <template v-if="!selectedChallenger">
+          <p class="panel-subtitle">Who wants to challenge?</p>
+          <div class="player-select">
+            <button
+              v-for="p in eligiblePlayers"
+              :key="p.id"
+              :class="['chip', { disabled: p.tokens < 1 }]"
+              :disabled="p.tokens < 1"
+              @click="selectedChallenger = p.id"
+            >
+              {{ p.name }} ({{ p.tokens }} tokens)
+            </button>
+          </div>
+        </template>
+
+        <!-- After selecting challenger, show position selection -->
+        <template v-else>
+          <p class="panel-subtitle">
+            {{ challengerName }} — pick the correct position! (costs 1 token)
+          </p>
+        </template>
+
+        <div class="btn-row">
+          <button
+            v-if="selectedChallenger && selectedPos !== null"
+            class="btn btn-accent"
+            @click="submitChallenge"
+            :disabled="submitting"
+          >
+            HITSTER!
+          </button>
+          <button
+            class="btn btn-ghost"
+            @click="handleSkip"
+            :disabled="submitting"
+          >
+            No challenge — discard card
+          </button>
+        </div>
+
+        <!-- Result -->
+        <p v-if="resultMessage" :class="['result-msg', resultSuccess ? 'correct' : 'wrong']">
+          {{ resultMessage }}
+        </p>
+      </div>
+    </div>
+  </Transition>
+</template>
+
+<script setup lang="ts">
+import { ref, computed } from 'vue'
+import type { Player, Card } from '@/types'
+import TimelineCard from './TimelineCard.vue'
+
+const props = defineProps<{
+  visible: boolean
+  players: Player[]
+  currentPlayerId: string
+  currentPlayerName: string
+  currentPlayerCards: Card[]
+  challengeCard: Card | null
+  submitting: boolean
+  resultMessage?: string
+  resultSuccess?: boolean
+}>()
+
+const emit = defineEmits<{
+  challenge: [challengerId: string, position: number]
+  skip: []
+}>()
+
+const selectedChallenger = ref<string | null>(null)
+const selectedPos = ref<number | null>(null)
+
+const eligiblePlayers = computed(() =>
+  props.players.filter(p => p.id !== props.currentPlayerId)
+)
+
+const challengerName = computed(() =>
+  props.players.find(p => p.id === selectedChallenger.value)?.name || ''
+)
+
+function selectPos(pos: number) {
+  if (!selectedChallenger.value) return
+  selectedPos.value = selectedPos.value === pos ? null : pos
+}
+
+function submitChallenge() {
+  if (selectedChallenger.value && selectedPos.value !== null) {
+    emit('challenge', selectedChallenger.value, selectedPos.value)
+  }
+}
+
+function handleSkip() {
+  emit('skip')
+}
+
+function reset() {
+  selectedChallenger.value = null
+  selectedPos.value = null
+}
+
+defineExpose({ reset })
+</script>
+
+<style scoped>
+.bottom-panel {
+  position: fixed;
+  bottom: 16px;
+  left: 16px;
+  z-index: 30;
+  width: min(420px, 50vw);
+}
+
+.panel-card {
+  background: rgba(15, 12, 40, 0.92);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 107, 203, 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.5);
+}
+
+.panel-title {
+  color: #ff6bcb;
+  font-size: 1.05em;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 6px;
+}
+
+.panel-hint {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8em;
+  text-align: center;
+  margin-bottom: 14px;
+}
+
+.panel-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9em;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.challenge-timeline {
+  margin-bottom: 14px;
+}
+
+.timeline-label {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+  text-align: center;
+}
+
+.timeline-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  overflow-x: auto;
+  padding: 6px 0;
+}
+
+.insert-slot {
+  width: 30px;
+  height: 44px;
+  border: 2px dashed rgba(255, 107, 203, 0.2);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255, 107, 203, 0.4);
+  font-size: 1em;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+
+.insert-slot:hover {
+  border-color: rgba(255, 107, 203, 0.5);
+  background: rgba(255, 107, 203, 0.05);
+}
+
+.insert-slot.active {
+  border-color: #ff6bcb;
+  background: rgba(255, 107, 203, 0.15);
+  color: #ff6bcb;
+  box-shadow: 0 0 10px rgba(255, 107, 203, 0.2);
+}
+
+.player-select {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+
+.chip {
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 0.82em;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.chip:hover:not(:disabled) { background: rgba(255, 107, 203, 0.15); }
+.chip:disabled { opacity: 0.3; cursor: not-allowed; }
+
+.btn-row {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.85em;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex: 1;
+  max-width: 200px;
+}
+
+.btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+.btn-accent {
+  background: rgba(255, 107, 203, 0.2);
+  color: #ff6bcb;
+  border: 1px solid rgba(255, 107, 203, 0.4);
+}
+.btn-accent:hover:not(:disabled) { background: rgba(255, 107, 203, 0.3); }
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.btn-ghost:hover:not(:disabled) { background: rgba(255, 255, 255, 0.12); }
+
+.result-msg {
+  text-align: center;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 0.85em;
+  font-weight: 600;
+  margin-top: 10px;
+}
+.result-msg.correct { color: #7cff7c; background: rgba(72, 187, 120, 0.1); }
+.result-msg.wrong { color: #ff7c7c; background: rgba(245, 101, 101, 0.1); }
+
+.panel-enter-active { transition: all 0.3s ease-out; }
+.panel-leave-active { transition: all 0.2s ease-in; }
+.panel-enter-from { opacity: 0; transform: translateY(20px); }
+.panel-leave-to { opacity: 0; transform: translateY(20px); }
+</style>

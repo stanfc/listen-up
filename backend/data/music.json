@@ -1,0 +1,4929 @@
+[
+  {
+    "id": "music-013",
+    "title": "玫瑰玫瑰我愛你",
+    "artist": "姚莉",
+    "year": 1940,
+    "spotifyId": "5jUdXKPPiF7ORfv79QQPSq",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a174ee78ebf4fcdad5b64444",
+    "tags": [
+      "1940s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "vXIkXohWd1k"
+  },
+  {
+    "id": "music-014",
+    "title": "秋的懷念",
+    "artist": "姚莉",
+    "year": 1941,
+    "spotifyId": "5l1vDbZeylzyYsM9uW02Mp",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a174ee78ebf4fcdad5b64444",
+    "tags": [
+      "1940s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "jOh03b-FbMc"
+  },
+  {
+    "id": "music-016",
+    "title": "瘋狂世界",
+    "artist": "周璇",
+    "year": 1943,
+    "spotifyId": "2HCs8VTLo6Vkzu06gVt1C1",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273110bc7230f212907339a0274",
+    "tags": [
+      "1940s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "_biz017UqHE"
+  },
+  {
+    "id": "music-017",
+    "title": "夜來香",
+    "artist": "李香蘭",
+    "year": 1944,
+    "spotifyId": "44W35pmcxf9WdFI1tzQgiF",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273383c9c4b034b41def88ffca4",
+    "tags": [
+      "1940s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "yLXB4SEU26o"
+  },
+  {
+    "id": "music-019",
+    "title": "夜上海",
+    "artist": "周璇",
+    "year": 1946,
+    "spotifyId": "56oXCICJjzdCHq3qp6FooU",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736db5adebe28ad4b1de6b08a0",
+    "tags": [
+      "1940s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "LIP3JtTGtkM"
+  },
+  {
+    "id": "music-021",
+    "title": "大地回春",
+    "artist": "吳鶯音",
+    "year": 1948,
+    "spotifyId": "4b2zxFRscF8zLPrjTiE1pW",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273512dd99690dbfafeb44fc1aa",
+    "tags": [
+      "1940s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "_YYZLUKxCz4"
+  },
+  {
+    "id": "music-022",
+    "title": "燒肉粽",
+    "artist": "郭金發",
+    "year": 1949,
+    "spotifyId": "1lk5tbfmyLh5Rm0mR2gbrL",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5d1ad4b92457c841a15fef1",
+    "tags": [
+      "1940s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "1GP0rW6WgSo"
+  },
+  {
+    "id": "music-029",
+    "title": "曼波女郎",
+    "artist": "葛蘭",
+    "year": 1957,
+    "spotifyId": "5fB8YhJPjmGjKPmIcsMZrH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273fb5237b4994c17c58a0f0f6c",
+    "tags": [
+      "1950s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "dqFX6YCkm-o"
+  },
+  {
+    "id": "music-030",
+    "title": "綠島小夜曲",
+    "artist": "紫薇",
+    "year": 1958,
+    "spotifyId": "1vR4WfTU6BZaqxAWxZcjCq",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a66f633b6f6284ff9ad10931",
+    "tags": [
+      "1950s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "YPeRYxhUz_k"
+  },
+  {
+    "id": "music-032",
+    "title": "南屏晚鐘",
+    "artist": "崔萍",
+    "year": 1960,
+    "spotifyId": "5c6oPwpnM2pdyCCyEHFYLu",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27329e6dbf7d4d5844be0179409",
+    "tags": [
+      "1960s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "_pQWL5xoI8g"
+  },
+  {
+    "id": "music-033",
+    "title": "夢裡相思",
+    "artist": "崔萍",
+    "year": 1960,
+    "spotifyId": "6jRUooPGCLedgnPLY79uc2",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27329e6dbf7d4d5844be0179409",
+    "tags": [
+      "1960s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "KQtn9H4Hf-0"
+  },
+  {
+    "id": "music-034",
+    "title": "牛油蛋撻",
+    "artist": "譚炳文",
+    "year": 1960,
+    "spotifyId": "0bpAJZJuLzEqjA7fMOAWZO",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273164a475cdb6494e42e650d43",
+    "tags": [
+      "1960s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "P8DNhvZMdro"
+  },
+  {
+    "id": "music-035",
+    "title": "孤女的願望",
+    "artist": "陳芬蘭",
+    "year": 1961,
+    "spotifyId": "1VgDPPfTWrdirtfouwGC9O",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f706ea2d65aab72ffb948c54",
+    "tags": [
+      "1960s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "Ihpzv0BRJ8k"
+  },
+  {
+    "id": "music-037",
+    "title": "啟田純情曲",
+    "artist": "葉啟田",
+    "year": 1964,
+    "spotifyId": "15YQaTUoG6sgiVMpOkTe2J",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a59b3bf1cc916019f3a431f8",
+    "tags": [
+      "1960s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "54pVUhzN00E"
+  },
+  {
+    "id": "music-040",
+    "title": "今天不回家",
+    "artist": "姚蘇蓉",
+    "year": 1968,
+    "spotifyId": "41fFQk0Pn1sQ27RPHmzlAP",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735553d9234b9b2036f6b7f9d6",
+    "tags": [
+      "1960s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "WbU-oWW0qXI"
+  },
+  {
+    "id": "music-041",
+    "title": "晶晶",
+    "artist": "鄧麗君",
+    "year": 1970,
+    "spotifyId": "7eylw7NT6FjXmtCFvbf7OG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273418c803a742552bfb0a5495d",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "38OlYlwDYZE"
+  },
+  {
+    "id": "music-042",
+    "title": "負心的人",
+    "artist": "余天",
+    "year": 1970,
+    "spotifyId": "25I5KFwKxOuBtXsDsZnhlz",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273584c77c54c05ecc80a6f9f55",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "fG-45WMBJZU"
+  },
+  {
+    "id": "music-043",
+    "title": "愛人結婚了",
+    "artist": "鄭少秋",
+    "year": 1971,
+    "spotifyId": "4saKN7M7jaXfjmWUEUfrZT",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f9c4e0aa339876d04403454c",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "T-BTSzGCQUI"
+  },
+  {
+    "id": "music-045",
+    "title": "祝你幸福",
+    "artist": "鳳飛飛",
+    "year": 1972,
+    "spotifyId": "0mQWgmhhzIwDVDBJ4OIwfI",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2737e4bc2631d6489514bfa8601",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "AIcWy2GMhtA"
+  },
+  {
+    "id": "music-046",
+    "title": "鐵塔凌雲",
+    "artist": "許冠傑",
+    "year": 1972,
+    "spotifyId": "3tMwHTdHyJBBiw5GGUITci",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e92898083a18ba690d6105ba",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "Na2kcHLBGJ4"
+  },
+  {
+    "id": "music-049",
+    "title": "雙星情歌",
+    "artist": "許冠傑",
+    "year": 1974,
+    "spotifyId": "5FXkexkGcimvk5c0ymJXlJ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a63c8a905af658f7b2881248",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "EyfkMteRXZM"
+  },
+  {
+    "id": "music-050",
+    "title": "雲河",
+    "artist": "黃鶯鶯",
+    "year": 1974,
+    "spotifyId": "3fPbBAj4OoJpBfcflyKufY",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273de815ce02ece46b75a39c254",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "Wx0k-7YWE0A"
+  },
+  {
+    "id": "music-051",
+    "title": "鄉愁四韻",
+    "artist": "楊弦 / 吳昌明 / 徐可萱 / 章紀龍 / 史美智",
+    "year": 1975,
+    "spotifyId": "07gaCMYAsqYKR4oeBV3CUR",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27339eeb627b3649a760714d8c9",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard"
+  },
+  {
+    "id": "music-052",
+    "title": "只有知心一個",
+    "artist": "溫拿樂隊",
+    "year": 1975,
+    "spotifyId": "66IPyyIVxqTeua9rBPZIHf",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739490836def2217f385c5523b",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "Ti7lJsUEfWE"
+  },
+  {
+    "id": "music-053",
+    "title": "生命之光",
+    "artist": "陳秋霞",
+    "year": 1976,
+    "spotifyId": "1qpxockwH1ZQhYT8zy8XJG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27304b12b5156fb45bc8c991b04",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "x8piZ8bKH-4"
+  },
+  {
+    "id": "music-054",
+    "title": "閃亮的日子",
+    "artist": "劉文正",
+    "year": 1977,
+    "spotifyId": "4rElxPM7LXSGzBRvA496dI",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273aa08caddb202487dad1dda6a",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "8LH75hHZ6Bc"
+  },
+  {
+    "id": "music-055",
+    "title": "每當變幻時",
+    "artist": "薰妮",
+    "year": 1977,
+    "spotifyId": "6GMbvRSITy3CPHVikX3sfe",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273731bf4c8d8534bf55927d020",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "KwxFWSRTqAQ"
+  },
+  {
+    "id": "music-056",
+    "title": "小李飛刀",
+    "artist": "羅文",
+    "year": 1978,
+    "spotifyId": "3SDqEwIcS8OfVxAc0wEGgp",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273870e0039f2845b34fc52da58",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "t9BGkfsFJoQ"
+  },
+  {
+    "id": "music-057",
+    "title": "楓葉情",
+    "artist": "鳳飛飛",
+    "year": 1978,
+    "spotifyId": "1evOuwQ3qmqn8eoBNK58ql",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27300aff4e65b8ba3e0fc601b2e",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "tdb9Cz3Dvy0"
+  },
+  {
+    "id": "music-058",
+    "title": "橄欖樹",
+    "artist": "齊豫",
+    "year": 1979,
+    "spotifyId": "0y58OaDt2n4Z3e9TN7Lqne",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733921cc7a002041e537632f30",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "LZb8fJZFhlo"
+  },
+  {
+    "id": "music-059",
+    "title": "楚留香",
+    "artist": "鄭少秋",
+    "year": 1979,
+    "spotifyId": "0pRts9r6g3SzSnUIYwt7Vu",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273bf6e79b800f3bc3409fab8df",
+    "tags": [
+      "1970s",
+      "chinese"
+    ],
+    "difficulty": "hard",
+    "youtubeId": "HdTggRt05Mo"
+  },
+  {
+    "id": "music-060",
+    "title": "上海灘",
+    "artist": "葉麗儀",
+    "year": 1980,
+    "spotifyId": "3ir1Zm9Dky4q3TNut8uwx5",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27332bb4491c2a6f608038c9ca0",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "PpVNdL9Wz_M"
+  },
+  {
+    "id": "music-061",
+    "title": "戀曲1980",
+    "artist": "羅大佑",
+    "year": 1980,
+    "spotifyId": "413VMa7YMS6j5EmSYZ2owY",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273302f7d342e0580656ccc2c2d",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "2nry60MCU8U"
+  },
+  {
+    "id": "music-063",
+    "title": "童年",
+    "artist": "張艾嘉",
+    "year": 1981,
+    "spotifyId": "1vf1W64zHB38NbhWAEEjm4",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730d32f5a641ab5b8abf554bfd",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "caQzKz4Zi-A"
+  },
+  {
+    "id": "music-064",
+    "title": "風的季節",
+    "artist": "徐小鳳",
+    "year": 1981,
+    "spotifyId": "75vlWTXLHcKElQte9qE4yO",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273539c9d29c7eac30cbf2585da",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "umUtPPGFe1w"
+  },
+  {
+    "id": "music-065",
+    "title": "三月裡的小雨",
+    "artist": "劉文正",
+    "year": 1981,
+    "spotifyId": "3jQRDdeb6F5cfLz9aXoYxW",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273febf25a50a7c68903e0c9881",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "67fJktZWFQ8"
+  },
+  {
+    "id": "music-066",
+    "title": "光陰的故事",
+    "artist": "羅大佑",
+    "year": 1982,
+    "spotifyId": "4qsESiC3wgGj1kXJTdICF2",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273302f7d342e0580656ccc2c2d",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "6rP9gV2YMJs"
+  },
+  {
+    "id": "music-067",
+    "title": "天天天藍",
+    "artist": "潘越雲",
+    "year": 1982,
+    "spotifyId": "2irLLFQfPp7oaVDUKNxGvs",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273509834cc0175a55d9fe50a96",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "j5Dt5MhlPsM"
+  },
+  {
+    "id": "music-068",
+    "title": "就在今夜",
+    "artist": "丘丘合唱團",
+    "year": 1982,
+    "spotifyId": "4FvfLdQyut66raWhaKM0v3",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736fa0171b72f88406e8dcb197",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "NUPOUgQxHHU"
+  },
+  {
+    "id": "music-069",
+    "title": "一樣的月光",
+    "artist": "蘇芮",
+    "year": 1983,
+    "spotifyId": "2cqYmQsDy0tuMjI69jfmFU",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3d448efb926c5c2e92c47f",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "ufAtOoMazjw"
+  },
+  {
+    "id": "music-070",
+    "title": "鐵血丹心",
+    "artist": "羅文 & 甄妮",
+    "year": 1983,
+    "spotifyId": "3FMcGPvEHPlr4GqaIEKXTP",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273211b49abc574b67b8a01f4df",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "1PCBWNMajKk"
+  },
+  {
+    "id": "music-071",
+    "title": "一剪梅",
+    "artist": "劉秋儀",
+    "year": 1983,
+    "spotifyId": "5NIPnfxA73oBuLfQHK2nbx",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739f7502c7bf01e4957d1ba200",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "0mDruB49clc"
+  },
+  {
+    "id": "music-072",
+    "title": "Monica",
+    "artist": "張國榮",
+    "year": 1984,
+    "spotifyId": "1B9OQxCuWdWlyVICqoGcut",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273638ba94408a5b626b817ece5",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "w3N5tisg20I"
+  },
+  {
+    "id": "music-073",
+    "title": "酒矸倘賣嘸",
+    "artist": "蘇芮",
+    "year": 1984,
+    "spotifyId": "4FtvRL1kxZAQIxbpfJDIPY",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3d448efb926c5c2e92c47f",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "9Fag0UJOy7U"
+  },
+  {
+    "id": "music-075",
+    "title": "為妳鍾情",
+    "artist": "張國榮",
+    "year": 1985,
+    "spotifyId": "2wSlWzQCo06NniaTNoXEVL",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c02cee0b5f5dde83456e99f6",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "lkd06VLJGQg"
+  },
+  {
+    "id": "music-076",
+    "title": "一代女皇",
+    "artist": "金佩姍",
+    "year": 1985,
+    "spotifyId": "0WBTEgXaXQxCkK8oEJBRg4",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27309844da491ea901bd36d328c",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "vY0fuuT1Cd0"
+  },
+  {
+    "id": "music-077",
+    "title": "愛情釀的酒",
+    "artist": "紅螞蟻合唱團",
+    "year": 1985,
+    "spotifyId": "1FDh5iYTkE08ZqmEEvnhY9",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273b6601cc745bf7f7ef5af20b9",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "jklCud4KxIQ"
+  },
+  {
+    "id": "music-079",
+    "title": "夢伴",
+    "artist": "梅艷芳",
+    "year": 1986,
+    "spotifyId": "5HGzKB3X49ijxxjmPPIODT",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273852f752d74245fc7c3150b09",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "k1PmD0br3PM"
+  },
+  {
+    "id": "music-080",
+    "title": "生命中的精靈",
+    "artist": "李宗盛",
+    "year": 1986,
+    "spotifyId": "42G4GyRxyQ3Dxkc84EToqQ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273343dd63afac90a18729c358f",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "jCPwfsRGLqk"
+  },
+  {
+    "id": "music-081",
+    "title": "一場遊戲一場夢",
+    "artist": "王傑",
+    "year": 1987,
+    "spotifyId": "0Id7swY6cWbvYLtVVF0wvq",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273508f6070bbe3a4fec70e2036",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "B2S1EngkjQk"
+  },
+  {
+    "id": "music-082",
+    "title": "甜言蜜語",
+    "artist": "葉蒨文",
+    "year": 1987,
+    "spotifyId": "1nZr95LkCejCzGNY0PE3p4",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0b1b30dc19301b2a140d2b0",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "UXaHpk2PTck"
+  },
+  {
+    "id": "music-083",
+    "title": "昔日舞曲",
+    "artist": "Beyond",
+    "year": 1987,
+    "spotifyId": "6BdMEs6BBtA4SYEpewLNIy",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f8dccb66b04d27c1dc41172b",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "8IkfCsNzYt0"
+  },
+  {
+    "id": "music-084",
+    "title": "我的未來不是夢",
+    "artist": "張雨生",
+    "year": 1988,
+    "spotifyId": "7waQoUkjuQEEPlWv9ImbnW",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a1701ed325f7e2c3bce3b0d2",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "lTxZmhAoSGU"
+  },
+  {
+    "id": "music-085",
+    "title": "情字這條路",
+    "artist": "潘越雲",
+    "year": 1988,
+    "spotifyId": "0iBhYQiU2DMM7iB6bfDvCE",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e775e4e4cb6818357c24dc89",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "CYaxe7ovLW8"
+  },
+  {
+    "id": "music-086",
+    "title": "喜歡你",
+    "artist": "Beyond",
+    "year": 1988,
+    "spotifyId": "58kMmqDaXOjoA5lbG0FSZH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2737306a7d7ba5d6f48bf5d0963",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "U-bvp_hsinw"
+  },
+  {
+    "id": "music-087",
+    "title": "真的愛妳",
+    "artist": "Beyond",
+    "year": 1989,
+    "spotifyId": "0PC2F01DR68Go04umziTGP",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2731dd61642554160edf78b0714",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "n8aK_IUna_Y"
+  },
+  {
+    "id": "music-088",
+    "title": "夢醒時分",
+    "artist": "陳淑樺",
+    "year": 1989,
+    "spotifyId": "31tZJyXMJaWBYStW7QmE5t",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736a7b3fc4aa4973f93ba63a49",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "nku5zFMZAdU"
+  },
+  {
+    "id": "music-089",
+    "title": "我終於失去了你",
+    "artist": "趙傳",
+    "year": 1989,
+    "spotifyId": "7tLVg4pdqAkXBI3sM1Tcgz",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273afa35ddeec1c8af317921591",
+    "tags": [
+      "1980s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "67p_MAZUnvE"
+  },
+  {
+    "id": "music-090",
+    "title": "我是一隻小小鳥",
+    "artist": "趙傳",
+    "year": 1990,
+    "spotifyId": "0Xuzmd3DG1tkApDYmEA5YQ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273afa35ddeec1c8af317921591",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "oGV1WHEu9g4"
+  },
+  {
+    "id": "music-091",
+    "title": "愛上一個不回家的人",
+    "artist": "林憶蓮",
+    "year": 1990,
+    "spotifyId": "5yIoL0La1bMBeI659ZHwcV",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739e0122c883aa009f44cc36f3",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "6pm8BVi1z7k"
+  },
+  {
+    "id": "music-092",
+    "title": "向前走",
+    "artist": "林強",
+    "year": 1990,
+    "spotifyId": "13ZwTWzDJgkWtIg6iGPiKP",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273fff226a0ff67a19fa7ddb043",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "gD14iiXq7Xw"
+  },
+  {
+    "id": "music-093",
+    "title": "一起走過的日子",
+    "artist": "劉德華",
+    "year": 1990,
+    "spotifyId": "1wi9GKce5BBFQRESs1e2zP",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c3588e43da60b3b786cdacc",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "Vtj_8SrfqQ4"
+  },
+  {
+    "id": "music-094",
+    "title": "愛情恰恰",
+    "artist": "陳小雲",
+    "year": 1990,
+    "spotifyId": "5q6e7fNF38TE51TonsQ3fk",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c4be81db2fd026deb767a1e4",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "dJ89kfL62Ak"
+  },
+  {
+    "id": "music-095",
+    "title": "認錯",
+    "artist": "優客李林",
+    "year": 1991,
+    "spotifyId": "3YKF20eSMqOHcS0qIRLciU",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273fa75e4b9e30a6477005480eb",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "STn-xzn1634"
+  },
+  {
+    "id": "music-096",
+    "title": "瀟灑走一回",
+    "artist": "葉蒨文  陳秀男 / 葉垂青",
+    "year": 1991,
+    "spotifyId": "4GwFHyuFlXsjLiyRBdx3FD",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ac3932b4bac754db13dbaab0",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "ZM8AczGGPm8"
+  },
+  {
+    "id": "music-097",
+    "title": "每天愛你多一些",
+    "artist": "張學友",
+    "year": 1991,
+    "spotifyId": "7uzJKRRrTqxUOeTtwQMd36",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c54b2bc9f5bc92843512d0ff",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "JVlIioAQKoE"
+  },
+  {
+    "id": "music-098",
+    "title": "大海",
+    "artist": "張雨生",
+    "year": 1992,
+    "spotifyId": "4XglvuvmwdVQ1MpV3zNUnR",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27376f073ba4f233d6e858115b3",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "EXaLvBGqQww"
+  },
+  {
+    "id": "music-099",
+    "title": "容易受傷的女人",
+    "artist": "王菲",
+    "year": 1992,
+    "spotifyId": "5g0IODsL7hiPxExwKNjIPo",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273fd98a753f60777600a45b081",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "tDw_ULjZWA8"
+  },
+  {
+    "id": "music-100",
+    "title": "紅日",
+    "artist": "李克勤",
+    "year": 1992,
+    "spotifyId": "5M8FXrTngqo69sLY55pffy",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273083d626468fce9005df32829",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "saYRzBQcgYw"
+  },
+  {
+    "id": "music-101",
+    "title": "千年等一回",
+    "artist": "高勝美",
+    "year": 1992,
+    "spotifyId": "0XaIdRxEbJgvNIOrjujcbQ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273605591eb6d97b682855c0519",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "RLMTildbLYM"
+  },
+  {
+    "id": "music-102",
+    "title": "酒後的心聲",
+    "artist": "江蕙",
+    "year": 1992,
+    "spotifyId": "1yhp9TnfIPuagO7XD0wA7W",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ead8d383a8afcbda8e91f6e0",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "Y1H22SMnS5M"
+  },
+  {
+    "id": "music-103",
+    "title": "花心",
+    "artist": "周華健",
+    "year": 1993,
+    "spotifyId": "0qow1ioAiifBQrPOOxYyUE",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27375e8b9604cb928cddbc2797b",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "IZ8-K3YPVN0"
+  },
+  {
+    "id": "music-104",
+    "title": "吻別",
+    "artist": "張學友",
+    "year": 1993,
+    "spotifyId": "1k0YFNylstvLBC3C5vPWP9",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273000a30fb51a15ae39b3731a1",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "mIF-nn_y2_8"
+  },
+  {
+    "id": "music-105",
+    "title": "執迷不悔",
+    "artist": "王菲",
+    "year": 1993,
+    "spotifyId": "2pKK1A009lhzhRPeTDderF",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2732b2a19540130d3e97245b649",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "ZtjI-xzGaxs"
+  },
+  {
+    "id": "music-106",
+    "title": "一天一點愛戀",
+    "artist": "梁朝偉",
+    "year": 1993,
+    "spotifyId": "0UAjKoYNJMiFNOZXn9mjUx",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27353fe3e238c839d144982b489",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "HJccvIv4CDY"
+  },
+  {
+    "id": "music-107",
+    "title": "風雨無阻",
+    "artist": "周華健",
+    "year": 1994,
+    "spotifyId": "7gVwlThNBYKIwqmoQ4xQKA",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730a02f529649ccb42d94e8dcf",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "HUvDaKBcA44"
+  },
+  {
+    "id": "music-108",
+    "title": "領悟",
+    "artist": "辛曉琪",
+    "year": 1994,
+    "spotifyId": "0nRIRTq9pPN3lPc5kUoyFJ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27374c71a025072a9602a28ddf5",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "RhfUGpEp9to"
+  },
+  {
+    "id": "music-109",
+    "title": "新不了情",
+    "artist": "萬芳",
+    "year": 1994,
+    "spotifyId": "1KFyrwqxqBky7ezRII71JN",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d528b5144e8fb12cdd33c643",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "Dw-R85AcN_w"
+  },
+  {
+    "id": "music-110",
+    "title": "歡喜就好",
+    "artist": "陳雷",
+    "year": 1994,
+    "spotifyId": "0XTIC0ECbVHd0L2aN6IshL",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27316bb1a9265be0bc6b82cee18",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "GPoTmtykcGY"
+  },
+  {
+    "id": "music-111",
+    "title": "浪人情歌",
+    "artist": "伍佰 & China Blue",
+    "year": 1994,
+    "spotifyId": "6WttjgrcxCq1CZnydPVVvt",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a3a2b2ca69f6090b8ea46965",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "OPkqtboFFYI"
+  },
+  {
+    "id": "music-112",
+    "title": "過火",
+    "artist": "張信哲",
+    "year": 1995,
+    "spotifyId": "0ZEOXfWy9lLCQMyOx2MzMU",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27341f4bf6f189f0be73a55ac20",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "SrD36rogSjc"
+  },
+  {
+    "id": "music-113",
+    "title": "再會啦心愛的無緣的人",
+    "artist": "施文彬",
+    "year": 1995,
+    "spotifyId": "5XZKK64s6wjd0P5MowNuB1",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734d9a2159667d00c0d8e62948",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "EqoQhUaLYsI"
+  },
+  {
+    "id": "music-114",
+    "title": "遺憾",
+    "artist": "許美靜",
+    "year": 1995,
+    "spotifyId": "1iDQ0rKPkk09OzBhXOltmg",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e382add0102fa15d52c96a75",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "IegK6qtIJOg"
+  },
+  {
+    "id": "music-115",
+    "title": "捨不得你",
+    "artist": "鄭秀文",
+    "year": 1995,
+    "spotifyId": "7HPCXjqV9D0n7JRHn7QGs2",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e15d1545f197573461c00ce9",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "S0cylcho3w8"
+  },
+  {
+    "id": "music-117",
+    "title": "如果雲知道",
+    "artist": "許茹芸",
+    "year": 1996,
+    "spotifyId": "2oPruu9Mf53XmEkwHNPkx9",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ab00567f75963cf22d5bda7",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "DOcb1-SD4Eo"
+  },
+  {
+    "id": "music-118",
+    "title": "姊妹",
+    "artist": "張惠妹",
+    "year": 1996,
+    "spotifyId": "0HKa9D9k2QN8Rtq0W9l5Vj",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c560aa1177db219cee077306",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "OO60xtWjLRw"
+  },
+  {
+    "id": "music-119",
+    "title": "心太軟",
+    "artist": "任賢齊",
+    "year": 1996,
+    "spotifyId": "3nlN7Yt8JOLE9WJDh767fZ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f6d188406b881472a5fa8346",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "ZSWeurc1yMw"
+  },
+  {
+    "id": "music-120",
+    "title": "挪威的森林",
+    "artist": "伍佰& China Blue",
+    "year": 1996,
+    "spotifyId": "5KdZLYyoBP0qsjDTDP28do",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a0477ab6afbb20d6732175c9",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "gPpZJlE0Ca8"
+  },
+  {
+    "id": "music-121",
+    "title": "愛不對人",
+    "artist": "江蕙",
+    "year": 1996,
+    "spotifyId": "5YhWMeN3uXieyhGMEbETmg",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27373d206a8ca5122aaf2445412",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "b3-Zp97zsWI"
+  },
+  {
+    "id": "music-122",
+    "title": "他不愛我",
+    "artist": "莫文蔚",
+    "year": 1997,
+    "spotifyId": "4tFZI85Z61VYuBYTtCrWqQ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f3cbcff885d6df63fc7796fc",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "nuWIJIn7wkw"
+  },
+  {
+    "id": "music-123",
+    "title": "無情的情書",
+    "artist": "動力火車",
+    "year": 1997,
+    "spotifyId": "2VBVpi1MoMMFU2RGhpxgyy",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f02983657fce3f790210ac2d",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "pPr8vkMAe9w"
+  },
+  {
+    "id": "music-124",
+    "title": "短髮",
+    "artist": "梁詠琪",
+    "year": 1997,
+    "spotifyId": "3EY5hWo0g4pFlwzDfhnURh",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273edafd5d7a22a6c53013ca20d",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "ssnNaAlL-i8"
+  },
+  {
+    "id": "music-126",
+    "title": "心有獨鍾",
+    "artist": "陳曉東",
+    "year": 1997,
+    "spotifyId": "5xO62o9Ub8ewnOQjmVpVSe",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273542b8ff44af7a213378f0515",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "s5qC6x_5UuQ"
+  },
+  {
+    "id": "music-127",
+    "title": "月亮惹的禍",
+    "artist": "張宇",
+    "year": 1998,
+    "spotifyId": "6ZQ9ROGZW0C92rJN2aJcls",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c227a9973d3c54e1abca93b1",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "1YJ8wSH6HBU"
+  },
+  {
+    "id": "music-128",
+    "title": "征服",
+    "artist": "那英",
+    "year": 1998,
+    "spotifyId": "7bmlZdt4C8HmNunYfwPXwn",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c8ed6fbd964219856417018",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "jrLil3-x_9Y"
+  },
+  {
+    "id": "music-129",
+    "title": "Di Da Di",
+    "artist": "李玟",
+    "year": 1998,
+    "spotifyId": "3MmdjiDvWsn5kmDJAbOmiK",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27308f52ce2e86f9784c5ce926d",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "zUnkE09Yrv8"
+  },
+  {
+    "id": "music-130",
+    "title": "當",
+    "artist": "動力火車",
+    "year": 1998,
+    "spotifyId": "2jKFpsM0gSWX76MUg67dQz",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b926d1cf785322797ea9b0c",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "q4aPDcZXjGg"
+  },
+  {
+    "id": "music-131",
+    "title": "我的快樂時代",
+    "artist": "陳奕迅",
+    "year": 1998,
+    "spotifyId": "1tFF8EMjMwQ6FoXmFMIj2W",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27363209c603e0ed736584b8a5c",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "Q7tnLVn93FA"
+  },
+  {
+    "id": "music-132",
+    "title": "我可以抱你嗎",
+    "artist": "張惠妹",
+    "year": 1999,
+    "spotifyId": "4ftEoiNyScZNTqOihfx89c",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b3244510c9b478593ff09d5",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "oj3NFUBO1U8"
+  },
+  {
+    "id": "music-133",
+    "title": "傷心太平洋",
+    "artist": "任賢齊",
+    "year": 1999,
+    "spotifyId": "0sFTMZdnVtnmqj9rymmCDU",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0025c86c0fc72d3099d2b77",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "nsHfeiGrFqo"
+  },
+  {
+    "id": "music-134",
+    "title": "志明與春嬌",
+    "artist": "五月天",
+    "year": 1999,
+    "spotifyId": "1QYdanf1Ll0Xz6WjfLmyq8",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738e2152addd4e11eb51a31e7f",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "5VUUGZ1-nlY"
+  },
+  {
+    "id": "music-135",
+    "title": "最熟悉的陌生人",
+    "artist": "蕭亞軒",
+    "year": 1999,
+    "spotifyId": "7ptLu9jaGwjeJCYItMK1LY",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2731666422b2fc0d7d9a0358996",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "C5mI0TqrJ-4"
+  },
+  {
+    "id": "music-136",
+    "title": "謝謝你的愛1999",
+    "artist": "謝霆鋒",
+    "year": 1999,
+    "spotifyId": "3ha0AyBi731mExF0EF7OOI",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738c4cf46c758e42720ab6f959",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "Wmb8twEjlgg"
+  },
+  {
+    "id": "music-137",
+    "title": "勇氣",
+    "artist": "梁靜茹",
+    "year": 2000,
+    "spotifyId": "1SNF1IdMuKPDhw9HTrdcvM",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f33cc2b3adabd7493e44619",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "nDchQNPuA0k"
+  },
+  {
+    "id": "music-138",
+    "title": "天黑黑",
+    "artist": "孫燕姿",
+    "year": 2000,
+    "spotifyId": "0eob3HoVodpLkppKt6rVay",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273df729ce08f51ac7cbab07e39",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "zi8z6RPYGV0"
+  },
+  {
+    "id": "music-139",
+    "title": "龍捲風",
+    "artist": "周杰倫",
+    "year": 2000,
+    "spotifyId": "4iVG1rHVXEB139AIOIja8f",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734a259ca5a6f986feb1fff695",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "RPWDeLqsN0g"
+  },
+  {
+    "id": "music-140",
+    "title": "K歌之王 (粵語版)",
+    "artist": "陳奕迅",
+    "year": 2000,
+    "spotifyId": "7BIviq53hh8sHIrA7kbJmh",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b5b5d4f255556eded931632",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "9elvYViwP4g"
+  },
+  {
+    "id": "music-141",
+    "title": "至少還有你",
+    "artist": "林憶蓮",
+    "year": 2000,
+    "spotifyId": "0fGM6yMJ1swPXt5NI0GCdl",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739bc1b2621c008a413127e27e",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "pQlAWZLOpgo"
+  },
+  {
+    "id": "music-142",
+    "title": "唯一",
+    "artist": "王力宏",
+    "year": 2001,
+    "spotifyId": "6LLyiqMoNoex4Zu0ka4iF2",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27312c74c7655d28d80d76eeeab",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "P7Qv4AV_StM"
+  },
+  {
+    "id": "music-143",
+    "title": "戀人未滿",
+    "artist": "S.H.E",
+    "year": 2001,
+    "spotifyId": "5aUFfsh20FCDtNHkQgPCbw",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27351f31ceecf65687e36993283",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "jL6D7rqk4SQ"
+  },
+  {
+    "id": "music-144",
+    "title": "情非得已",
+    "artist": "庾澄慶",
+    "year": 2001,
+    "spotifyId": "4KBegMBVyHsfC7fPOztTzV",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734df4e8ec1f66ebb6b63c14c2",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "OedQozXSM2U"
+  },
+  {
+    "id": "music-145",
+    "title": "終身美麗",
+    "artist": "鄭秀文",
+    "year": 2001,
+    "spotifyId": "3ctJQ3riTHFk5A5SMDr1F7",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273830e33dc510933bf84806eb0",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "KK9viFTvIIk"
+  },
+  {
+    "id": "music-146",
+    "title": "痛愛",
+    "artist": "容祖兒",
+    "year": 2001,
+    "spotifyId": "3PUgmO3998FquMS1j5tWiN",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273221abba201414e82cd6276d9",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "qkT4Mxmm92g"
+  },
+  {
+    "id": "music-147",
+    "title": "痴心绝对",
+    "artist": "李圣杰",
+    "year": 2002,
+    "spotifyId": "0D0n4q2o54VTOmDJdL6ikY",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e34baf069252392938495697",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "7NIsBeVRAgk"
+  },
+  {
+    "id": "music-148",
+    "title": "分手快乐",
+    "artist": "梁静茹",
+    "year": 2002,
+    "spotifyId": "07RT3ZKAlXBMjXEJrN9Uxd",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27380a6a7255ebd1a1e70b9644b",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "cr2Hmu99hhI"
+  },
+  {
+    "id": "music-149",
+    "title": "死了都要爱",
+    "artist": "信乐团",
+    "year": 2002,
+    "spotifyId": "3ACOnPSMkn60ll5r2w6IaX",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27382c0c51f7e563f61f9522d02",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "p-ehKBc9p9k"
+  },
+  {
+    "id": "music-150",
+    "title": "半岛铁盒",
+    "artist": "周杰伦",
+    "year": 2002,
+    "spotifyId": "7LQSysyJNJAtAemXIQ6mDs",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27383a404faeaf8330b674801ea",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "duZDsG3tvoA"
+  },
+  {
+    "id": "music-151",
+    "title": "爱的主打歌",
+    "artist": "萧亚轩",
+    "year": 2002,
+    "spotifyId": "5rklMDMl2KjHPHlYd2O7ag",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2732d5feabe32f4f3cf9edb5efc",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "EHMm_ElRvMA"
+  },
+  {
+    "id": "music-152",
+    "title": "晴天",
+    "artist": "周杰倫",
+    "year": 2003,
+    "spotifyId": "2zjo2j5j3S0Nk21LKCgc8L",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736850b3307853e0753ed53cc5",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "DYptgVvkVLQ"
+  },
+  {
+    "id": "music-153",
+    "title": "遇見",
+    "artist": "孫燕姿",
+    "year": 2003,
+    "spotifyId": "3xJK8ywApYVEYIDhymYMC6",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273df729ce08f51ac7cbab07e39",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "m4nu_F_9dWU"
+  },
+  {
+    "id": "music-154",
+    "title": "Super Star",
+    "artist": "S.H.E",
+    "year": 2003,
+    "spotifyId": "4PPh6AkROsIjoEOlw2eYuO",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273298469234bc5317d796aebd3",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "gr5fNKK2FaA"
+  },
+  {
+    "id": "music-155",
+    "title": "揮著翅膀的女孩",
+    "artist": "容祖兒",
+    "year": 2003,
+    "spotifyId": "3ckCH7YwSzzB88FAnPbaQ2",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27319b6e0582629b5df7f16b236",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "xeb475YDpJE"
+  },
+  {
+    "id": "music-156",
+    "title": "必殺技",
+    "artist": "古巨基",
+    "year": 2003,
+    "spotifyId": "3PrIhODothki0YvYW3qCOT",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730c7b1ea067d03f5f62ebf8e9",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "dTSQZRFaNTI"
+  },
+  {
+    "id": "music-157",
+    "title": "我們的愛",
+    "artist": "F.I.R. 飛兒樂團",
+    "year": 2004,
+    "spotifyId": "0Q4YuuiCuxIIKUw2fb1cmV",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f475bb027a3f2f9aef2e7940",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "88D2-J_pk7A"
+  },
+  {
+    "id": "music-158",
+    "title": "江南",
+    "artist": "林俊傑",
+    "year": 2004,
+    "spotifyId": "0YgvF6fNWydNGzCY3pzK4Y",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730d39c7f4416b6655c664bad3",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "G97_rOdHcnY"
+  },
+  {
+    "id": "music-159",
+    "title": "小城大事",
+    "artist": "楊千嬅",
+    "year": 2004,
+    "spotifyId": "2yDm6S26Nc5LitK7GTz8wp",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a2ff4b3594c000d777f16234",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "WJaufugjeSQ"
+  },
+  {
+    "id": "music-160",
+    "title": "下輩子如果我還記得你",
+    "artist": "馬郁",
+    "year": 2004,
+    "spotifyId": "6qOAG1rfgqwKHnWIgwL9ZN",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f513121986aca55f3547d47",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "yZjyVpFTt_E"
+  },
+  {
+    "id": "music-161",
+    "title": "愛與誠",
+    "artist": "古巨基",
+    "year": 2004,
+    "spotifyId": "5HIFjkxSTX8EE4ZXj9RYPE",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b2dcb6ce21ad336cb37d70b",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "z5NBt33b7iY"
+  },
+  {
+    "id": "music-162",
+    "title": "童話",
+    "artist": "光良",
+    "year": 2005,
+    "spotifyId": "3mYkEkfIIcmQmLWP12uocy",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e01fce1cd12ba8f13bad43d0",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "bBcp_ljCBGU"
+  },
+  {
+    "id": "music-163",
+    "title": "一千年以後",
+    "artist": "林俊傑",
+    "year": 2005,
+    "spotifyId": "7ronMHt2hVGfpag6m27wd9",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273cf6457616f19b3c5b1d19e3a",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "m0z1XfphYzU"
+  },
+  {
+    "id": "music-164",
+    "title": "曖昧",
+    "artist": "楊丞琳",
+    "year": 2005,
+    "spotifyId": "2aqbwnjV0esOdAtwFu3W0A",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f3bf5d3b56f5ae5f9282de44",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "mebzXfWi87E"
+  },
+  {
+    "id": "music-165",
+    "title": "千年之戀",
+    "artist": "F.I.R. 飛兒樂團",
+    "year": 2005,
+    "spotifyId": "6J3YmODloSi669U6cKbtTH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734850396ddffac6d511ffd9ec",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "5fTrPL5b4Lg"
+  },
+  {
+    "id": "music-166",
+    "title": "冬令時間",
+    "artist": "Twins",
+    "year": 2005,
+    "spotifyId": "4xHo65LEBW8DOX7udMzwXx",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273155ff68aea74498424d78f3e",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "v2KB05bXJak"
+  },
+  {
+    "id": "music-167",
+    "title": "隱形的翅膀",
+    "artist": "張韶涵",
+    "year": 2006,
+    "spotifyId": "02T2R6fMzSZq4pRXtW94rH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739ea70b7dae971e6b8ca15955",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "be2wvNFTLMc"
+  },
+  {
+    "id": "music-168",
+    "title": "舞孃",
+    "artist": "蔡依林",
+    "year": 2006,
+    "spotifyId": "55V0mdDTtti0B71eqp8lWy",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273065275a40f524e345aaadd53",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "0EN3MnGEBXk"
+  },
+  {
+    "id": "music-169",
+    "title": "小情歌",
+    "artist": "蘇打綠",
+    "year": 2006,
+    "spotifyId": "4FhJ7YSRxATHnaRg4nGs6t",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f455f6b17df809e48fad7379",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "in8NNzwFa-s"
+  },
+  {
+    "id": "music-170",
+    "title": "三國戀",
+    "artist": "Tank",
+    "year": 2006,
+    "spotifyId": "45YBp3MQVDaQEQnRPDXfpf",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273885ff0fa5b734a9c9cdf0904",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "GggTls8KznY"
+  },
+  {
+    "id": "music-171",
+    "title": "愛才",
+    "artist": "衛蘭",
+    "year": 2006,
+    "spotifyId": "3Qo7nKuwvKU1ibIy2Zxrqi",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2732ce63e5eba7fa352a94a37f4",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Vxha7ZRL8x8"
+  },
+  {
+    "id": "music-172",
+    "title": "該死的溫柔",
+    "artist": "馬天宇",
+    "year": 2007,
+    "spotifyId": "3XMKrJoJY2g0t7BpZFPdPA",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273b19c45cee93c94a2b6e38614",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "GE8DaPP7AMw"
+  },
+  {
+    "id": "music-173",
+    "title": "日不落",
+    "artist": "蔡依林",
+    "year": 2007,
+    "spotifyId": "1sfmWlFCr9Dh8ZVlSdup0U",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273afe34d360197814acaac7421",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "1GA8z-Wliew"
+  },
+  {
+    "id": "music-174",
+    "title": "會呼吸的痛",
+    "artist": "梁靜茹",
+    "year": 2007,
+    "spotifyId": "5IgElbSREzVyqgf1OCuKJd",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27305e295246e72250b1cbe3144",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "dLF12O_6YiI"
+  },
+  {
+    "id": "music-175",
+    "title": "背叛",
+    "artist": "曹格",
+    "year": 2007,
+    "spotifyId": "48VzfSDNpxIfWohA9bZgfo",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27383435610a4055ff0f624d3bf",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "xHsSWiLsIRY"
+  },
+  {
+    "id": "music-176",
+    "title": "無與倫比的美麗",
+    "artist": "蘇打綠",
+    "year": 2007,
+    "spotifyId": "2UwbKIkGPgTPdp7CVx1Dok",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273291f4d4980100af39b4701e6",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "NA4otP-v6iI"
+  },
+  {
+    "id": "music-178",
+    "title": "洋蔥",
+    "artist": "楊宗緯",
+    "year": 2008,
+    "spotifyId": "1YUqUoAsUNK3lWZ0L2paws",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d3e8b9a9cf1b3bbf586390c2",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "78NED_I0lU0"
+  },
+  {
+    "id": "music-179",
+    "title": "下一個天亮",
+    "artist": "郭靜",
+    "year": 2008,
+    "spotifyId": "1AtH77F385v8TU7dxiyZcQ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27307561628e098acf1faec1ee6",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "AEUmLttrY5s"
+  },
+  {
+    "id": "music-180",
+    "title": "愛不疚",
+    "artist": "林峯",
+    "year": 2008,
+    "spotifyId": "1vETwbT4wiFNxnWCE45MTx",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27319fa66bc2968dc174809c389",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "FG0At3Liwdk"
+  },
+  {
+    "id": "music-181",
+    "title": "下雨天",
+    "artist": "南拳媽媽",
+    "year": 2008,
+    "spotifyId": "3BfjVIPmUpIrgqLdOJP1My",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273007062438a8936b73565faf6",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "uu0k4cQS7_8"
+  },
+  {
+    "id": "music-182",
+    "title": "王妃",
+    "artist": "蕭敬騰",
+    "year": 2009,
+    "spotifyId": "6bOWOIAjiZFb7hH1DB1I47",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738cd188c847142dee76b3ab1c",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "qnDlH_S4Fak"
+  },
+  {
+    "id": "music-183",
+    "title": "我愛他",
+    "artist": "丁噹",
+    "year": 2009,
+    "spotifyId": "2qOitAAyMgHOs0cMilqf8k",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273fce5285ecccea8f6552e2ed1",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "QKb30DgwZ7Y"
+  },
+  {
+    "id": "music-184",
+    "title": "說謊",
+    "artist": "林宥嘉",
+    "year": 2009,
+    "spotifyId": "0hmQhwGbidV0hAxXwO1lKP",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273035b836d9167adecc0ac6295",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "ftfJRzW0MPo"
+  },
+  {
+    "id": "music-185",
+    "title": "失落沙洲",
+    "artist": "徐佳瑩",
+    "year": 2009,
+    "spotifyId": "4vBoopG4WzohMju1GUmwoi",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27374c777725eacd71851b3d84e",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Ie1KcGvBN_k"
+  },
+  {
+    "id": "music-186",
+    "title": "阿波羅",
+    "artist": "RubberBand",
+    "year": 2009,
+    "spotifyId": "4Urz8PyfHnt6OVq9fcx3mh",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273917947a6976f847414335b17",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "xYPjNKSdgiU"
+  },
+  {
+    "id": "music-187",
+    "title": "錯的人",
+    "artist": "蕭亞軒",
+    "year": 2010,
+    "spotifyId": "0fQla3BOmDbwE7e6I78LbZ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273312b7d867d873fe48adb907a",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "54yKHYSwJcQ"
+  },
+  {
+    "id": "music-188",
+    "title": "愛的主場秀",
+    "artist": "羅志祥",
+    "year": 2010,
+    "spotifyId": "4SoB4BLwnCdELaV0VPu5Iv",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27336be09ce591dd689b8043ad2",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "QbOaheYJHeo"
+  },
+  {
+    "id": "music-189",
+    "title": "沒那麼簡單",
+    "artist": "黃小琥",
+    "year": 2010,
+    "spotifyId": "4xZIMRwaaBx7CZMmM6KLuh",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738d4991c8e56249ff4ec1972f",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "rmPHuvQoh0g"
+  },
+  {
+    "id": "music-190",
+    "title": "慢慢等",
+    "artist": "韋禮安",
+    "year": 2010,
+    "spotifyId": "1y9yrb1BMEqqBaFGoMmeIV",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736f68c0cb9b188177079765cc",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "smaCyk6HIuA"
+  },
+  {
+    "id": "music-191",
+    "title": "相反的我",
+    "artist": "張芸京",
+    "year": 2010,
+    "spotifyId": "0q9Ymv5x4i1ITItynKvvPA",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d7929c4eef95de4664ced91b",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "ffqXINvx5ps"
+  },
+  {
+    "id": "music-192",
+    "title": "那些年",
+    "artist": "胡夏",
+    "year": 2011,
+    "spotifyId": "3v8FOuA8jxAC5SOA2uN6Mg",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c2db2cb50579ad6f7c16e087",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "KqjgLbKZ1h0"
+  },
+  {
+    "id": "music-193",
+    "title": "煎熬",
+    "artist": "李佳薇",
+    "year": 2011,
+    "spotifyId": "1bkdJsC4ZWDo8j8ekJWMeD",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27359333960bf23878cb56a072c",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "LJd5xIjvMCg"
+  },
+  {
+    "id": "music-194",
+    "title": "諾亞方舟",
+    "artist": "五月天",
+    "year": 2011,
+    "spotifyId": "4UgmvXhDgA0s5MBadJlJyg",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273201b8c5fee1e364c3605747f",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "V46K7apDziA"
+  },
+  {
+    "id": "music-195",
+    "title": "魔鬼中的天使",
+    "artist": "田馥甄",
+    "year": 2011,
+    "spotifyId": "5mjMlKG2ltInZEIikffAWw",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730466000a072dc179c4b64854",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "na_xv5iFt2Y"
+  },
+  {
+    "id": "music-196",
+    "title": "好不容易",
+    "artist": "方大同",
+    "year": 2011,
+    "spotifyId": "7mhDvCdRYudqBbJfBU4uuN",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739784a34b189f5181bf000465",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "jDGGAaDsN8Y"
+  },
+  {
+    "id": "music-197",
+    "title": "我的歌聲裡",
+    "artist": "曲婉婷",
+    "year": 2012,
+    "spotifyId": "513Fp1fXzZ3MzVIDng28wL",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2731df1f19218f770e0f3364c8d",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "w0dMz8RBG7g"
+  },
+  {
+    "id": "music-198",
+    "title": "愛你",
+    "artist": "陳芳語",
+    "year": 2012,
+    "spotifyId": "0n7Ij8XEDfYYFRgBQjNjnf",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27330065f9a53fbeae1556d5129",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "KGrulNiJ6Uc"
+  },
+  {
+    "id": "music-199",
+    "title": "暫時的男朋友",
+    "artist": "嚴爵",
+    "year": 2012,
+    "spotifyId": "5JGfHNIhl2Bt4kmtKNJiZw",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27308725aae7704fda19c56c8de",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "88m2XdyGXRY"
+  },
+  {
+    "id": "music-200",
+    "title": "月彎彎",
+    "artist": "謝金燕",
+    "year": 2012,
+    "spotifyId": "7wXCWqfYInJyviBzJSHVcb",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ea005e0cf4f87f1ffe141186",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "iysQ6nzofn0"
+  },
+  {
+    "id": "music-201",
+    "title": "寂寞來了怎麼辦?",
+    "artist": "吳克群",
+    "year": 2012,
+    "spotifyId": "3LhGWhEvv2i3gyETz6p4d9",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273131e657ba8c19ddbbda82734",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "g0VsJKe5HlQ"
+  },
+  {
+    "id": "music-202",
+    "title": "山丘",
+    "artist": "李宗盛",
+    "year": 2013,
+    "spotifyId": "4sZDrNBr9EsEvoOj7Z9Gr7",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735d39206a5ad11999ef5fd4b4",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "rVEMTxg_LrU"
+  },
+  {
+    "id": "music-203",
+    "title": "手掌心",
+    "artist": "丁噹",
+    "year": 2013,
+    "spotifyId": "0RHldQWFLZ3mNMU6FXfWrO",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273fc6bd25261ead19bcd0f1bc6",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "7wvNwOPprBE"
+  },
+  {
+    "id": "music-204",
+    "title": "薄情歌",
+    "artist": "C AllStar",
+    "year": 2013,
+    "spotifyId": "1qW5H7li77nVfoAoXW0rGj",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273780bbe8f5aef9498e2b04395",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "RjLDdIr_aDI"
+  },
+  {
+    "id": "music-205",
+    "title": "在你身邊",
+    "artist": "韋禮安",
+    "year": 2013,
+    "spotifyId": "0Cs2nm2g4oMEbR5xz58Var",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2731a264ca1bb82cccf7de3406e",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "tHmsHgQSsbo"
+  },
+  {
+    "id": "music-206",
+    "title": "一個人想著一個人",
+    "artist": "曾沛慈",
+    "year": 2013,
+    "spotifyId": "3n3zzFH7zzO0gJNaw4RKSm",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2732bc290220b16df50c6324586",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "olODk6jhMhM"
+  },
+  {
+    "id": "music-207",
+    "title": "以後別做朋友",
+    "artist": "周興哲",
+    "year": 2014,
+    "spotifyId": "7zyYmIdjqqiX6kLryb7QBx",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736386289cfd8e8187133a8f56",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Ew4VvF0DPMc"
+  },
+  {
+    "id": "music-208",
+    "title": "我還是愛著你",
+    "artist": "MP魔幻力量",
+    "year": 2014,
+    "spotifyId": "5ELx2q0Zm4kiHNvP8MHl7D",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730fd236f23c4a1b78ae745637",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Oc_VUUE9MHo"
+  },
+  {
+    "id": "music-209",
+    "title": "越難越愛",
+    "artist": "吳若希",
+    "year": 2014,
+    "spotifyId": "0AlWf4EbQNrBU5qVCWgGs0",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739c433fea44bc3c7bc0310090",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "fUiwiqs5JjM"
+  },
+  {
+    "id": "music-210",
+    "title": "高山低谷",
+    "artist": "林奕匡",
+    "year": 2014,
+    "spotifyId": "75ZEiExjqAGBFmjlFPZPLY",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d8a1034842a2168351b09002",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "VqnpLbr1zJs"
+  },
+  {
+    "id": "music-211",
+    "title": "後會無期",
+    "artist": "鄧紫棋",
+    "year": 2014,
+    "spotifyId": "5jSuSxPNY1BOQjjnGnyrEw",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27394b342992fab343f85b333b5",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "A_YTLoXHjyI"
+  },
+  {
+    "id": "music-212",
+    "title": "小幸運",
+    "artist": "田馥甄",
+    "year": 2015,
+    "spotifyId": "2zapgrglLRISEUlspPtdep",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27375526674fc32f1736bebfe27",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "CFTZSSJyy7A"
+  },
+  {
+    "id": "music-213",
+    "title": "不將就",
+    "artist": "李榮浩",
+    "year": 2015,
+    "spotifyId": "5DH8nF7aWoXXg5Sm3gjCWD",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273167bfff7b24d6d8fb0cd08a8",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "a9ot-Fa9KHk"
+  },
+  {
+    "id": "music-214",
+    "title": "原來她不夠愛我",
+    "artist": "吳業坤",
+    "year": 2015,
+    "spotifyId": "4n5zyjjuwsLOeJn73BmKtV",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730adad3d1ff55ecbcb25aa377",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "AphrA76OpnE"
+  },
+  {
+    "id": "music-215",
+    "title": "差一點我們會飛",
+    "artist": "黃淑蔓",
+    "year": 2015,
+    "spotifyId": "44QXVFCGfB7oj9rF6WJeyZ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273992252f9471064c2a9a43852",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Vsr5gpmmvhs"
+  },
+  {
+    "id": "music-216",
+    "title": "大齡女子",
+    "artist": "彭佳慧",
+    "year": 2015,
+    "spotifyId": "4pkUru7mlNlEP5B5urUbGL",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735e2fa337731c9bf3ac323174",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "6OGz3OSbk0g"
+  },
+  {
+    "id": "music-217",
+    "title": "你，好不好？",
+    "artist": "周興哲",
+    "year": 2016,
+    "spotifyId": "2gug6MRv4xQFYi9LA3PJCS",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27305e895059be31891a3e0f01d",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "wSBXfzgqHtE"
+  },
+  {
+    "id": "music-218",
+    "title": "年輪說",
+    "artist": "楊丞琳",
+    "year": 2016,
+    "spotifyId": "7uoMF8aYcagKbt5m5wi4MH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27349cbdb6132af9fe67cf9c7d3",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "anurOHpo0aY"
+  },
+  {
+    "id": "music-219",
+    "title": "癡情玫瑰花",
+    "artist": "Under Lover (地下情人) feat. 玖壹壹",
+    "year": 2016,
+    "spotifyId": "2t5uvhvciaCRIqEebgcMII",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2731cfbf1b2d160c797e503fc7f",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "lKe0k2pF9pc"
+  },
+  {
+    "id": "music-220",
+    "title": "魚仔",
+    "artist": "盧廣仲",
+    "year": 2017,
+    "spotifyId": "2sb6AZQLeoD3VgA4zglQB6",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ebd7d3e4537ed9425406a61b",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "ybfWYpYhTQQ"
+  },
+  {
+    "id": "music-221",
+    "title": "長相廝守",
+    "artist": "ToNick",
+    "year": 2017,
+    "spotifyId": "44TjgDPUGUqU3ylA8tBkVf",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27316745543eea6827b16607e9e",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "sENLQMsYpHE"
+  },
+  {
+    "id": "music-222",
+    "title": "不曾回來過",
+    "artist": "李千娜",
+    "year": 2017,
+    "spotifyId": "6QAn6Crff7sfcqC83fH7dd",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2732a3023dee97b54b32d814f36",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "nRNyOWdThw8"
+  },
+  {
+    "id": "music-223",
+    "title": "年少有為",
+    "artist": "李榮浩",
+    "year": 2018,
+    "spotifyId": "6XY80Ofqd8j0SGiEdRLwCp",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734ed5351deda71982d6f1ab4d",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Dnj5Tcpev0Q"
+  },
+  {
+    "id": "music-224",
+    "title": "慢慢喜歡你",
+    "artist": "莫文蔚",
+    "year": 2018,
+    "spotifyId": "79LVKCDq5n3N2k6dtWP4gP",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733ca1981b111f175cfe6a7a9d",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "kqqraGvoqVs"
+  },
+  {
+    "id": "music-225",
+    "title": "浪流連",
+    "artist": "茄子蛋",
+    "year": 2018,
+    "spotifyId": "1IS0WFyiVpwsATeSzjEvpI",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738c7e976070d78efcda06f7bc",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "3Y0Ut5ozaKs"
+  },
+  {
+    "id": "music-226",
+    "title": "有一種悲傷",
+    "artist": "A-Lin",
+    "year": 2019,
+    "spotifyId": "3ayrHkyorPEpeOBvZ76SwG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273780862004f70c1e58dfddf49",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "BRcudpJzy1I"
+  },
+  {
+    "id": "music-227",
+    "title": "Without You",
+    "artist": "高爾宣 OSN",
+    "year": 2019,
+    "spotifyId": "0KWnRv3wxjltYVB3MqjNd2",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273643c4fb91404d250686fa4ed",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "HQDDlgGy2hg"
+  },
+  {
+    "id": "music-228",
+    "title": "刻在我心底的名字",
+    "artist": "盧廣仲",
+    "year": 2020,
+    "spotifyId": "3OC84eKMxRJ4x0Hcwl9i4i",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a09d99cdbfdb0fafee0c2318",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "m78lJuzftcc"
+  },
+  {
+    "id": "music-229",
+    "title": "想見你想見你想見你",
+    "artist": "八三夭",
+    "year": 2020,
+    "spotifyId": "69zgyr5HVKdInjeKpq1qHa",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27371eb1e21d6b443885815abe8",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "4iRupuNet3Q"
+  },
+  {
+    "id": "music-230",
+    "title": "飛鳥和蟬",
+    "artist": "任然",
+    "year": 2020,
+    "spotifyId": "4cDVX9pSt4UQEVbbXKodW6",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736acb4401ee683e6869c2085e",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Sdh16YlinNE"
+  },
+  {
+    "id": "music-231",
+    "title": "星辰大海",
+    "artist": "黃霄雲",
+    "year": 2021,
+    "spotifyId": "37ugDnt4m4BSm0VAFwd5Li",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f4c4ce6bcdd614daccfbfc25",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "nInB4ncDxTQ"
+  },
+  {
+    "id": "music-232",
+    "title": "E先生連環不幸事件",
+    "artist": "呂爵安 (Edan Lui)",
+    "year": 2021,
+    "spotifyId": "06sDxr7MbbwFyTP1f6rvvl",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735057527efcd068ed0605b187",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "7FPL4DRizgk"
+  },
+  {
+    "id": "music-233",
+    "title": "明室",
+    "artist": "洪佩瑜",
+    "year": 2022,
+    "spotifyId": "61rAMMOHksE6rLlkWnXV9m",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736825fb538c7d9a357aabcfdf",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "YCsPVWEicbg"
+  },
+  {
+    "id": "music-234",
+    "title": "小心地滑",
+    "artist": "張天賦",
+    "year": 2022,
+    "spotifyId": "5awK4mHW8B2bCuX8G0Grvb",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27341da81f167e0b702fabbac1d",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "FlsxLlozYdw"
+  },
+  {
+    "id": "music-235",
+    "title": "眼淚記得你",
+    "artist": "孫盛希",
+    "year": 2023,
+    "spotifyId": "0USeB0Tykai3QZj5YAUclG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273162f07a534e697ed177d8085",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "07hpRRx4xMg"
+  },
+  {
+    "id": "music-236",
+    "title": "世一",
+    "artist": "MC 張天賦",
+    "year": 2023,
+    "spotifyId": "3IxGmKdOkv7tgMCzyKF2Xm",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27341da81f167e0b702fabbac1d",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "ESmaELNy8GE"
+  },
+  {
+    "id": "music-237",
+    "title": "星期五晚上",
+    "artist": "Energy",
+    "year": 2024,
+    "spotifyId": "7JKYx62KGXytK27ZInyAHG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f22371e53d5b4f5e93ccc89b",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "btPv0-d3NbE"
+  },
+  {
+    "id": "music-238",
+    "title": "感情用事",
+    "artist": "王心凌",
+    "year": 2024,
+    "spotifyId": "1MzomU1zM1oEuyIAJ1upfu",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738c13124f3f9be8242edcd69f",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "WU5OVdrdRfo"
+  },
+  {
+    "id": "music-239",
+    "title": "跳樓機",
+    "artist": "LBI利比",
+    "year": 2025,
+    "spotifyId": "1XZE0InCx3SdCnLpVsPpZl",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27365bcb498250d15917f92464f",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "HegSBovl24I"
+  },
+  {
+    "id": "music-240",
+    "title": "珠玉",
+    "artist": "單依純",
+    "year": 2025,
+    "spotifyId": "2V42jeCmAOTdV1C4tSRWgJ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a4fd5a3021fe0e17e5e723a",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "iy8-IviW3Qo"
+  },
+  {
+    "id": "music-241",
+    "title": "總有一顆屬於你的星球",
+    "artist": "Solar (솔라), 告五人",
+    "year": 2026,
+    "spotifyId": "43wspxaX8tKNjkjN8A4Xl5",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a8745f2e76bfe3e1224bd0bc",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "RcU8cCdhNp4"
+  },
+  {
+    "id": "music-242",
+    "title": "夏天的思念",
+    "artist": "王識賢",
+    "year": 2026,
+    "spotifyId": "1U3mv8kS6Cu3fV7eXRBgHK",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d8e65858e4e6e55716fadb45",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "m_F-KvPk7nw"
+  },
+  {
+    "id": "music-243",
+    "title": "金包銀",
+    "artist": "蔡秋鳳",
+    "year": 1990,
+    "spotifyId": "33t5PhIV3slvYyMDOcrkBC",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e90e749777e8907873e6eec8",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "6R2yfAOYRlw"
+  },
+  {
+    "id": "music-244",
+    "title": "滾滾紅塵",
+    "artist": "陳淑樺",
+    "year": 1990,
+    "spotifyId": "5OqJ4AKkzOQLF0zOLvm7YT",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2737276055e233e21458a66f119",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "qVm3GdOd2P8"
+  },
+  {
+    "id": "music-245",
+    "title": "哭砂",
+    "artist": "黃鶯鶯",
+    "year": 1990,
+    "spotifyId": "240AkEtInwSJhgZ3liTgYc",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27312b6d1326217d6a3285b85dc",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "p4YkHQrPt2I"
+  },
+  {
+    "id": "music-246",
+    "title": "相逢何必曾相識",
+    "artist": "韋綺姍 / 李龍基",
+    "year": 1990,
+    "spotifyId": "0AfdWOK4xEdfBGVilQ1z4W",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273164a475cdb6494e42e650d43",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "dTtxd7Fzsvo"
+  },
+  {
+    "id": "music-247",
+    "title": "我是不是該安靜的走開",
+    "artist": "郭富城",
+    "year": 1991,
+    "spotifyId": "6D3T0boXNLHNkNIFZ6BLNU",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735588bca42000fd1ec828bf3c",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "sC4zXrm337w"
+  },
+  {
+    "id": "music-248",
+    "title": "Lonely",
+    "artist": "草蜢",
+    "year": 1991,
+    "spotifyId": "1OpQ6wBWu3JPXxVNoV79Ny",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730a7112812648bebb99fc7771",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "sTb7Hwp0JqU"
+  },
+  {
+    "id": "music-249",
+    "title": "似是故人來",
+    "artist": "梅艷芳",
+    "year": 1991,
+    "spotifyId": "6eBh2ulCWTS3ZVtZIPuxeH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734c56368ec8cb38181565e17c",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "HIIqp9Rhayo"
+  },
+  {
+    "id": "music-250",
+    "title": "水手",
+    "artist": "鄭智化",
+    "year": 1992,
+    "spotifyId": "3xRNwjF4BkUxQmrBAXes6g",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27351d9f9d072dab92195d34287",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "P1JUS4emI2s"
+  },
+  {
+    "id": "music-251",
+    "title": "飄雪",
+    "artist": "陳慧嫻",
+    "year": 1992,
+    "spotifyId": "3QlusKT6cJtiVNQakKTYAw",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c774a8367682b67d6e040def",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "oGTEVhr6-5E"
+  },
+  {
+    "id": "music-252",
+    "title": "冬季到台北來看雨",
+    "artist": "孟庭葦",
+    "year": 1992,
+    "spotifyId": "59db3kNoPFmph8WgnGRzw0",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d5ab4129c0c80e33c924550d",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "7FmPOAvHS7Y"
+  },
+  {
+    "id": "music-253",
+    "title": "春風少年兄",
+    "artist": "林強",
+    "year": 1992,
+    "spotifyId": "5QAk3pLRdud29kkXx8wfJd",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730829310b1babd23f0d3109e2",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "aXOqPZdDeRE"
+  },
+  {
+    "id": "music-254",
+    "title": "濤聲依舊",
+    "artist": "毛寧",
+    "year": 1992,
+    "spotifyId": "1ylsn0xEPDRCt1SsOu9pfH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27363be41e66ecd45564823166e",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "1fT5g8Hzf4E"
+  },
+  {
+    "id": "music-255",
+    "title": "用心良苦",
+    "artist": "張宇",
+    "year": 1993,
+    "spotifyId": "7bQ0virCxnDvvoRUjKLheW",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c227a9973d3c54e1abca93b1",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "O211TLekHUc"
+  },
+  {
+    "id": "music-256",
+    "title": "愛如潮水",
+    "artist": "張信哲",
+    "year": 1993,
+    "spotifyId": "0OOIgBn2ba6BQLInoUuZnj",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27318d1105d2c3ab78bc3a10659",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "LPl420bwG8c"
+  },
+  {
+    "id": "music-257",
+    "title": "別問我是誰",
+    "artist": "王馨平",
+    "year": 1993,
+    "spotifyId": "7z5NROqfoKWPlK9RQzpUQY",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273dd5918d55c2f885f92295cda",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "0rRod8uGSFo"
+  },
+  {
+    "id": "music-258",
+    "title": "一人有一個夢想",
+    "artist": "黎瑞恩",
+    "year": 1993,
+    "spotifyId": "5bRt9Vs7UPznXM6EfBhiZ1",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2737f4d221cef1c9427de626d28",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "O3kHJHGZMrw"
+  },
+  {
+    "id": "music-259",
+    "title": "少年游",
+    "artist": "優客李林",
+    "year": 1993,
+    "spotifyId": "2MIKmTsLhRBuYhZI0wCpYy",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ffcee7e812fb98d61a376bfb",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "1mOQ5itWpzg"
+  },
+  {
+    "id": "music-260",
+    "title": "太傻",
+    "artist": "巫啟賢",
+    "year": 1994,
+    "spotifyId": "5hMFr5j0btsmS56acvkVwG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ce78564d60222381eaea1eb3",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "8lBJOeLoSJI"
+  },
+  {
+    "id": "music-261",
+    "title": "那有一天不想你",
+    "artist": "黎明",
+    "year": 1994,
+    "spotifyId": "7InK7RDnZAJUgsKfNtbSVQ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733e96ef99f61d2fbc2f4de9fc",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "9-GBO3ovtIQ"
+  },
+  {
+    "id": "music-262",
+    "title": "最浪漫的事",
+    "artist": "趙詠華",
+    "year": 1994,
+    "spotifyId": "5E5iiAjLdZ6aAoV6oXluQO",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273038da23f1c9ede588f07fece",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "VmeM46a3IDc"
+  },
+  {
+    "id": "music-263",
+    "title": "愛江山更愛美人",
+    "artist": "李麗芬",
+    "year": 1994,
+    "spotifyId": "3Vk5iJOtG6ny2L5uAIzcoj",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739272368347bcbe320d936c92",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "9oJoVtKoCzA"
+  },
+  {
+    "id": "music-264",
+    "title": "茫茫到深更",
+    "artist": "羅時豐",
+    "year": 1994,
+    "spotifyId": "4mTZQvYs0QrcMqNo9xNd5X",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2737e6c8f7cae97fb60c2a66f5e",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "mkF-SCcsw_w"
+  },
+  {
+    "id": "music-265",
+    "title": "白天不懂夜的黑",
+    "artist": "那英",
+    "year": 1995,
+    "spotifyId": "5aHDLo1MY6y15fWz1BfK2M",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ddce3c26279ffa43351ef311",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "KheDK8lO0Qc"
+  },
+  {
+    "id": "music-267",
+    "title": "滿足",
+    "artist": "蘇慧倫",
+    "year": 1995,
+    "spotifyId": "0xvAAS5Ap9u6hqV2slJil2",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733c4fd9fb5678276349be69dc",
+    "tags": [
+      "1990s",
+      "chinese"
+    ],
+    "difficulty": "medium",
+    "youtubeId": "2ycw7yiTKfk"
+  },
+  {
+    "id": "music-270",
+    "title": "活著VIVA",
+    "artist": "謝霆鋒",
+    "year": 2000,
+    "spotifyId": "4qmUx3yvJOt9Jktzr6Kvh0",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735cf42c3dae0af5a0f4e17433",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "tZKFGmks6hA"
+  },
+  {
+    "id": "music-271",
+    "title": "灰姑娘",
+    "artist": "梁詠琪",
+    "year": 2000,
+    "spotifyId": "6VGlD9ot0bY1AeLqA5w0Ps",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739274fb9a3d44c1b3027ce8f6",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "r8Aur5Oloq0"
+  },
+  {
+    "id": "music-272",
+    "title": "你要的愛",
+    "artist": "戴佩妮",
+    "year": 2000,
+    "spotifyId": "2AwYywTNbeiWqQcLqt8UwP",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ba16f5c6c4e2d873996a81a7",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "oV5wT-ps9DI"
+  },
+  {
+    "id": "music-273",
+    "title": "戀上一個人",
+    "artist": "游鴻明",
+    "year": 2000,
+    "spotifyId": "3TVgJsWLPvh9qyCtjPXgJG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734dbfa430149d9103daffdbee",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "sSXmdwk_v-Y"
+  },
+  {
+    "id": "music-275",
+    "title": "流星雨",
+    "artist": "F4",
+    "year": 2001,
+    "spotifyId": "1hPNdCII2b8NOEIqwbbsdG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273b4d2d987314808ac34a90996",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "ocTdA8NytIc"
+  },
+  {
+    "id": "music-276",
+    "title": "第一次",
+    "artist": "光良",
+    "year": 2001,
+    "spotifyId": "2PXhHrVL1HkKk4fto9D8zE",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273587fbee0b9d7903024e06c61",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "rFsn1tzhcHk"
+  },
+  {
+    "id": "music-277",
+    "title": "爛泥",
+    "artist": "許志安",
+    "year": 2001,
+    "spotifyId": "32Qnykz8DGD3gy48tWZJTI",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273cdf65fe232c6ea5432c9f5ed",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "2l1rGDkQejI"
+  },
+  {
+    "id": "music-278",
+    "title": "戀愛大過天",
+    "artist": "Twins",
+    "year": 2001,
+    "spotifyId": "1osjpQP9fzvEbznF8Ev4pl",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a2deab44bf597a7f0c9652ba",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "F3P5WsIjvrM"
+  },
+  {
+    "id": "music-279",
+    "title": "親愛的你怎麼不在身邊",
+    "artist": "江美琪",
+    "year": 2001,
+    "spotifyId": "3d5CdkcQnPcfODJBzjD6It",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273752346198d796c435481c56d",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "H6E6XaVSYgY"
+  },
+  {
+    "id": "music-280",
+    "title": "他一定很爱你",
+    "artist": "阿杜",
+    "year": 2002,
+    "spotifyId": "1n3TbqMfvALAI0BjtiF6Lt",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273fea83ce5f97fef7a71cbf5f3",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "ZUm48lPJPLc"
+  },
+  {
+    "id": "music-281",
+    "title": "街角的祝福",
+    "artist": "戴佩妮",
+    "year": 2002,
+    "spotifyId": "1M5MN2PnMtf7YhnqukD4xa",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734d30db579d1b4ab1cc0bdc54",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "L-YMr0cTH6s"
+  },
+  {
+    "id": "music-282",
+    "title": "好心分手",
+    "artist": "盧巧音",
+    "year": 2002,
+    "spotifyId": "7DQOE8yIchm7bPPvJ0w6Bf",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736e1382844d414fb49117caf1",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "08wk0ePNQEs"
+  },
+  {
+    "id": "music-283",
+    "title": "我難過",
+    "artist": "5566",
+    "year": 2002,
+    "spotifyId": "5OhErxdPrRqTVy81xMDOIS",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27325b4ec378906781191345a9d",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "2l4X4lGP_Zk"
+  },
+  {
+    "id": "music-284",
+    "title": "藍蓮花",
+    "artist": "許巍",
+    "year": 2002,
+    "spotifyId": "24TQIQpKJWp4isMbulvifs",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27327dbed9090ce17c34dd25d79",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "7qnn-h7jaYQ"
+  },
+  {
+    "id": "music-285",
+    "title": "七月七日晴",
+    "artist": "許慧欣",
+    "year": 2003,
+    "spotifyId": "5LCzuZv1gkHsXj6ZY1ugQ4",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c98f42eda371860937ef37ae",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "K5CEaajl94w"
+  },
+  {
+    "id": "music-286",
+    "title": "生如夏花",
+    "artist": "朴樹",
+    "year": 2003,
+    "spotifyId": "4SG8qjxY6pnyS3mJPV1TcI",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734f6093fd6490e08c75638063",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "3E3rWff6eFc"
+  },
+  {
+    "id": "music-287",
+    "title": "下一站天后",
+    "artist": "Twins",
+    "year": 2003,
+    "spotifyId": "3fki2lDDSDz8rHoCZteq3j",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27337df567e7690bfd53f47cba9",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "cPKfUWDmNbo"
+  },
+  {
+    "id": "music-288",
+    "title": "算你狠",
+    "artist": "陳小春",
+    "year": 2003,
+    "spotifyId": "6vRi97fsVtZ4dj8qC7eoUr",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2731158310e4a6ab67b8ed3db80",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "xlLM6W7iRUI"
+  },
+  {
+    "id": "music-289",
+    "title": "歐若拉",
+    "artist": "張韶涵",
+    "year": 2004,
+    "spotifyId": "7fIP72hHPvNFI8XPYsxwQ9",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d30c8aef90942ef304ca12f4",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "dmwJaG-R1iM"
+  },
+  {
+    "id": "music-290",
+    "title": "瓦解",
+    "artist": "南拳媽媽",
+    "year": 2004,
+    "spotifyId": "3TNTZ9OpTSsiEqcEsUBSND",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273aabab7480a4ea737625a068c",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "znoweoouEvg"
+  },
+  {
+    "id": "music-291",
+    "title": "當你孤單你會想起誰",
+    "artist": "張棟樑",
+    "year": 2004,
+    "spotifyId": "558dTfMGywYbzFX0zVU4aC",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c829265964ebd8964299c409",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "5LhKG8ucAF8"
+  },
+  {
+    "id": "music-292",
+    "title": "梔子花開",
+    "artist": "何炅",
+    "year": 2004,
+    "spotifyId": "1tRM87wwuyI3bCYMYgv2ml",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27333590e40987be3985777d3b9",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "llaSLqhCQGw"
+  },
+  {
+    "id": "music-293",
+    "title": "男人海洋",
+    "artist": "周傳雄",
+    "year": 2004,
+    "spotifyId": "7zAlSsfPteOgBzaX9fm9DF",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27345f8dd4788ee412bfb5a97be",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "vl0zkkptSlY"
+  },
+  {
+    "id": "music-294",
+    "title": "那女孩對我說",
+    "artist": "黃義達",
+    "year": 2005,
+    "spotifyId": "4lD40vyG33AcLiftmxQSC8",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735892c98137afa9511d81d46f",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "AeWWFxplRC4"
+  },
+  {
+    "id": "music-295",
+    "title": "不得不愛",
+    "artist": "潘瑋柏 feat. 弦子",
+    "year": 2005,
+    "spotifyId": "3TYzES2lL8BTPE4uudj0Hj",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273aff76eaae50a7890976dd720",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "wuwbok3wlGE"
+  },
+  {
+    "id": "music-296",
+    "title": "旅行的意義",
+    "artist": "陳綺貞",
+    "year": 2005,
+    "spotifyId": "0kcYzEvagMWsp9wL6RxW90",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d8832d0133d9f6bf0aad2cce",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "tv95k0zqnaA"
+  },
+  {
+    "id": "music-297",
+    "title": "練舞功",
+    "artist": "謝金燕",
+    "year": 2005,
+    "spotifyId": "5vvgDPcKzZ9MwY4Simsddl",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273417f918bf6c9703269a96cda",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "EBBw4fBZRTg"
+  },
+  {
+    "id": "music-298",
+    "title": "黑的意念",
+    "artist": "黃立行",
+    "year": 2005,
+    "spotifyId": "2e0Lxpf3VFlxRP3DjLSzQz",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ecc5421bc994d8665641feda",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "9xocb4r41eQ"
+  },
+  {
+    "id": "music-299",
+    "title": "認真的雪",
+    "artist": "薛之謙",
+    "year": 2006,
+    "spotifyId": "2ukWUxS1rgl8erHlCjoYzb",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27398364b51ba00be9d180fa16d",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "N-wMiGPs4m4"
+  },
+  {
+    "id": "music-300",
+    "title": "寶貝 (In the Night)",
+    "artist": "張懸",
+    "year": 2006,
+    "spotifyId": "1G9KctNOyAM8wMkCFhR3EZ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738f0985c08bb3f664ce8a7f26",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "A2INEZWY9VU"
+  },
+  {
+    "id": "music-301",
+    "title": "失戀無罪",
+    "artist": "A-Lin",
+    "year": 2006,
+    "spotifyId": "2s96YKKpfBUbQP3lJuhkfX",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273477599cfd11f3b0d31727288",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "lmFlqWPzl-E"
+  },
+  {
+    "id": "music-303",
+    "title": "有沒有人告訴你",
+    "artist": "陳楚生",
+    "year": 2007,
+    "spotifyId": "1zuznbi4cpVkWfyclfYbTB",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273b4b753cf812c5092ec812209",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "rGEb05NjCR4"
+  },
+  {
+    "id": "music-304",
+    "title": "我不想忘記你",
+    "artist": "郭靜",
+    "year": 2007,
+    "spotifyId": "6sNXFtBPUvyFWEjSZhEwbd",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2737f7ebc5c3b8cce1e353ad06b",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "K-xda8e2FLc"
+  },
+  {
+    "id": "music-305",
+    "title": "酷愛",
+    "artist": "張敬軒",
+    "year": 2007,
+    "spotifyId": "63huDpEdqQBN43UgxhoIcX",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27371cd2b8c2e47caf2b25fc280",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "wOUovyr0icE"
+  },
+  {
+    "id": "music-306",
+    "title": "電燈膽",
+    "artist": "鄧麗欣",
+    "year": 2007,
+    "spotifyId": "1TAz93GRvOHAuKfmoXjWsp",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739db47406c00ea6d33ba62e5e",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "IDywqSyQ3Mc"
+  },
+  {
+    "id": "music-307",
+    "title": "窮開心",
+    "artist": "花兒樂隊",
+    "year": 2007,
+    "spotifyId": "57fqPbwSY4bs8ycxzkek1C",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273bd92032ffcab70a9edde371c",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "-r0pBc1JJK4"
+  },
+  {
+    "id": "music-308",
+    "title": "獨家記憶",
+    "artist": "陳小春",
+    "year": 2008,
+    "spotifyId": "3cSHn8YDBsq4Tlc4RXKSUe",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e1ca932a2cd98a243fba4a4a",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "K4i7UfFSr8k"
+  },
+  {
+    "id": "music-310",
+    "title": "Let's Start From Here",
+    "artist": "王若琳",
+    "year": 2008,
+    "spotifyId": "4LThFOso6YeLtjG6TZUOdh",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273fd06c734c681939f44be01da",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "XEyESh3pblo"
+  },
+  {
+    "id": "music-311",
+    "title": "LOVE SONG",
+    "artist": "方大同",
+    "year": 2008,
+    "spotifyId": "2XEtdVgbgltXfzVQppAkbi",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730bbc8262cb4b28de58cd8663",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Shxik4JT_hE"
+  },
+  {
+    "id": "music-312",
+    "title": "如果我變成回憶",
+    "artist": "TANK 呂建忠",
+    "year": 2009,
+    "spotifyId": "4ZihPLUkdHJZ9XVhxMeFTG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273b5dcedb6825288b7f235a600",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "FGsnxTkWZCU"
+  },
+  {
+    "id": "music-313",
+    "title": "偏愛",
+    "artist": "張芸京",
+    "year": 2009,
+    "spotifyId": "0MKQMuVOTbLnN6sMuie5lC",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273000eded017cda25d29f4d9c5",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "DeJDWU6hYkU"
+  },
+  {
+    "id": "music-314",
+    "title": "越來越愛",
+    "artist": "飛輪海",
+    "year": 2009,
+    "spotifyId": "2Cf6gfTNhQhkbF7r4ze12L",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2737566a0fed7362ecb10203523",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "V5CtQbW0iYQ"
+  },
+  {
+    "id": "music-315",
+    "title": "A.I.N.Y. (愛你)",
+    "artist": "G.E.M. 鄧紫棋",
+    "year": 2009,
+    "spotifyId": "4uGve3vqfumnGsUMtnGumr",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27322801140a531d76dde7739fd",
+    "tags": [
+      "2000s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "-gaB9ov-Om0"
+  },
+  {
+    "id": "music-316",
+    "title": "寂寞寂寞就好",
+    "artist": "田馥甄",
+    "year": 2010,
+    "spotifyId": "73Za3Ote9y5Y02GGjvzvXt",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e9c70da96f03659d7069fde7",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "DyFIzKYQQYE"
+  },
+  {
+    "id": "music-317",
+    "title": "天后",
+    "artist": "陳勢安",
+    "year": 2010,
+    "spotifyId": "4D0KlK4Fl8lotvsoys1bYQ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c45593710081f6364e42960d",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "j6K-lNr360I"
+  },
+  {
+    "id": "music-318",
+    "title": "天梯",
+    "artist": "C AllStar",
+    "year": 2010,
+    "spotifyId": "6hj8n3puSrVaEnKQa6hbWK",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27352c3244b8200d1a0b9c509f7",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "eBvarz3DY00"
+  },
+  {
+    "id": "music-319",
+    "title": "我本人",
+    "artist": "吳雨霏",
+    "year": 2010,
+    "spotifyId": "55z4ZnZNJEJBn9hPrekE4f",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273af008bf6ec6c254e1fbb4939",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "63ZZtZmVwuQ"
+  },
+  {
+    "id": "music-321",
+    "title": "因為愛情",
+    "artist": "王菲 & 陳奕迅",
+    "year": 2011,
+    "spotifyId": "6WOwRdX67b4VKujGIal4tK",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733326073c82569d68cee6bd60",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "VdwAkhNdZi8"
+  },
+  {
+    "id": "music-322",
+    "title": "好的事情",
+    "artist": "嚴爵",
+    "year": 2011,
+    "spotifyId": "6oMCbuCGvSDWsVJdznassw",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e7ece397cf7af6aef4211ce7",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "oVkAseYw_wo"
+  },
+  {
+    "id": "music-323",
+    "title": "微加幸福",
+    "artist": "郁可唯",
+    "year": 2011,
+    "spotifyId": "5um2yasMJpYNCWSU2wKR1W",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273212a5334c04dd0efae4fcc9c",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "wgwIfD9Ihik"
+  },
+  {
+    "id": "music-324",
+    "title": "依然愛你",
+    "artist": "王力宏",
+    "year": 2011,
+    "spotifyId": "2b7O6Tcku6S4vPAVUpCFl0",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27315b7fa2dda6577778c020956",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "sU_ByeHJtw8"
+  },
+  {
+    "id": "music-325",
+    "title": "泡沫",
+    "artist": "鄧紫棋",
+    "year": 2012,
+    "spotifyId": "2IfSPLPDW6RGosdB5huwAA",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739f6a38e4bb9c2f824c215e58",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "GHXr4bBxHCo"
+  },
+  {
+    "id": "music-326",
+    "title": "傻子",
+    "artist": "林宥嘉",
+    "year": 2012,
+    "spotifyId": "4bouIwzPhLnMDSUCOtrP4G",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730daad88c6b77a7eddaeedf4c",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "xi6wOaZ61-U"
+  },
+  {
+    "id": "music-327",
+    "title": "最好的結局",
+    "artist": "八三夭",
+    "year": 2012,
+    "spotifyId": "6KvPToUvepVHeywUtYxm7y",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735366b3d8980beb378d495d80",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "E1tgHfuKMrs"
+  },
+  {
+    "id": "music-328",
+    "title": "思念會驚",
+    "artist": "蕭煌奇",
+    "year": 2012,
+    "spotifyId": "32A5z6Ribq7D21W53krvlk",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734fb1b3127ab26eceb77b305e",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "EtRr4LwcvcI"
+  },
+  {
+    "id": "music-329",
+    "title": "有點甜",
+    "artist": "汪蘇瀧",
+    "year": 2012,
+    "spotifyId": "5W3jFFv3nhHTXAswzjKfPw",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273424a3fc61bf3cc9d78218208",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "OtEJ6LGCW-U"
+  },
+  {
+    "id": "music-330",
+    "title": "其實都沒有",
+    "artist": "楊宗緯",
+    "year": 2013,
+    "spotifyId": "5fOkUkzwuYIs9BjGf3z1Bt",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2739a2861dd3b31a4baa326daac",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "JWIOULj0fxE"
+  },
+  {
+    "id": "music-331",
+    "title": "一千萬次的淚水",
+    "artist": "朱俐靜",
+    "year": 2013,
+    "spotifyId": "4gQLLI4oii6Dt4IpBwIxn6",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273dead9bb135e48e54caa90941",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "VWUbtdKKiSQ"
+  },
+  {
+    "id": "music-332",
+    "title": "不許你注定一人",
+    "artist": "Dear Jane",
+    "year": 2013,
+    "spotifyId": "0B2fMb8KALZeoFbRv7m3iE",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273019dec17514e722fe9c0fab4",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "UppBiK8xpeg"
+  },
+  {
+    "id": "music-333",
+    "title": "親愛的路人",
+    "artist": "劉若英",
+    "year": 2013,
+    "spotifyId": "2xuFvtdpy8Roq3J5q23pvq",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ea6a5d4ecd17aa5d2e09a780",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "5UzWEtOkpCc"
+  },
+  {
+    "id": "music-334",
+    "title": "Come back to me",
+    "artist": "Bii畢書盡",
+    "year": 2013,
+    "spotifyId": "0WdqF7a5oegDVPpD6QPzKZ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c5c13410421a4abe60e75258",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "CRJDQQXS4uE"
+  },
+  {
+    "id": "music-335",
+    "title": "小蘋果",
+    "artist": "筷子兄弟",
+    "year": 2014,
+    "spotifyId": "0ZnxFHRtsl4MgBKuhXoqqe",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735cfc96b11522d738517a07cf",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Hpnub-uM6eo"
+  },
+  {
+    "id": "music-336",
+    "title": "平凡之路",
+    "artist": "朴樹",
+    "year": 2014,
+    "spotifyId": "3YFGh5Kga1K40yUhuCVffM",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730774b7bf251583021114dd50",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "ecTSlaNM0Z0"
+  },
+  {
+    "id": "music-337",
+    "title": "尋人啟事",
+    "artist": "徐佳瑩",
+    "year": 2014,
+    "spotifyId": "19HCkAp2iAqwpJ5xA3YykX",
+    "albumArt": "https://i.scdn.co/image/1bb84849ea36e676e80b1c71c5302d695419b8d1",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "TPzyzi-Jydc"
+  },
+  {
+    "id": "music-338",
+    "title": "青春常駐",
+    "artist": "張敬軒",
+    "year": 2014,
+    "spotifyId": "0doiPBTd9nPCnraNwAxfTC",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273359296829bff3040b080c0e7",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "sFjLsF_oA3E"
+  },
+  {
+    "id": "music-339",
+    "title": "上水的花",
+    "artist": "蕭煌奇",
+    "year": 2014,
+    "spotifyId": "6ZbYUfTgChCzvxMpOxiJn4",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e6baa14c30d643b9060b1676",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "W4dOifzE6R4"
+  },
+  {
+    "id": "music-340",
+    "title": "演員",
+    "artist": "薛之謙",
+    "year": 2015,
+    "spotifyId": "5Sib99jpYybZAicUMETb3h",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273b561e8f785c92e136f37cd08",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "XaN3kUz4KSw"
+  },
+  {
+    "id": "music-341",
+    "title": "樣 (YOUNG)",
+    "artist": "TFBOYS",
+    "year": 2015,
+    "spotifyId": "0yiQHp0XPLlGWyGAxlY2gy",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b9bcb0efc5c52af936e92a8",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "aPP1GULNbjk"
+  },
+  {
+    "id": "music-342",
+    "title": "信愛成癮",
+    "artist": "陳嘉樺",
+    "year": 2015,
+    "spotifyId": "1e3revlbqWb7wn8TvXaQz8",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f5a45d3694deba6f5094c041",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "M6bu1SNBhTo"
+  },
+  {
+    "id": "music-343",
+    "title": "不孤島",
+    "artist": "宇宙人",
+    "year": 2015,
+    "spotifyId": "6OaPS1jr6CdTPElbxSfGSy",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273067801fbe5eb4a463da4da1a",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "AHeHF9Bz458"
+  },
+  {
+    "id": "music-344",
+    "title": "孤獨的總和",
+    "artist": "吳汶芳",
+    "year": 2015,
+    "spotifyId": "0ijLRtzsHLaVub64tznzHH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27336ca66e9d748d81c19b313e6",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "90xQdZ4WmLA"
+  },
+  {
+    "id": "music-345",
+    "title": "微微一笑很傾城",
+    "artist": "楊洋",
+    "year": 2016,
+    "spotifyId": "67UmmvDAlOdU36yP3TmSdE",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ae1fff948263a9b63ea92fd8",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "yF5k5kDJNgk"
+  },
+  {
+    "id": "music-346",
+    "title": "是我不夠好",
+    "artist": "李毓芬",
+    "year": 2016,
+    "spotifyId": "1rAywAtbOxHszio4OTwYPf",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733b0769551f22bbd9bcf50b5c",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "BsvIwqyiaJw"
+  },
+  {
+    "id": "music-347",
+    "title": "FLY OUT",
+    "artist": "兄弟本色G.U.T.S.",
+    "year": 2016,
+    "spotifyId": "11mB5vkSy4HeR6ROPNAYzW",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273178bcb615c8d046008b91f99",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "-sM8SynMM5I"
+  },
+  {
+    "id": "music-348",
+    "title": "女神",
+    "artist": "鄭欣宜",
+    "year": 2016,
+    "spotifyId": "47MN8iVKji2TUL2DOnXpgJ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27383dea3a9297affc2042b08f5",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "EbJhct_HTu8"
+  },
+  {
+    "id": "music-349",
+    "title": "嘻哈庄腳情",
+    "artist": "玖壹壹 / Lulu黃路梓茵",
+    "year": 2016,
+    "spotifyId": "4CUVSWJMrLepqFgBQbBBCB",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273dbe6794a4afcafc06291b751",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "JvkqZrYJUe8"
+  },
+  {
+    "id": "music-350",
+    "title": "無表面傷痕",
+    "artist": "鄭欣宜",
+    "year": 2017,
+    "spotifyId": "4186l4RX4q08uBI7lHtnG9",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f0dd9dad89b65cce363d50ce",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "fdPP1aVU-jE"
+  },
+  {
+    "id": "music-351",
+    "title": "三生三世",
+    "artist": "張杰",
+    "year": 2017,
+    "spotifyId": "6vyx2fi4ThuLTvRUlymjmG",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273fe5f91871f3028dd5ca31da1",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "wdtEWS2D9xo"
+  },
+  {
+    "id": "music-352",
+    "title": "家家酒",
+    "artist": "家家",
+    "year": 2017,
+    "spotifyId": "6mO5fCJKvB9tr5RAFvBO7z",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d8946e4e14cbce7eb4a2d7c5",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "T-Xk_xirUlo"
+  },
+  {
+    "id": "music-353",
+    "title": "C3PO",
+    "artist": "李克勤",
+    "year": 2017,
+    "spotifyId": "18BLNafwAjUQhmWXx3BY7E",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27360edc7fc7ced0676feb1eba1",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "rB9nToIV3WI"
+  },
+  {
+    "id": "music-354",
+    "title": "現在就讓我走",
+    "artist": "宇宙人",
+    "year": 2017,
+    "spotifyId": "3Fen3xxgbBoybWOZA9BbQn",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27316e7eb20ff57009e8f04cb6f",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "HJjQ-D5AANY"
+  },
+  {
+    "id": "music-355",
+    "title": "沙漠駱駝",
+    "artist": "展展與羅羅",
+    "year": 2018,
+    "spotifyId": "3hqiyTQk3P2e8nuAasNirK",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ec53da0d71e421acbf75e297",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "BYgh1-JgTnY"
+  },
+  {
+    "id": "music-356",
+    "title": "別廢話",
+    "artist": "袁婭維TIA RAY",
+    "year": 2018,
+    "spotifyId": "5J6VuORfJF1sByc8m2woNY",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27381237f162a838b5f73c87de6",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "W2fc8QE_pUQ"
+  },
+  {
+    "id": "music-357",
+    "title": "幹大事",
+    "artist": "頑童MJ116",
+    "year": 2018,
+    "spotifyId": "5kmwHTRCdyT8E9vDGRKy7X",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27305570f9f5557d730d86a777f",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "COS0pHrCi0k"
+  },
+  {
+    "id": "music-358",
+    "title": "假使世界原來不像你預期",
+    "artist": "方皓玟",
+    "year": 2018,
+    "spotifyId": "0JqIVpSbGstd8xDniWAi3r",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273457a7746de40433acb705f73",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "4sg-K53kODE"
+  },
+  {
+    "id": "music-359",
+    "title": "Will You Remember Me",
+    "artist": "李玖哲",
+    "year": 2018,
+    "spotifyId": "5uRmQQ9CqHrrSBeF16k7rw",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734d97a105f884efd52f2cae08",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Qly4kNtckkg"
+  },
+  {
+    "id": "music-360",
+    "title": "愛人錯過",
+    "artist": "告五人",
+    "year": 2019,
+    "spotifyId": "27FOde2nUw0pFuj7hlPbaS",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2737a2aff746e4093fecd950130",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "6D79CYTxvOM"
+  },
+  {
+    "id": "music-361",
+    "title": "查某囡仔",
+    "artist": "李千娜",
+    "year": 2019,
+    "spotifyId": "6ZDoaVTXy9kl3Ir8MQ8Gnx",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27399ab6e88fcfe946bd175e292",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Ez7sOZ2CTbQ"
+  },
+  {
+    "id": "music-362",
+    "title": "怎麼了",
+    "artist": "周興哲",
+    "year": 2019,
+    "spotifyId": "5cU1O9P0EDA0rPkPDykhIm",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273540dd1971439c343972a92b7",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Y2ge3KrdeWs"
+  },
+  {
+    "id": "music-363",
+    "title": "句號",
+    "artist": "鄧紫棋",
+    "year": 2019,
+    "spotifyId": "66YKSygcUZHHqHJZcWslI3",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273a86c7932c5072d2221907af1",
+    "tags": [
+      "2010s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "7XlqcS6B7WA"
+  },
+  {
+    "id": "music-364",
+    "title": "你的答案",
+    "artist": "阿冗",
+    "year": 2020,
+    "spotifyId": "4QWSICaQ6LGmcS8qX9lNVh",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2732ea8833f69f77ec4eec7ce70",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "ye4jAQ0uxcQ"
+  },
+  {
+    "id": "music-365",
+    "title": "CHANGE.",
+    "artist": "瘦子E.SO",
+    "year": 2020,
+    "spotifyId": "4E5PyVOBH25CICgTURwGXM",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273ccce43a832568d049049fb2c",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "HTRQ0n4yjfs"
+  },
+  {
+    "id": "music-366",
+    "title": "愛上現在的我",
+    "artist": "閻奕格",
+    "year": 2020,
+    "spotifyId": "0pjX0ZNeiLXEtcn5RZc5jb",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273f2c36090997731060656ab51",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "KvwY9DN7LxY"
+  },
+  {
+    "id": "music-367",
+    "title": "別人的",
+    "artist": "徐若瑄",
+    "year": 2020,
+    "spotifyId": "4kRxP0UA2fg8LqGHj3lZVZ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738800978179ace490c036ab42",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "GyrpNE9Vgh8"
+  },
+  {
+    "id": "music-368",
+    "title": "銀河修理員",
+    "artist": "Dear Jane",
+    "year": 2020,
+    "spotifyId": "0pupuSkMBGpzsqG3fWcyPe",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9ce0c84d84082a7438ccdb7",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "sg8V5BLMEhE"
+  },
+  {
+    "id": "music-369",
+    "title": "漠河舞廳",
+    "artist": "柳爽",
+    "year": 2021,
+    "spotifyId": "3VFkmg98EP0wrZs9CmkWkQ",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735922ecce4490b8d221b786d5",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "lNwb4TCVBK8"
+  },
+  {
+    "id": "music-370",
+    "title": "熱愛105°C的你",
+    "artist": "阿肆",
+    "year": 2021,
+    "spotifyId": "5ws4FF3bV5sXUwDUyZ8lnH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735ad385b1d970cd88397f8eb4",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "PKmyT7oYWKM"
+  },
+  {
+    "id": "music-371",
+    "title": "反對無效",
+    "artist": "MC 張天賦",
+    "year": 2021,
+    "spotifyId": "2P5Eeh29qJrYa1T27cdL3B",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c476a736b90f0d4a920d2ef0",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "L67zi-8wBXo"
+  },
+  {
+    "id": "music-372",
+    "title": "莎喲娜拉",
+    "artist": "旺福",
+    "year": 2021,
+    "spotifyId": "5s9vuxFe9QrReoMHkf6wdK",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2738b6ba873b30582a93449feaa",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "jLMWGTJInZo"
+  },
+  {
+    "id": "music-374",
+    "title": "滅人山",
+    "artist": "黃連煜",
+    "year": 2022,
+    "spotifyId": "5XYIrq63AAOXkzbC5FuzQM",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e622dff8b005f22f1144f7c9",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "0LwM_2h-HGc"
+  },
+  {
+    "id": "music-375",
+    "title": "終究還是因為愛",
+    "artist": "TRASH",
+    "year": 2022,
+    "spotifyId": "53yiHIP3ptxWtT4ambRcgb",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2733a0276e0c6fa6ca6dcc5ac50",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "fl1Wbd-ldMQ"
+  },
+  {
+    "id": "music-376",
+    "title": "某種老朋友",
+    "artist": "林家謙",
+    "year": 2022,
+    "spotifyId": "4c9hHw1PUYXHfKFASXo8H0",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273c912341be9093425498e3ffc",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "bvhbM0JGsx4"
+  },
+  {
+    "id": "music-377",
+    "title": "世界與你無關",
+    "artist": "陳蕾",
+    "year": 2022,
+    "spotifyId": "2L2HN8waNS9brDRjKBpYd0",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730bb724875c5b2ad57f6a2b8f",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "fN6eXrbxQFI"
+  },
+  {
+    "id": "music-378",
+    "title": "數到十",
+    "artist": "Lolly Talk",
+    "year": 2022,
+    "spotifyId": "6rTFggXwImkDdz6ZqseDSX",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273957efe3ebbd585aacb5c9b5f",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "9Q-lceCpldM"
+  },
+  {
+    "id": "music-379",
+    "title": "我會等",
+    "artist": "承桓",
+    "year": 2023,
+    "spotifyId": "5Rzpn60KTM11EBETHaF9Kt",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2735acf144a78b1c2ada7a3060b",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "-eGMo7S6yMI"
+  },
+  {
+    "id": "music-380",
+    "title": "羅剎海市",
+    "artist": "刀郎",
+    "year": 2023,
+    "spotifyId": "2oa3LISllwPhnB8XWkqx4H",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273354ae76ef3f459433bef9082",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "sjstsUSgRIc"
+  },
+  {
+    "id": "music-381",
+    "title": "伊的身邊已經有別人2023",
+    "artist": "許富凱, 血肉果汁機",
+    "year": 2023,
+    "spotifyId": "2FpYbwYtGA5a4RUvGY2T6L",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273bedfd0a7ce4996ec497c5166",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "zKeBFUgxdsI"
+  },
+  {
+    "id": "music-382",
+    "title": "無能為力",
+    "artist": "泳兒",
+    "year": 2023,
+    "spotifyId": "33GjUsP4FAkk8sHcHJiN2e",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27384a06f5726216f52e5ea0a75",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "EPYCIxnls0I"
+  },
+  {
+    "id": "music-383",
+    "title": "到底我算什麼",
+    "artist": "麋先生",
+    "year": 2024,
+    "spotifyId": "400I9zCPEcazwQFxtIuiPO",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273239affa70272f71dc661caff",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "zgut0inqhSA"
+  },
+  {
+    "id": "music-384",
+    "title": "願望清單",
+    "artist": "陳嘉樺",
+    "year": 2024,
+    "spotifyId": "62zFqsI1wnVQSITris9khc",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2731e1846915200cb030e18ac22",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "x7QOqSFEUls"
+  },
+  {
+    "id": "music-385",
+    "title": "運轉人生",
+    "artist": "邱軍",
+    "year": 2024,
+    "spotifyId": "30slz6D2PtbwDimGJaEVsH",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2734e5591f98235db2eeff10768",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "x-OinY-8bxc"
+  },
+  {
+    "id": "music-386",
+    "title": "黑玻璃",
+    "artist": "洪嘉豪",
+    "year": 2024,
+    "spotifyId": "6eK3D9wcJhv7RDtpsqPBXs",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273cd45451950a6f641d83f5a13",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "Rp4iHpTvBY8"
+  },
+  {
+    "id": "music-387",
+    "title": "用背脊唱情歌",
+    "artist": "Gareth.T",
+    "year": 2025,
+    "spotifyId": "1jQp4mCBDmXr8NMqsMpH8E",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273724045f9b6a2d9a2a0394c83",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "falq0Gr3rc0"
+  },
+  {
+    "id": "music-388",
+    "title": "Big Cars",
+    "artist": "JACE",
+    "year": 2025,
+    "spotifyId": "205Sa48O0O0Ul22ZeJAdXO",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730b415caf3da61cb094393761",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "kG2wwUupdz0"
+  },
+  {
+    "id": "music-390",
+    "title": "你還是你嗎",
+    "artist": "魏如萱 (Waa Wei)",
+    "year": 2025,
+    "spotifyId": "0uzGIrqzEG1Nb7p5sEAJc0",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b27314863f869cb2728ca52f6760",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "BmPVLl1wQjo"
+  },
+  {
+    "id": "music-391",
+    "title": "若無你我欲去佗位",
+    "artist": "黃奇斌",
+    "year": 2025,
+    "spotifyId": "76EfpqmO6JUL2TTR1SIGwz",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2736c4b884cac26028093ca1838",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "785sf7xodmY"
+  },
+  {
+    "id": "music-392",
+    "title": "飛瀑而下",
+    "artist": "孫燕姿",
+    "year": 2026,
+    "spotifyId": "4hSJqNfEZAPT9IJzGUtfmg",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273b8ea968d904c86cee23f4c43",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "zjcltw4Fi0w"
+  },
+  {
+    "id": "music-393",
+    "title": "獨一無二的美麗",
+    "artist": "浮花樂隊",
+    "year": 2026,
+    "spotifyId": "6ejvLALb1984ILa1fuCID4",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273d9cf271974ade8c28a2ddc59",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "catpLpGals0"
+  },
+  {
+    "id": "music-394",
+    "title": "回歸一塊小石頭",
+    "artist": "楊千嬅",
+    "year": 2026,
+    "spotifyId": "4toSxFiU203HNYzelGsEyB",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b273e1bd85906b84447caa354dea",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "DyE9wuFMLX4"
+  },
+  {
+    "id": "music-395",
+    "title": "單程票",
+    "artist": "派偉俊",
+    "year": 2026,
+    "spotifyId": "1Y75eWEIVy1Efa1p1fySRC",
+    "albumArt": "https://i.scdn.co/image/ab67616d0000b2730ef6c1912d58ee29f80479a2",
+    "tags": [
+      "2020s",
+      "chinese"
+    ],
+    "difficulty": "easy",
+    "youtubeId": "QVs13AMJAMY"
+  }
+]
