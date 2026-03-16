@@ -11266,15 +11266,23 @@
             "artist": "System",
             "year": 2012,
             "position": 0
+          },
+          {
+            "id": "card-ff281a40-c606-4703-8774-56829cf48070",
+            "musicId": "music-1559",
+            "title": "POW (파우) 'Come True (feat. 신온유 of 신인류)' M/V",
+            "artist": "POW (파우) 'Come True (feat. 신온유 of 신인류)'",
+            "year": 2026,
+            "position": 1
           }
         ],
-        "isCurrentPlayer": true,
+        "isCurrentPlayer": false,
         "guessedCorrectSongInRound": false
       },
       {
         "id": "player-a5a63a3b-8701-415d-aa43-c69cc5a6702f",
         "name": "晨",
-        "tokens": 2,
+        "tokens": 3,
         "cards": [
           {
             "id": "card-9f10dd81-4d5d-49f2-942c-57c569be8c52",
@@ -11283,22 +11291,35 @@
             "artist": "System",
             "year": 2012,
             "position": 0
+          },
+          {
+            "id": "card-f8eef2f8-90b8-45ab-bd21-b5a4686e9827",
+            "musicId": "music-1932",
+            "title": "蔡依林 Jolin Tsai《心引力》 (feat.王俊凱) Official Live Music Video",
+            "artist": "蔡依林",
+            "year": 2024,
+            "position": 1
           }
         ],
-        "isCurrentPlayer": false,
-        "guessedCorrectSongInRound": false
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": true
       }
     ],
     "currentRound": {
-      "roundNumber": 1,
-      "currentPlayer": "player-956f605d-0acd-4b19-9f9e-0fa6b31eb274",
-      "musicId": "music-1559",
-      "phase": "song_guess",
-      "usedMusicIds": [],
+      "roundNumber": 2,
+      "currentPlayer": "player-a5a63a3b-8701-415d-aa43-c69cc5a6702f",
+      "musicId": "music-1932",
+      "phase": "round_end",
+      "usedMusicIds": [
+        "music-1932"
+      ],
       "startingPlayerId": "player-956f605d-0acd-4b19-9f9e-0fa6b31eb274",
-      "turnIndex": 0
+      "turnIndex": 1,
+      "correctGuessPlayer": "player-a5a63a3b-8701-415d-aa43-c69cc5a6702f",
+      "placedPosition": 1,
+      "placementWrong": false
     },
     "createdAt": "2026-03-16T10:38:27.651Z",
-    "updatedAt": "2026-03-16T10:38:27.682Z"
+    "updatedAt": "2026-03-16T10:41:43.036Z"
   }
 }
