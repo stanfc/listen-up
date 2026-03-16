@@ -13,7 +13,7 @@
     </button>
     <!-- Round badge -->
     <div class="round-badge" v-if="roundNumber">
-      Round {{ roundNumber }}
+      第 {{ roundNumber }} 回合
     </div>
   </div>
 </template>

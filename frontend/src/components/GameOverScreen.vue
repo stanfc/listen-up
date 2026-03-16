@@ -3,7 +3,7 @@
     <div v-if="visible" class="game-over-overlay">
       <div class="game-over-card">
         <div class="trophy">🏆</div>
-        <h2 class="winner-title">{{ winnerName }} Wins!</h2>
+        <h2 class="winner-title">{{ winnerName }} 獲勝！</h2>
         <div class="ranking">
           <div
             v-for="(player, idx) in ranking"
@@ -12,11 +12,11 @@
           >
             <span class="rank-pos">{{ idx + 1 }}.</span>
             <span class="rank-name">{{ player.name }}</span>
-            <span class="rank-cards">{{ player.cards.length }} cards</span>
+            <span class="rank-cards">{{ player.cards.length }} 張卡牌</span>
           </div>
         </div>
         <button class="btn-restart" @click="$emit('restart')">
-          New Game
+          重新開始
         </button>
       </div>
     </div>

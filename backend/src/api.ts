@@ -5,7 +5,6 @@ import * as db from './database'
 import * as gameLogic from './gameLogic'
 import * as validation from './validation'
 import { Game, GameStatus, GamePhase, GuessType } from './types'
-import { getPreviewUrl, getAlbumArt } from './spotify'
 
 const app = express() as any
 
@@ -26,7 +25,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 
   res.status(500).json({
     code: 'INTERNAL_ERROR',
-    message: err.message || 'Internal server error'
+    message: err.message || '內部伺服器錯誤'
   })
 })
 
@@ -77,7 +76,7 @@ app.get('/api/games/:gameId', (req: Request, res: Response, next: NextFunction) 
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 
@@ -103,14 +102,14 @@ app.post('/api/games/:gameId/players', (req: Request, res: Response, next: NextF
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 
     if (game.status !== GameStatus.WAITING) {
       return res.status(400).json({
         code: 'GAME_ALREADY_STARTED',
-        message: 'Game has already started'
+        message: '遊戲已經開始'
       })
     }
 
@@ -141,14 +140,14 @@ app.post('/api/games/:gameId/start', (req: Request, res: Response, next: NextFun
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 
     if (game.status !== GameStatus.WAITING) {
       return res.status(400).json({
         code: 'GAME_ALREADY_STARTED',
-        message: 'Game has already started'
+        message: '遊戲已經開始'
       })
     }
 
@@ -177,7 +176,7 @@ app.get('/api/games/:gameId/music', (req: Request, res: Response, next: NextFunc
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 
@@ -185,7 +184,7 @@ app.get('/api/games/:gameId/music', (req: Request, res: Response, next: NextFunc
     if (!music) {
       return res.status(404).json({
         code: 'MUSIC_NOT_FOUND',
-        message: 'Music not found'
+        message: '找不到音樂'
       })
     }
 
@@ -204,7 +203,7 @@ app.get('/api/games/:gameId/music', (req: Request, res: Response, next: NextFunc
  * GET /api/games/:gameId/music/reveal
  * Reveal full music info (call during ROUND_END phase)
  */
-app.get('/api/games/:gameId/music/reveal', async (req: Request, res: Response, next: NextFunction) => {
+app.get('/api/games/:gameId/music/reveal', (req: Request, res: Response, next: NextFunction) => {
   try {
     const { gameId } = req.params
     validation.validateGameId(gameId)
@@ -213,7 +212,7 @@ app.get('/api/games/:gameId/music/reveal', async (req: Request, res: Response, n
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 
@@ -221,15 +220,11 @@ app.get('/api/games/:gameId/music/reveal', async (req: Request, res: Response, n
     if (!music) {
       return res.status(404).json({
         code: 'MUSIC_NOT_FOUND',
-        message: 'Music not found'
+        message: '找不到音樂'
       })
     }
 
-    // Use stored albumArt, fetch from Spotify if missing
-    let albumArt = music.albumArt
-    if (!albumArt) {
-      albumArt = await getAlbumArt(music.spotifyId) || ''
-    }
+    const albumArt = music.albumArt || ''
 
     res.json({
       title: music.title,
@@ -259,7 +254,7 @@ app.post('/api/games/:gameId/guess', (req: Request, res: Response, next: NextFun
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 
@@ -295,7 +290,7 @@ app.post('/api/games/:gameId/skip-song-guess', (req: Request, res: Response, nex
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 
@@ -329,7 +324,7 @@ app.post('/api/games/:gameId/card-placement', (req: Request, res: Response, next
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 
@@ -360,7 +355,7 @@ app.post('/api/games/:gameId/challenge', (req: Request, res: Response, next: Nex
 
     const game = db.getGame(gameId)
     if (!game) {
-      return res.status(404).json({ code: 'GAME_NOT_FOUND', message: 'Game not found' })
+      return res.status(404).json({ code: 'GAME_NOT_FOUND', message: '找不到遊戲' })
     }
 
     const result = gameLogic.challengePlacement(game, challengerId, position)
@@ -387,7 +382,7 @@ app.post('/api/games/:gameId/skip-challenge', (req: Request, res: Response, next
 
     const game = db.getGame(gameId)
     if (!game) {
-      return res.status(404).json({ code: 'GAME_NOT_FOUND', message: 'Game not found' })
+      return res.status(404).json({ code: 'GAME_NOT_FOUND', message: '找不到遊戲' })
     }
 
     const result = gameLogic.skipChallenge(game)
@@ -419,7 +414,7 @@ app.post('/api/games/:gameId/change-song', (req: Request, res: Response, next: N
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 
@@ -449,7 +444,7 @@ app.post('/api/games/:gameId/next-round', (req: Request, res: Response, next: Ne
     if (!game) {
       return res.status(404).json({
         code: 'GAME_NOT_FOUND',
-        message: 'Game not found'
+        message: '找不到遊戲'
       })
     }
 

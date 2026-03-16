@@ -66,7 +66,7 @@ export const useGameStore = defineStore('game', () => {
 
       return response
     } catch (err: any) {
-      error.value = err.message || 'Failed to create game'
+      error.value = err.message || '建立遊戲失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -74,7 +74,7 @@ export const useGameStore = defineStore('game', () => {
   }
 
   async function addPlayer(playerName: string) {
-    if (!gameId.value) throw new Error('No active game')
+    if (!gameId.value) throw new Error('沒有進行中的遊戲')
 
     isLoading.value = true
     error.value = null
@@ -87,7 +87,7 @@ export const useGameStore = defineStore('game', () => {
 
       return response
     } catch (err: any) {
-      error.value = err.message || 'Failed to add player'
+      error.value = err.message || '新增玩家失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -95,7 +95,7 @@ export const useGameStore = defineStore('game', () => {
   }
 
   async function startGame() {
-    if (!gameId.value) throw new Error('No active game')
+    if (!gameId.value) throw new Error('沒有進行中的遊戲')
 
     isLoading.value = true
     error.value = null
@@ -107,7 +107,7 @@ export const useGameStore = defineStore('game', () => {
       // Load initial music
       await loadCurrentMusic()
     } catch (err: any) {
-      error.value = err.message || 'Failed to start game'
+      error.value = err.message || '啟動遊戲失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -122,7 +122,7 @@ export const useGameStore = defineStore('game', () => {
       currentMusic.value = response
       revealedMusic.value = null // Reset revealed info for new round
     } catch (err: any) {
-      error.value = 'Failed to load music'
+      error.value = '載入音樂失敗'
       console.error(err)
     }
   }
@@ -135,13 +135,13 @@ export const useGameStore = defineStore('game', () => {
       revealedMusic.value = response
       return response
     } catch (err: any) {
-      error.value = 'Failed to reveal music'
+      error.value = '顯示音樂失敗'
       console.error(err)
     }
   }
 
   async function submitSongGuess(playerId: string, guess: string, usingToken: boolean = false) {
-    if (!gameId.value) throw new Error('No active game')
+    if (!gameId.value) throw new Error('沒有進行中的遊戲')
 
     isLoading.value = true
     error.value = null
@@ -158,7 +158,7 @@ export const useGameStore = defineStore('game', () => {
 
       return response
     } catch (err: any) {
-      error.value = err.message || 'Failed to submit guess'
+      error.value = err.message || '提交猜測失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -166,7 +166,7 @@ export const useGameStore = defineStore('game', () => {
   }
 
   async function skipSongGuess() {
-    if (!gameId.value) throw new Error('No active game')
+    if (!gameId.value) throw new Error('沒有進行中的遊戲')
 
     isLoading.value = true
     error.value = null
@@ -178,7 +178,7 @@ export const useGameStore = defineStore('game', () => {
 
       return response
     } catch (err: any) {
-      error.value = err.message || 'Failed to skip song guess'
+      error.value = err.message || '跳過猜歌失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -186,7 +186,7 @@ export const useGameStore = defineStore('game', () => {
   }
 
   async function changeSong(playerId: string) {
-    if (!gameId.value) throw new Error('No active game')
+    if (!gameId.value) throw new Error('沒有進行中的遊戲')
 
     isLoading.value = true
     error.value = null
@@ -201,7 +201,7 @@ export const useGameStore = defineStore('game', () => {
 
       return response
     } catch (err: any) {
-      error.value = err.message || 'Failed to change song'
+      error.value = err.message || '換歌失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -209,7 +209,7 @@ export const useGameStore = defineStore('game', () => {
   }
 
   async function challenge(challengerId: string, position: number) {
-    if (!gameId.value) throw new Error('No active game')
+    if (!gameId.value) throw new Error('沒有進行中的遊戲')
 
     isLoading.value = true
     error.value = null
@@ -219,7 +219,7 @@ export const useGameStore = defineStore('game', () => {
       currentPlayer.value = response.currentPlayer
       return response
     } catch (err: any) {
-      error.value = err.message || 'Challenge failed'
+      error.value = err.message || '挑戰失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -227,7 +227,7 @@ export const useGameStore = defineStore('game', () => {
   }
 
   async function skipChallenge() {
-    if (!gameId.value) throw new Error('No active game')
+    if (!gameId.value) throw new Error('沒有進行中的遊戲')
 
     isLoading.value = true
     error.value = null
@@ -237,7 +237,7 @@ export const useGameStore = defineStore('game', () => {
       currentPlayer.value = response.currentPlayer
       return response
     } catch (err: any) {
-      error.value = err.message || 'Skip challenge failed'
+      error.value = err.message || '跳過挑戰失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -245,7 +245,7 @@ export const useGameStore = defineStore('game', () => {
   }
 
   async function submitCardPlacement(playerId: string, position: number) {
-    if (!gameId.value) throw new Error('No active game')
+    if (!gameId.value) throw new Error('沒有進行中的遊戲')
 
     isLoading.value = true
     error.value = null
@@ -259,7 +259,7 @@ export const useGameStore = defineStore('game', () => {
 
       return response
     } catch (err: any) {
-      error.value = err.message || 'Failed to place card'
+      error.value = err.message || '放置卡牌失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -267,7 +267,7 @@ export const useGameStore = defineStore('game', () => {
   }
 
   async function moveToNextRound() {
-    if (!gameId.value) throw new Error('No active game')
+    if (!gameId.value) throw new Error('沒有進行中的遊戲')
 
     isLoading.value = true
     error.value = null
@@ -276,10 +276,9 @@ export const useGameStore = defineStore('game', () => {
       currentGame.value = response.game
       currentPlayer.value = response.currentPlayer
 
-      // Load next music
-      await loadCurrentMusic()
+      return response
     } catch (err: any) {
-      error.value = err.message || 'Failed to move to next round'
+      error.value = err.message || '進入下一回合失敗'
       throw err
     } finally {
       isLoading.value = false
@@ -294,7 +293,7 @@ export const useGameStore = defineStore('game', () => {
       currentGame.value = response.game
       currentPlayer.value = response.currentPlayer
     } catch (err: any) {
-      error.value = err.message || 'Failed to load game state'
+      error.value = err.message || '載入遊戲狀態失敗'
       throw err
     } finally {
       isLoading.value = false

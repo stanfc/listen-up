@@ -25,7 +25,18 @@ const args = process.argv.slice(2)
 const playlistUrl = args.find(a => !a.startsWith('--'))
 const fromIndex = parseInt(args[args.indexOf('--from') + 1]) || 0
 const randomCount = args.includes('--random') ? parseInt(args[args.indexOf('--random') + 1]) || 0 : 0
-const extraTags = args.includes('--tags') ? args[args.indexOf('--tags') + 1].split(',').map(t => t.trim()).filter(Boolean) : []
+
+function parseExtraTags(cliArgs) {
+  const tagFlagIndex = cliArgs.findIndex(arg => arg === '--tags' || arg === '--tag')
+  if (tagFlagIndex === -1) return []
+
+  return (cliArgs[tagFlagIndex + 1] || '')
+    .split(',')
+    .map(t => t.trim())
+    .filter(Boolean)
+}
+
+const extraTags = parseExtraTags(args)
 
 if (!playlistUrl) {
   console.error('❌ 請提供 YouTube 播放列表 URL')
@@ -156,7 +167,10 @@ function fetchPlaylistVideos(url) {
     return videos
   } catch (err) {
     console.error('❌ yt-dlp 執行失敗:', err.message)
-    console.error('請確保已安裝 yt-dlp: pip install yt-dlp')
+    console.error('請先安裝 yt-dlp，可用其中一種方式：')
+    console.error('  • macOS(Homebrew): brew install yt-dlp')
+    console.error('  • pipx: pipx install yt-dlp')
+    console.error('  • Python: pip3 install yt-dlp')
     process.exit(1)
   }
 }

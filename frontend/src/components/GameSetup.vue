@@ -3,37 +3,37 @@
     <CosmicBackground />
     <div class="setup-container">
       <h1 class="setup-logo">Listen Up!</h1>
-      <p class="setup-subtitle">Music Timeline Game</p>
+      <p class="setup-subtitle">音樂時間線遊戲</p>
 
       <div class="form-group">
-        <label>Players</label>
+        <label>玩家人數</label>
         <select v-model.number="playerCount">
-          <option v-for="n in 7" :key="n + 1" :value="n + 1">{{ n + 1 }} players</option>
+          <option v-for="n in 7" :key="n + 1" :value="n + 1">{{ n + 1 }} 位玩家</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Cards to Win</label>
+        <label>勝利所需卡牌數</label>
         <select v-model.number="winningCards">
-          <option v-for="n in 8" :key="n + 2" :value="n + 2">{{ n + 2 }} cards</option>
+          <option v-for="n in 8" :key="n + 2" :value="n + 2">{{ n + 2 }} 張卡牌</option>
         </select>
       </div>
 
       <div class="form-group">
-        <label>Player Names</label>
+        <label>玩家名稱</label>
         <div class="player-names">
           <input
             v-for="(_, idx) in playerNames"
             :key="idx"
             v-model="playerNames[idx]"
             class="name-input"
-            :placeholder="`Player ${idx + 1}`"
+            :placeholder="`玩家 ${idx + 1}`"
           />
         </div>
       </div>
 
       <div class="form-group">
-        <label>Music Tags</label>
+        <label>音樂標籤 <span class="label-hint">（不選 = 全選）</span></label>
         <div class="tags-container">
           <button
             v-for="tag in availableTags"
@@ -48,10 +48,10 @@
 
       <button
         @click="startGame"
-        :disabled="selectedTags.length === 0 || isLoading"
+        :disabled="isLoading"
         class="btn-start"
       >
-        {{ isLoading ? 'Starting...' : 'Start Game' }}
+        {{ isLoading ? '啟動中...' : '開始遊戲' }}
       </button>
 
       <p v-if="error" class="error-message">{{ error }}</p>
@@ -69,18 +69,18 @@ const gameStore = useGameStore()
 const emit = defineEmits(['game-started'])
 
 const playerCount = ref(4)
-const playerNames = ref<string[]>(['Player 1', 'Player 2', 'Player 3', 'Player 4'])
+const playerNames = ref<string[]>(['玩家 1', '玩家 2', '玩家 3', '玩家 4'])
 const winningCards = ref(5)
 
 watch(playerCount, (count) => {
   while (playerNames.value.length < count) {
-    playerNames.value.push(`Player ${playerNames.value.length + 1}`)
+    playerNames.value.push(`玩家 ${playerNames.value.length + 1}`)
   }
   while (playerNames.value.length > count) {
     playerNames.value.pop()
   }
 })
-const selectedTags = ref<string[]>(['2000s', '2010s', '1990s'])
+const selectedTags = ref<string[]>([])
 const availableTags = ref<string[]>([])
 const isLoading = ref(false)
 const error = ref<string | null>(null)
@@ -95,7 +95,7 @@ onMounted(async () => {
 })
 
 function defaultTags() {
-  return ['1960s', '1970s', '1980s', '1990s', '2000s', '2010s', '2020s']
+  return []
 }
 
 function toggleTag(tag: string) {
@@ -122,7 +122,7 @@ async function startGame() {
     await gameStore.createGame(config)
 
     for (let i = 0; i < playerCount.value; i++) {
-      const name = playerNames.value[i]?.trim() || `Player ${i + 1}`
+      const name = playerNames.value[i]?.trim() || `玩家 ${i + 1}`
       await gameStore.addPlayer(name)
     }
 
@@ -130,7 +130,7 @@ async function startGame() {
     await gameStore.loadCurrentMusic()
     emit('game-started')
   } catch (err: any) {
-    error.value = err.message || 'Failed to start game'
+    error.value = err.message || '遊戲啟動失敗'
   } finally {
     isLoading.value = false
   }
@@ -190,6 +190,12 @@ label {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
+}
+
+.label-hint {
+  text-transform: none;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.3);
 }
 
 select {

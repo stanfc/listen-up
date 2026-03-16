@@ -75,12 +75,12 @@ export function addPlayerToGame(game: Game, playerName: string): Player {
  */
 export function startGame(game: Game): Game {
   if (game.status !== GameStatus.WAITING) {
-    throw new Error('Game is not in waiting state')
+    throw new Error('遊戲不在等待狀態')
   }
 
   const minPlayers = game.config.minPlayers || 2
   if (game.players.length < minPlayers || game.players.length > game.config.maxPlayers) {
-    throw new Error('Invalid number of players')
+    throw new Error('玩家人數不正確')
   }
 
   // Shuffle players for random order
@@ -166,12 +166,12 @@ export function processSongGuess(
 ): { correct: boolean; message: string; nextPhase?: GamePhase } {
   const music = getMusicById(game.currentRound.musicId)
   if (!music) {
-    throw new Error('Music not found')
+    throw new Error('找不到音樂')
   }
 
   const player = game.players.find(p => p.id === playerId)
   if (!player) {
-    throw new Error('Player not found')
+    throw new Error('找不到玩家')
   }
 
   const normalizedGuess = normalizeSongTitle(guess)
@@ -197,14 +197,14 @@ export function processSongGuess(
 
     return {
       correct: true,
-      message: `Correct! The song is "${music.title}" by ${music.artist}. +1 token!`,
+      message: `正確！這首歌是 ${music.artist} 的「${music.title}」。+1 代幣！`,
       nextPhase: GamePhase.CARD_PLACEMENT
     }
   } else {
     // Wrong guess - still move to card placement
     return {
       correct: false,
-      message: `Wrong! The song is "${music.title}" by ${music.artist}. Now place the card...`,
+      message: `錯誤！這首歌是 ${music.artist} 的「${music.title}」。現在放置卡牌...`,
       nextPhase: GamePhase.CARD_PLACEMENT
     }
   }
@@ -216,7 +216,7 @@ export function processSongGuess(
 export function skipSongGuess(game: Game): { message: string; nextPhase?: GamePhase } {
   const music = getMusicById(game.currentRound.musicId)
   if (!music) {
-    throw new Error('Music not found')
+    throw new Error('找不到音樂')
   }
 
   // Create pending card from current music
@@ -231,7 +231,7 @@ export function skipSongGuess(game: Game): { message: string; nextPhase?: GamePh
   game.currentRound.phase = GamePhase.CARD_PLACEMENT
 
   return {
-    message: 'Skipped song guess. Now place the card...',
+    message: '跳過猜歌。現在放置卡牌...',
     nextPhase: GamePhase.CARD_PLACEMENT
   }
 }
@@ -247,16 +247,16 @@ export function processCardPlacement(
 ): { message: string; nextPhase: GamePhase } {
   const player = game.players.find(p => p.id === playerId)
   if (!player) {
-    throw new Error('Player not found')
+    throw new Error('找不到玩家')
   }
 
   const card = game.currentRound.pendingCard
   if (!card) {
-    throw new Error('No pending card to place')
+    throw new Error('沒有待放置的卡牌')
   }
 
   if (position < 0 || position > player.cards.length) {
-    throw new Error('Invalid card position')
+    throw new Error('卡牌位置無效')
   }
 
   // Store placement info but DON'T reveal if correct yet
@@ -276,7 +276,7 @@ export function processCardPlacement(
   game.currentRound.placementWrong = !isCorrect
 
   return {
-    message: 'Card placed! Waiting for challenges...',
+    message: '卡牌已放置！等待挑戰...',
     nextPhase: GamePhase.CHALLENGE
   }
 }
@@ -296,25 +296,25 @@ export function challengePlacement(
   position: number
 ): { success: boolean; message: string; stolenCard: boolean; placementWasCorrect: boolean } {
   if (game.currentRound.phase !== GamePhase.CHALLENGE) {
-    throw new Error('Not in challenge phase')
+    throw new Error('目前不在挑戰階段')
   }
 
   const challenger = game.players.find(p => p.id === challengerId)
-  if (!challenger) throw new Error('Challenger not found')
+  if (!challenger) throw new Error('找不到挑戰者')
 
   if (challenger.id === game.currentRound.currentPlayer) {
-    throw new Error('Current player cannot challenge their own placement')
+    throw new Error('當前玩家不能挑戰自己的放置')
   }
 
   if (challenger.tokens < 1) {
-    throw new Error('Not enough tokens to challenge')
+    throw new Error('代幣不足，無法挑戰')
   }
 
   const card = game.currentRound.challengeCard
-  if (!card) throw new Error('No card to challenge')
+  if (!card) throw new Error('沒有可挑戰的卡牌')
 
   const currentPlayer = game.players.find(p => p.id === game.currentRound.currentPlayer)
-  if (!currentPlayer) throw new Error('Current player not found')
+  if (!currentPlayer) throw new Error('找不到當前玩家')
 
   const wasWrong = game.currentRound.placementWrong === true
 
@@ -333,7 +333,7 @@ export function challengePlacement(
 
     return {
       success: false,
-      message: `Placement was correct! ${challenger.name} lost 1 token.`,
+      message: `放置正確！${challenger.name} 失去 1 個代幣。`,
       stolenCard: false,
       placementWasCorrect: true
     }
@@ -370,7 +370,7 @@ export function challengePlacement(
 
     return {
       success: true,
-      message: `${challenger.name} challenged correctly! Card stolen!`,
+      message: `${challenger.name} 挑戰成功！卡牌被搶走！`,
       stolenCard: true,
       placementWasCorrect: false
     }
@@ -381,7 +381,7 @@ export function challengePlacement(
 
     return {
       success: false,
-      message: `${challenger.name}'s challenge failed! Card discarded, token lost.`,
+      message: `${challenger.name} 挑戰失敗！卡牌丟棄，代幣失去。`,
       stolenCard: false,
       placementWasCorrect: false
     }
@@ -394,12 +394,12 @@ export function challengePlacement(
  */
 export function skipChallenge(game: Game): { message: string; placementCorrect: boolean } {
   if (game.currentRound.phase !== GamePhase.CHALLENGE) {
-    throw new Error('Not in challenge phase')
+    throw new Error('目前不在挑戰階段')
   }
 
   const card = game.currentRound.challengeCard
   const currentPlayer = game.players.find(p => p.id === game.currentRound.currentPlayer)
-  if (!currentPlayer || !card) throw new Error('Invalid state')
+  if (!currentPlayer || !card) throw new Error('狀態無效')
 
   const wasWrong = game.currentRound.placementWrong === true
 
@@ -415,7 +415,7 @@ export function skipChallenge(game: Game): { message: string; placementCorrect: 
   game.currentRound.challengeCard = undefined
 
   return {
-    message: wasWrong ? 'Wrong placement! Card discarded.' : 'Correct placement! Card added.',
+    message: wasWrong ? '放置錯誤！卡牌丟棄。' : '放置正確！卡牌已加入。',
     placementCorrect: !wasWrong
   }
 }
@@ -429,15 +429,15 @@ export function changeSong(
 ): { message: string; newMusicId: string } {
   const player = game.players.find(p => p.id === playerId)
   if (!player) {
-    throw new Error('Player not found')
+    throw new Error('找不到玩家')
   }
 
   if (player.tokens < 1) {
-    throw new Error('Not enough tokens')
+    throw new Error('代幣不足')
   }
 
   if (game.currentRound.phase !== GamePhase.SONG_GUESS) {
-    throw new Error('Can only change song during song guess phase')
+    throw new Error('只能在猜歌階段換歌')
   }
 
   // Spend 1 token
@@ -451,14 +451,14 @@ export function changeSong(
   // Draw new song
   const newMusic = getNextMusic(game)
   if (!newMusic) {
-    throw new Error('No more music available')
+    throw new Error('沒有更多可用的音樂')
   }
 
   game.currentRound.musicId = newMusic.id
   game.currentRound.pendingCard = undefined
 
   return {
-    message: `Song changed! -1 token (${player.tokens} remaining)`,
+    message: `已換歌！-1 代幣（剩餘 ${player.tokens} 個）`,
     newMusicId: newMusic.id
   }
 }

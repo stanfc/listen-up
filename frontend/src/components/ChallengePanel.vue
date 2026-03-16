@@ -2,14 +2,14 @@
   <Transition name="panel">
     <div v-if="visible" class="bottom-panel">
       <div class="panel-card">
-        <p class="panel-title">Card placed! Any challengers?</p>
+        <p class="panel-title">卡牌已放置！有人要挑戰嗎？</p>
         <p class="panel-hint">
-          Think it's wrong? Spend 1 token and guess the correct position on {{ currentPlayerName }}'s timeline to steal it!
+          覺得放錯了？花費 1 個代幣，猜測 {{ currentPlayerName }} 時間線上的正確位置來搶奪卡牌！
         </p>
 
         <!-- Show current player's timeline for reference -->
         <div class="challenge-timeline">
-          <div class="timeline-label">{{ currentPlayerName }}'s timeline:</div>
+          <div class="timeline-label">{{ currentPlayerName }} 的時間線：</div>
           <div class="timeline-row">
             <div
               class="insert-slot"
@@ -30,7 +30,7 @@
 
         <!-- Challenger selection -->
         <template v-if="!selectedChallenger">
-          <p class="panel-subtitle">Who wants to challenge?</p>
+          <p class="panel-subtitle">誰要挑戰？</p>
           <div class="player-select">
             <button
               v-for="p in eligiblePlayers"
@@ -39,7 +39,7 @@
               :disabled="p.tokens < 1"
               @click="selectedChallenger = p.id"
             >
-              {{ p.name }} ({{ p.tokens }} tokens)
+              {{ p.name }}（{{ p.tokens }} 代幣）
             </button>
           </div>
         </template>
@@ -47,7 +47,7 @@
         <!-- After selecting challenger, show position selection -->
         <template v-else>
           <p class="panel-subtitle">
-            {{ challengerName }} — pick the correct position! (costs 1 token)
+            {{ challengerName }} — 選擇正確位置！（花費 1 代幣）
           </p>
         </template>
 
@@ -58,14 +58,14 @@
             @click="submitChallenge"
             :disabled="submitting"
           >
-            HITSTER!
+            挑戰！
           </button>
           <button
             class="btn btn-ghost"
             @click="handleSkip"
             :disabled="submitting"
           >
-            No challenge — discard card
+            不挑戰 — 跳過
           </button>
         </div>
 

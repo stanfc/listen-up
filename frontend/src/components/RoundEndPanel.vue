@@ -4,12 +4,12 @@
       <div class="panel-card">
         <!-- Deuce banner -->
         <div v-if="isDeuce" class="deuce-banner">
-          <span>DEUCE!</span>
+          <span>平手！</span>
         </div>
 
         <!-- Song reveal -->
         <div v-if="revealedMusic" class="song-reveal">
-          <div class="reveal-badge">Answer</div>
+          <div class="reveal-badge">答案</div>
           <p class="song-title">{{ revealedMusic.title }}</p>
           <p v-if="revealedMusic.artist" class="song-artist">{{ revealedMusic.artist }}</p>
           <p class="song-year">{{ revealedMusic.year }}</p>
@@ -21,7 +21,7 @@
         </p>
 
         <button class="btn btn-primary" @click="$emit('nextRound')" :disabled="submitting">
-          {{ submitting ? 'Loading...' : 'Next Round' }}
+          {{ submitting ? '載入中...' : '下一回合' }}
         </button>
       </div>
     </div>

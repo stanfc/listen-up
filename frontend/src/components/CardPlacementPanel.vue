@@ -2,7 +2,7 @@
   <Transition name="panel">
     <div v-if="visible" class="bottom-panel">
       <div class="panel-card">
-        <p class="panel-title">Place the card in your timeline</p>
+        <p class="panel-title">將卡牌放入你的時間線</p>
 
         <!-- Timeline with insert gaps -->
         <div class="placement-timeline">
@@ -24,15 +24,15 @@
 
         <!-- Pending card preview -->
         <div v-if="pendingCard" class="pending-info">
-          <span>New card</span>
+          <span>新卡牌</span>
         </div>
 
         <div class="btn-row">
           <button class="btn btn-success" @click="confirm" :disabled="selectedPos === null || submitting">
-            Confirm
+            確認
           </button>
           <button class="btn btn-ghost" @click="selectedPos = null">
-            Reset
+            重置
           </button>
         </div>
       </div>

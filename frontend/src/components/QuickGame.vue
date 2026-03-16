@@ -28,13 +28,11 @@
       :submitting="isSubmitting"
       :players="gameStore.gamePlayers"
       :revealed-music="gameStore.revealedMusic"
-      :show-video="showMusicVideo"
       :result-message="lastResult?.message"
       :result-correct="lastResult?.correct"
       :current-tokens="currentPlayer?.tokens ?? 0"
-      @reveal="revealAndShowAnswer"
+      @revealAndShowVideo="handleRevealAndShowVideo"
       @skip="skipSongGuess"
-      @showVideo="showMusicVideo = true"
       @wrong="submitWrongGuess"
       @selectWinner="submitCorrectGuess"
       @changeSong="handleChangeSong"
@@ -68,7 +66,7 @@
       :visible="gameStore.currentPhase === 'round_end' && !showGameOver"
       :revealed-music="gameStore.revealedMusic"
       :result-message="lastResult?.message"
-      :result-success="lastResult?.success"
+      :result-success="lastResult?.goodForPlayer"
       :submitting="isSubmitting"
       :is-deuce="gameStore.currentGame?.deuce"
       @nextRound="handleRoundEnd"
@@ -141,8 +139,9 @@ async function handleChangeSong() {
   }
 }
 
-async function revealAndShowAnswer() {
+async function handleRevealAndShowVideo() {
   await gameStore.revealMusic()
+  showMusicVideo.value = true
 }
 
 async function skipSongGuess() {
@@ -188,7 +187,7 @@ async function submitCorrectGuess(playerId: string) {
       await gameStore.revealMusic()
     }
     const title = gameStore.revealedMusic?.title
-    if (!title) throw new Error('No song title')
+    if (!title) throw new Error('找不到歌曲名稱')
 
     const result = await gameStore.submitSongGuess(playerId, title)
     lastResult.value = result
@@ -225,7 +224,7 @@ async function handleChallenge(challengerId: string, position: number) {
   isSubmitting.value = true
   try {
     const result = await gameStore.challenge(challengerId, position)
-    lastResult.value = result
+    lastResult.value = { ...result, goodForPlayer: !result.success }
     // Now reveal music + show video
     await gameStore.revealMusic()
     showMusicVideo.value = true
@@ -240,7 +239,7 @@ async function handleSkipChallenge() {
   isSubmitting.value = true
   try {
     const result = await gameStore.skipChallenge()
-    lastResult.value = result
+    lastResult.value = { ...result, goodForPlayer: result.placementCorrect }
     // Now reveal music + show video
     await gameStore.revealMusic()
     showMusicVideo.value = true
