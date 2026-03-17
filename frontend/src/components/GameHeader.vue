@@ -40,37 +40,67 @@ defineEmits<{ reset: [] }>()
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 8px 20px;
+  padding: 6px 12px;
   background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+@media (min-width: 640px) {
+  .game-hud {
+    padding: 8px 20px;
+  }
+}
+
 .logo {
   font-family: 'Segoe Script', 'Brush Script MT', cursive;
-  font-size: 1.2em;
+  font-size: 1em;
   color: rgba(255, 255, 255, 0.8);
   font-weight: 700;
   font-style: italic;
 }
 
+@media (min-width: 640px) {
+  .logo {
+    font-size: 1.2em;
+  }
+}
+
 .hud-center {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
+}
+
+@media (min-width: 640px) {
+  .hud-center {
+    gap: 12px;
+  }
 }
 
 .hud-item {
   color: rgba(255, 255, 255, 0.5);
-  font-size: 0.8em;
+  font-size: 0.7em;
+}
+
+@media (min-width: 640px) {
+  .hud-item {
+    font-size: 0.8em;
+  }
+}
+
+.hud-divider {
+  display: none;
+}
+
+@media (min-width: 640px) {
+  .hud-divider {
+    display: inline;
+  }
 }
 
 .hud-item strong {
   color: rgba(255, 255, 255, 0.9);
-}
-
-.hud-divider {
-  color: rgba(255, 255, 255, 0.15);
 }
 
 .current-player {

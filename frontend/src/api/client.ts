@@ -10,7 +10,7 @@ import type {
   GameStateResponse
 } from '@/types'
 
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:3000/api'
+const API_BASE_URL = import.meta.env.VITE_API_URL || '/api'
 
 const client = axios.create({
   baseURL: API_BASE_URL,
@@ -29,6 +29,11 @@ export const apiService = {
 
   async getGameState(gameId: string): Promise<GameStateResponse> {
     const response = await client.get(`/games/${gameId}`)
+    return response.data
+  },
+
+  async getGameByRoomCode(roomCode: string) {
+    const response = await client.get(`/games/room/${roomCode}`)
     return response.data
   },
 

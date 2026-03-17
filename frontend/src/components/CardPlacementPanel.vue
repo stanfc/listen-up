@@ -75,10 +75,21 @@ defineExpose({ reset })
 <style scoped>
 .bottom-panel {
   position: fixed;
-  bottom: 16px;
-  left: 16px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 30;
-  width: min(420px, 50vw);
+  padding: 0 12px 12px;
+}
+
+@media (min-width: 640px) {
+  .bottom-panel {
+    right: auto;
+    padding: 0;
+    bottom: 16px;
+    left: 16px;
+    width: clamp(280px, 30vw, 420px);
+  }
 }
 
 .panel-card {
@@ -86,16 +97,16 @@ defineExpose({ reset })
   backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 255, 255, 0.12);
   border-radius: 12px;
-  padding: 20px 24px;
+  padding: clamp(12px, 1.5vh, 20px) clamp(14px, 1.5vw, 24px);
   box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.5);
 }
 
 .panel-title {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1em;
+  font-size: clamp(0.8em, 1.1vw, 1em);
   font-weight: 600;
   text-align: center;
-  margin-bottom: 14px;
+  margin-bottom: clamp(8px, 1vh, 14px);
 }
 
 .placement-timeline {
@@ -109,7 +120,7 @@ defineExpose({ reset })
 
 .insert-gap {
   width: 8px;
-  height: 60px;
+  height: clamp(44px, 9vmin, 60px);
   border-radius: 4px;
   display: flex;
   align-items: center;
@@ -165,11 +176,11 @@ defineExpose({ reset })
 }
 
 .btn {
-  padding: 10px 24px;
+  padding: clamp(6px, 0.8vh, 10px) clamp(12px, 1.5vw, 24px);
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.85em;
+  font-size: clamp(0.7em, 1vw, 0.85em);
   cursor: pointer;
   transition: all 0.2s;
 }

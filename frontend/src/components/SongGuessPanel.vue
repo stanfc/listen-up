@@ -94,10 +94,21 @@ defineExpose({ reset })
 <style scoped>
 .bottom-panel {
   position: fixed;
-  bottom: 16px;
-  left: 16px;
+  bottom: 0;
+  left: 0;
+  right: 0;
   z-index: 30;
-  width: min(380px, 45vw);
+  padding: 0 12px 12px;
+}
+
+@media (min-width: 640px) {
+  .bottom-panel {
+    right: auto;
+    padding: 0;
+    bottom: 16px;
+    left: 16px;
+    width: clamp(260px, 28vw, 380px);
+  }
 }
 
 .panel-card {
@@ -105,16 +116,16 @@ defineExpose({ reset })
   backdrop-filter: blur(12px);
   border: 1px solid rgba(0, 255, 255, 0.12);
   border-radius: 12px;
-  padding: 16px 20px;
+  padding: clamp(10px, 1.5vh, 16px) clamp(12px, 1.5vw, 20px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
 }
 
 .panel-title {
   color: rgba(255, 255, 255, 0.9);
-  font-size: 1.05em;
+  font-size: clamp(0.8em, 1.2vw, 1.05em);
   font-weight: 600;
   text-align: center;
-  margin-bottom: 12px;
+  margin-bottom: clamp(6px, 1vh, 12px);
 }
 
 .song-info {
@@ -128,7 +139,7 @@ defineExpose({ reset })
 
 .song-title {
   color: #00ffff;
-  font-size: 1em;
+  font-size: clamp(0.75em, 1.1vw, 1em);
   font-weight: 700;
 }
 
@@ -153,16 +164,16 @@ defineExpose({ reset })
 .player-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 6px;
+  gap: clamp(4px, 0.5vh, 6px);
   margin-bottom: 4px;
 }
 
 .btn {
-  padding: 9px 12px;
+  padding: clamp(6px, 0.8vh, 9px) clamp(8px, 1vw, 12px);
   border: none;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 0.82em;
+  font-size: clamp(0.7em, 1vw, 0.82em);
   cursor: pointer;
   transition: all 0.2s;
   white-space: nowrap;

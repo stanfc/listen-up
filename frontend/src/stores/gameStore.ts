@@ -300,6 +300,24 @@ export const useGameStore = defineStore('game', () => {
     }
   }
 
+  async function rejoinByRoomCode(roomCode: string) {
+    isLoading.value = true
+    error.value = null
+    try {
+      const game = await apiService.getGameByRoomCode(roomCode)
+      currentGame.value = game
+      const active = game.players.find((p: any) => p.isCurrentPlayer)
+      currentPlayer.value = active || null
+      await loadCurrentMusic()
+      return game
+    } catch (err: any) {
+      error.value = err?.response?.data?.message || '找不到此房間'
+      throw err
+    } finally {
+      isLoading.value = false
+    }
+  }
+
   function reset() {
     currentGame.value = null
     currentPlayer.value = null
@@ -342,6 +360,7 @@ export const useGameStore = defineStore('game', () => {
     submitCardPlacement,
     moveToNextRound,
     loadGameState,
+    rejoinByRoomCode,
     reset
   }
 })

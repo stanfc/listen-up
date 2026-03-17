@@ -111,9 +111,11 @@ export function startGame(game: Game): Game {
 }
 
 /**
- * Get next unplayed music with year-balanced weighting.
- * Each year has equal probability, then a random song is picked from that year.
- * This prevents years with many songs from dominating.
+ * Get next unplayed music with year + tag balanced weighting.
+ * 1. Start from the music pool (filtered by game config tags)
+ * 2. Pick a random year from the pool → subset by year
+ * 3. Collect all non-year tags from that subset, pick a random one → smaller subset
+ * 4. Pick a random song from the final subset
  */
 export function getNextMusic(game: Game): Music | null {
   const filteredMusic = filterMusicByTags(game.config.musicTags)
@@ -128,11 +130,7 @@ export function getNextMusic(game: Game): Music | null {
 
   if (availableMusic.length === 0) return null
 
-  // Separate year tags and other tags from config
-  const allTags = game.config.musicTags || []
-  const otherTags = allTags.filter(t => !/^\d{4}s$/.test(t))
-
-  // Step 1: Group by year, pick a random year (equal probability)
+  // Step 1: Group by year, pick a random year
   const byYear: Record<number, Music[]> = {}
   for (const m of availableMusic) {
     if (!byYear[m.year]) byYear[m.year] = []
@@ -142,12 +140,18 @@ export function getNextMusic(game: Game): Music | null {
   const randomYear = years[Math.floor(Math.random() * years.length)]
   let pool = byYear[randomYear]
 
-  // Step 2: If other tags exist, pick a random other tag, filter pool
-  if (otherTags.length > 0) {
-    const randomTag = otherTags[Math.floor(Math.random() * otherTags.length)]
+  // Step 2: Collect non-year tags from this year's pool, pick a random one
+  const tagSet = new Set<string>()
+  for (const m of pool) {
+    for (const t of m.tags) {
+      if (!/^\d{4}s$/.test(t)) tagSet.add(t)
+    }
+  }
+  const nonYearTags = Array.from(tagSet)
+  if (nonYearTags.length > 0) {
+    const randomTag = nonYearTags[Math.floor(Math.random() * nonYearTags.length)]
     const tagged = pool.filter(m => m.tags.includes(randomTag))
     if (tagged.length > 0) pool = tagged
-    // If no songs match that tag in this year, fall back to all songs in that year
   }
 
   return pool[Math.floor(Math.random() * pool.length)]

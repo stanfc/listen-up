@@ -12,22 +12,6 @@ const app = express() as any
 app.use(cors())
 app.use(express.json())
 
-// Error handling middleware
-app.use((err: any, req: Request, res: Response, next: NextFunction) => {
-  console.error(err)
-
-  if (err instanceof validation.ValidationError) {
-    return res.status(400).json({
-      code: err.code,
-      message: err.message
-    })
-  }
-
-  res.status(500).json({
-    code: 'INTERNAL_ERROR',
-    message: err.message || '內部伺服器錯誤'
-  })
-})
 
 // Routes
 
@@ -58,6 +42,26 @@ app.post('/api/games', (req: Request, res: Response, next: NextFunction) => {
       gameId: game.id,
       roomCode: game.roomCode
     })
+  } catch (err) {
+    next(err)
+  }
+})
+
+/**
+ * GET /api/games/room/:roomCode
+ * Find game by room code (for rejoin)
+ */
+app.get('/api/games/room/:roomCode', (req: Request, res: Response, next: NextFunction) => {
+  try {
+    const { roomCode } = req.params
+    const game = db.getGameByRoomCode(roomCode)
+    if (!game) {
+      return res.status(404).json({
+        code: 'GAME_NOT_FOUND',
+        message: '找不到此房間'
+      })
+    }
+    res.json(game)
   } catch (err) {
     next(err)
   }
@@ -475,6 +479,23 @@ app.get('/api/music/tags', (req: Request, res: Response) => {
  */
 app.get('/api/health', (req: Request, res: Response) => {
   res.json({ status: 'ok' })
+})
+
+// Error handling middleware (must be after all routes)
+app.use((err: any, req: Request, res: Response, next: NextFunction) => {
+  console.error(err)
+
+  if (err instanceof validation.ValidationError) {
+    return res.status(400).json({
+      code: err.code,
+      message: err.message
+    })
+  }
+
+  res.status(500).json({
+    code: 'INTERNAL_ERROR',
+    message: err.message || '內部伺服器錯誤'
+  })
 })
 
 module.exports = app

@@ -52,8 +52,8 @@ function stackStyle(i: number) {
 
 .deck-stack {
   position: relative;
-  width: 100px;
-  height: 140px;
+  width: clamp(56px, 12vmin, 80px);
+  height: clamp(78px, 17vmin, 112px);
 }
 
 .deck-card {
@@ -70,8 +70,8 @@ function stackStyle(i: number) {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 72px;
-  height: 72px;
+  width: clamp(44px, 10vmin, 60px);
+  height: clamp(44px, 10vmin, 60px);
   border-radius: 50%;
   border: none;
   background: rgba(10, 10, 30, 0.9);
@@ -98,9 +98,9 @@ function stackStyle(i: number) {
 }
 
 .play-icon {
-  width: 28px;
-  height: 28px;
-  margin-left: 3px;
+  width: clamp(18px, 4vmin, 24px);
+  height: clamp(18px, 4vmin, 24px);
+  margin-left: 2px;
 }
 
 .glow-ring {

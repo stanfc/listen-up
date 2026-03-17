@@ -54,6 +54,30 @@
         {{ isLoading ? '啟動中...' : '開始遊戲' }}
       </button>
 
+      <div class="divider">
+        <span>或</span>
+      </div>
+
+      <div class="rejoin-section">
+        <label>輸入房號繼續遊戲</label>
+        <div class="rejoin-row">
+          <input
+            v-model="rejoinCode"
+            class="name-input rejoin-input"
+            placeholder="例：A1B2"
+            maxlength="4"
+            @keyup.enter="rejoinGame"
+          />
+          <button
+            @click="rejoinGame"
+            :disabled="isLoading || !rejoinCode.trim()"
+            class="btn-rejoin"
+          >
+            加入
+          </button>
+        </div>
+      </div>
+
       <p v-if="error" class="error-message">{{ error }}</p>
     </div>
   </div>
@@ -84,6 +108,7 @@ const selectedTags = ref<string[]>([])
 const availableTags = ref<string[]>([])
 const isLoading = ref(false)
 const error = ref<string | null>(null)
+const rejoinCode = ref('')
 
 onMounted(async () => {
   try {
@@ -104,6 +129,19 @@ function toggleTag(tag: string) {
     selectedTags.value.splice(idx, 1)
   } else {
     selectedTags.value.push(tag)
+  }
+}
+
+async function rejoinGame() {
+  if (!rejoinCode.value.trim()) return
+  isLoading.value = true
+  error.value = null
+  try {
+    await gameStore.rejoinByRoomCode(rejoinCode.value.trim())
+  } catch (err: any) {
+    error.value = err?.response?.data?.message || '找不到此房間'
+  } finally {
+    isLoading.value = false
   }
 }
 
@@ -154,10 +192,16 @@ async function startGame() {
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
-  padding: 40px;
+  padding: 24px 20px;
   max-width: 460px;
   width: 100%;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 640px) {
+  .setup-container {
+    padding: 40px;
+  }
 }
 
 .setup-logo {
@@ -298,6 +342,67 @@ select option {
 }
 
 .btn-start:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  gap: 12px;
+}
+
+.divider::before,
+.divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.divider span {
+  color: rgba(255, 255, 255, 0.3);
+  font-size: 0.82em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.rejoin-section {
+  margin-bottom: 10px;
+}
+
+.rejoin-row {
+  display: flex;
+  gap: 8px;
+}
+
+.rejoin-input {
+  flex: 1;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.btn-rejoin {
+  padding: 8px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-rejoin:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(0, 255, 255, 0.3);
+}
+
+.btn-rejoin:disabled {
   opacity: 0.4;
   cursor: not-allowed;
 }

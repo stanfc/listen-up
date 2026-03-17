@@ -77,6 +77,8 @@ export interface GameRound {
   usedMusicIds: string[]
   correctGuessPlayer?: string
   pendingCard?: Card
+  challengeCard?: Card
+  placedPosition?: number
 }
 
 export interface Game {
@@ -90,6 +92,7 @@ export interface Game {
   updatedAt: string
   finishedAt?: string
   winner?: string
+  deuce?: boolean
 }
 
 // API Request/Response types

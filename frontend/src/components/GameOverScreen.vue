@@ -50,12 +50,19 @@ defineEmits<{ restart: [] }>()
 .game-over-card {
   background: rgba(15, 12, 40, 0.95);
   border: 1px solid rgba(255, 215, 0, 0.3);
-  border-radius: 20px;
-  padding: 40px 48px;
+  border-radius: 16px;
+  padding: 28px 24px;
   text-align: center;
   box-shadow: 0 0 60px rgba(255, 215, 0, 0.1);
   max-width: 400px;
   width: 90vw;
+}
+
+@media (min-width: 640px) {
+  .game-over-card {
+    border-radius: 20px;
+    padding: 40px 48px;
+  }
 }
 
 .trophy {
@@ -71,10 +78,16 @@ defineEmits<{ restart: [] }>()
 
 .winner-title {
   color: #ffd700;
-  font-size: 1.8em;
+  font-size: 1.4em;
   font-weight: 800;
   margin-bottom: 24px;
   text-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+@media (min-width: 640px) {
+  .winner-title {
+    font-size: 1.8em;
+  }
 }
 
 .ranking {

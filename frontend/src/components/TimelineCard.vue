@@ -30,9 +30,9 @@ const props = withDefaults(defineProps<{
 
 const cardStyle = computed(() => ({
   '--card-color': props.color,
-  '--card-w': props.size === 'sm' ? '50px' : '64px',
-  '--card-h': props.size === 'sm' ? '72px' : '90px',
-  '--font-size': props.size === 'sm' ? '0.85em' : '1.1em',
+  '--card-w': props.size === 'sm' ? 'clamp(36px, 7vmin, 50px)' : 'clamp(48px, 9vmin, 64px)',
+  '--card-h': props.size === 'sm' ? 'clamp(52px, 10vmin, 72px)' : 'clamp(68px, 13vmin, 90px)',
+  '--font-size': props.size === 'sm' ? 'clamp(0.65em, 1.2vmin, 0.85em)' : 'clamp(0.8em, 1.5vmin, 1.1em)',
 }))
 </script>
 

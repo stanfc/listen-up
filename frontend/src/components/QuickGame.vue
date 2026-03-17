@@ -55,6 +55,7 @@
       :current-player-name="currentPlayer?.name || ''"
       :current-player-cards="currentPlayerCards"
       :challenge-card="gameStore.currentGame?.currentRound.challengeCard || null"
+      :placed-position="gameStore.currentGame?.currentRound.placedPosition ?? null"
       :submitting="isSubmitting"
       :result-message="lastResult?.message"
       :result-success="lastResult?.success"
@@ -298,7 +299,8 @@ onMounted(async () => {
 <style scoped>
 .game-root {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  height: 100dvh;
   overflow: hidden;
 }
 
@@ -308,8 +310,17 @@ onMounted(async () => {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding-top: 50px;
-  padding-bottom: 200px;
+  height: 100vh;
+  height: 100dvh;
+  padding-top: 40px;
+  /* Reserve space for bottom panel */
+  padding-bottom: 45vh;
+}
+
+@media (min-width: 640px) {
+  .table-area {
+    padding-top: 50px;
+    padding-bottom: 30vh;
+  }
 }
 </style>

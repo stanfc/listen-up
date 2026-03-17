@@ -63,8 +63,15 @@ const seatStyle = computed(() => ({
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 4px;
-  min-width: 80px;
+  gap: 2px;
+  min-width: 60px;
+}
+
+@media (min-width: 640px) {
+  .seat-inner {
+    gap: 4px;
+    min-width: 80px;
+  }
 }
 
 .player-info {

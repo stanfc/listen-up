@@ -1,0 +1,13 @@
+node_modules
+dist
+.git
+.env
+.claude
+*.md
+log.txt
+song-crawler
+*.js
+songs_data_verified.json
+frontend/node_modules
+backend/node_modules
+backend/dist

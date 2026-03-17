@@ -30,6 +30,17 @@ export function getGame(gameId: string): Game | null {
   return games[gameId] || null
 }
 
+// Find game by room code
+export function getGameByRoomCode(roomCode: string): Game | null {
+  const games = loadGames()
+  for (const id of Object.keys(games)) {
+    if (games[id].roomCode === roomCode.toUpperCase()) {
+      return games[id]
+    }
+  }
+  return null
+}
+
 // Create game
 export function createGame(game: Game): Game {
   const games = loadGames()
@@ -91,6 +102,26 @@ export function filterMusicByTags(tags: string[]): Music[] {
     // Intersect the two groups
     return yearMatch && otherMatch
   })
+}
+
+// Cleanup old games (older than maxAgeMs, default 24h)
+export function cleanupOldGames(maxAgeMs: number = 24 * 60 * 60 * 1000): number {
+  const games = loadGames()
+  const now = Date.now()
+  let removed = 0
+
+  for (const id of Object.keys(games)) {
+    const updatedAt = new Date(games[id].updatedAt).getTime()
+    if (now - updatedAt > maxAgeMs) {
+      delete games[id]
+      removed++
+    }
+  }
+
+  if (removed > 0) {
+    saveGames(games)
+  }
+  return removed
 }
 
 // Generate room code
