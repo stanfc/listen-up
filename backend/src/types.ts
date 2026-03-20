@@ -54,6 +54,7 @@ export interface GameConfig {
   winningCards: number
   musicTags: string[]
   maxRounds?: number
+  tokenPointsK?: number  // Every k tokens = 1 point. 0 or undefined = disabled
 }
 
 export interface GameRound {

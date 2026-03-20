@@ -196,7 +196,8 @@ export function processSongGuess(
 
   if (isCorrect) {
     player.guessedCorrectSongInRound = true
-    player.tokens = Math.min(player.tokens + 1, 5) // Award 1 token, max 5
+    const maxTokens = game.config.tokenPointsK ? 99 : 5
+    player.tokens = Math.min(player.tokens + 1, maxTokens)
     game.currentRound.correctGuessPlayer = playerId
 
     return {
@@ -476,6 +477,15 @@ export function changeSong(
  *
  * Returns { finished, winner, deuce } so frontend knows what happened.
  */
+/**
+ * Calculate a player's effective score: cards + token bonus points
+ */
+function getPlayerScore(player: Player, config: GameConfig): number {
+  const k = config.tokenPointsK
+  const tokenPoints = k && k > 0 ? Math.floor(player.tokens / k) : 0
+  return player.cards.length + tokenPoints
+}
+
 export function moveToNextRound(game: Game): { finished: boolean; deuce: boolean } {
   if (game.status !== GameStatus.PLAYING) {
     return { finished: true, deuce: false }
@@ -493,11 +503,12 @@ export function moveToNextRound(game: Game): { finished: boolean; deuce: boolean
   const fullRoundComplete = game.currentRound.turnIndex >= count
 
   if (fullRoundComplete) {
-    // Check win condition
-    const maxCards = Math.max(...game.players.map(p => p.cards.length))
+    // Check win condition using effective score (cards + token bonus)
+    const scores = game.players.map(p => getPlayerScore(p, game.config))
+    const maxScore = Math.max(...scores)
 
-    if (maxCards >= game.config.winningCards) {
-      const leaders = game.players.filter(p => p.cards.length === maxCards)
+    if (maxScore >= game.config.winningCards) {
+      const leaders = game.players.filter(p => getPlayerScore(p, game.config) === maxScore)
 
       if (leaders.length === 1) {
         // Single winner!

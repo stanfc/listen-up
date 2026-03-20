@@ -24,9 +24,10 @@
           />
         </TransitionGroup>
       </div>
-      <!-- Card count badge -->
+      <!-- Score badge -->
       <div class="card-count">
-        <span>{{ player.cards.length }}</span>
+        <span v-if="tokenBonus > 0">{{ player.cards.length }}+{{ tokenBonus }}</span>
+        <span v-else>{{ player.cards.length }}</span>
       </div>
     </div>
   </div>
@@ -35,6 +36,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import type { Player } from '@/types'
+
 import TimelineCard from './TimelineCard.vue'
 
 const props = defineProps<{
@@ -43,7 +45,13 @@ const props = defineProps<{
   y: number         // percent
   rotation: number   // degrees
   color: string
+  tokenPointsK?: number
 }>()
+
+const tokenBonus = computed(() => {
+  const k = props.tokenPointsK
+  return k && k > 0 ? Math.floor(props.player.tokens / k) : 0
+})
 
 const seatStyle = computed(() => ({
   left: `${props.x}%`,

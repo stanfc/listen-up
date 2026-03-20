@@ -44,7 +44,8 @@ export const useGameStore = defineStore('game', () => {
       const response = await apiService.createGame({
         maxPlayers: config.maxPlayers,
         winningCards: config.winningCards,
-        musicTags: config.musicTags
+        musicTags: config.musicTags,
+        tokenPointsK: config.tokenPointsK
       })
 
       currentGame.value = {

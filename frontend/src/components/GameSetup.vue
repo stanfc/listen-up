@@ -33,6 +33,24 @@
       </div>
 
       <div class="form-group">
+        <label>擴充規則</label>
+        <div class="expansion-toggle">
+          <label class="toggle-label">
+            <input type="checkbox" v-model="tokenPointsEnabled" />
+            <span>代幣換分：每 </span>
+            <select
+              v-model.number="tokenPointsK"
+              :disabled="!tokenPointsEnabled"
+              class="inline-select"
+            >
+              <option v-for="n in 5" :key="n" :value="n">{{ n }}</option>
+            </select>
+            <span> 個代幣 = 1 分</span>
+          </label>
+        </div>
+      </div>
+
+      <div class="form-group">
         <label>音樂標籤 <span class="label-hint">（不選 = 全選）</span></label>
         <div class="tags-container">
           <button
@@ -97,9 +115,16 @@ import RulesModal from './RulesModal.vue'
 const gameStore = useGameStore()
 const emit = defineEmits(['game-started'])
 
-const playerCount = ref(4)
-const playerNames = ref<string[]>(['玩家 1', '玩家 2', '玩家 3', '玩家 4'])
-const winningCards = ref(5)
+// Load saved settings
+const saved = (() => {
+  try {
+    return JSON.parse(localStorage.getItem('gameSetup') || '{}')
+  } catch { return {} }
+})()
+
+const playerCount = ref(saved.playerCount || 4)
+const playerNames = ref<string[]>(saved.playerNames || Array.from({ length: playerCount.value }, (_, i) => `玩家 ${i + 1}`))
+const winningCards = ref(saved.winningCards || 5)
 
 watch(playerCount, (count) => {
   while (playerNames.value.length < count) {
@@ -109,12 +134,25 @@ watch(playerCount, (count) => {
     playerNames.value.pop()
   }
 })
-const selectedTags = ref<string[]>([])
+const selectedTags = ref<string[]>(saved.selectedTags || [])
 const availableTags = ref<string[]>([])
 const isLoading = ref(false)
 const error = ref<string | null>(null)
 const rejoinCode = ref('')
 const showRules = ref(false)
+const tokenPointsEnabled = ref(saved.tokenPointsEnabled || false)
+const tokenPointsK = ref(saved.tokenPointsK || 3)
+
+function saveSettings() {
+  localStorage.setItem('gameSetup', JSON.stringify({
+    playerCount: playerCount.value,
+    playerNames: playerNames.value,
+    winningCards: winningCards.value,
+    selectedTags: selectedTags.value,
+    tokenPointsEnabled: tokenPointsEnabled.value,
+    tokenPointsK: tokenPointsK.value,
+  }))
+}
 
 onMounted(async () => {
   try {
@@ -154,13 +192,15 @@ async function rejoinGame() {
 async function startGame() {
   isLoading.value = true
   error.value = null
+  saveSettings()
   try {
     const config = {
       maxPlayers: playerCount.value,
       minPlayers: 2,
       winningCards: winningCards.value,
       musicTags: selectedTags.value,
-      maxRounds: 100
+      maxRounds: 100,
+      tokenPointsK: tokenPointsEnabled.value ? tokenPointsK.value : 0
     }
 
     await gameStore.createGame(config)
@@ -411,6 +451,42 @@ select option {
 .btn-rejoin:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+.expansion-toggle {
+  display: flex;
+  align-items: center;
+}
+
+.toggle-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.88em;
+  cursor: pointer;
+}
+
+.toggle-label input[type="checkbox"] {
+  accent-color: var(--accent, #00ffff);
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+.inline-select {
+  width: 48px;
+  padding: 2px 4px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 6px;
+  font-size: 0.95em;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+}
+
+.inline-select:disabled {
+  opacity: 0.3;
 }
 
 .btn-rules {

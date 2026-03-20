@@ -21,7 +21,7 @@ app.use(express.json())
  */
 app.post('/api/games', (req: Request, res: Response, next: NextFunction) => {
   try {
-    const { maxPlayers, winningCards, musicTags } = req.body
+    const { maxPlayers, winningCards, musicTags, tokenPointsK } = req.body
 
     // Validate input
     validation.validateGameConfig(maxPlayers, winningCards, musicTags)
@@ -32,7 +32,8 @@ app.post('/api/games', (req: Request, res: Response, next: NextFunction) => {
       minPlayers: 2,
       winningCards,
       musicTags,
-      maxRounds: 100
+      maxRounds: 100,
+      tokenPointsK: tokenPointsK || 0
     }
 
     const game = gameLogic.createNewGame(config)

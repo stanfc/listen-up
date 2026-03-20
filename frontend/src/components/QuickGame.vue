@@ -15,6 +15,7 @@
         :players="gameStore.gamePlayers"
         :round-number="gameStore.currentGame?.currentRound.roundNumber || 0"
         :is-playable="gameStore.currentPhase === 'song_guess' && !gameStore.isGameFinished"
+        :token-points-k="gameStore.currentGame?.config.tokenPointsK"
       />
     </div>
 
@@ -75,6 +76,7 @@
       :visible="showGameOver"
       :winner-name="gameStore.winner?.name || ''"
       :ranking="finalRanking"
+      :token-points-k="tokenK"
       @restart="resetGame"
     />
 
@@ -130,8 +132,16 @@ const currentMusic = computed(() => gameStore.currentMusic)
 
 const currentPlayerCards = computed(() => currentPlayer.value?.cards || [])
 
+const tokenK = computed(() => gameStore.currentGame?.config.tokenPointsK || 0)
+
+function getScore(p: { cards: { length: number }; tokens: number }) {
+  const k = tokenK.value
+  const bonus = k > 0 ? Math.floor(p.tokens / k) : 0
+  return p.cards.length + bonus
+}
+
 const finalRanking = computed(() =>
-  [...gameStore.gamePlayers].sort((a, b) => b.cards.length - a.cards.length)
+  [...gameStore.gamePlayers].sort((a, b) => getScore(b) - getScore(a))
 )
 
 // --- Actions ---
@@ -142,6 +152,8 @@ async function handleChangeSong() {
   if (!currentPlayer.value) return
   isSubmitting.value = true
   try {
+    showMusicVideo.value = false
+    gameStore.revealedMusic = null
     await gameStore.changeSong(currentPlayer.value.id)
     songGuessRef.value?.reset()
   } catch (err) {

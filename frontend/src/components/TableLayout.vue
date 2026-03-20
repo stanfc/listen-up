@@ -9,6 +9,7 @@
       :y="seat.y"
       :rotation="seat.rotation"
       :color="seat.color"
+      :token-points-k="tokenPointsK"
     />
   </div>
 </template>
@@ -24,6 +25,7 @@ const props = defineProps<{
   players: Player[]
   roundNumber: number
   isPlayable: boolean
+  tokenPointsK?: number
 }>()
 
 const seats = computed(() => {

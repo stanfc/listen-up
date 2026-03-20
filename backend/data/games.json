@@ -380,5 +380,716 @@
     },
     "createdAt": "2026-03-20T03:59:09.408Z",
     "updatedAt": "2026-03-20T03:59:18.617Z"
+  },
+  "game-36e44573-2590-403f-a926-c1838d9005d7": {
+    "id": "game-36e44573-2590-403f-a926-c1838d9005d7",
+    "roomCode": "I9VO",
+    "status": "playing",
+    "config": {
+      "maxPlayers": 4,
+      "minPlayers": 2,
+      "winningCards": 5,
+      "musicTags": [],
+      "maxRounds": 100
+    },
+    "players": [
+      {
+        "id": "player-35b232b7-1c16-4f74-8435-70fb7e75dd46",
+        "name": "玩家 2",
+        "tokens": 3,
+        "cards": [
+          {
+            "id": "card-47906237-d6a7-42ac-88a9-4b94d9d55b4d",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-c3341ba0-208a-435b-8776-1c0793d49faf",
+        "name": "玩家 4",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-d2b2b7c4-5cb4-4154-98fb-cd599d43d830",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-ba3ccdfd-1b01-4ec9-ba4f-aafc8c3d1529",
+        "name": "玩家 1",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-b04465d3-72d3-4e21-99a3-4a9c7941d012",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-485c6837-2e05-4c3d-9c2c-fa389d1c0b9d",
+        "name": "玩家 3",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-abab187d-a520-4c0b-b858-c4b343ce9280",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      }
+    ],
+    "currentRound": {
+      "roundNumber": 2,
+      "currentPlayer": "player-c3341ba0-208a-435b-8776-1c0793d49faf",
+      "musicId": "music-3241",
+      "phase": "song_guess",
+      "usedMusicIds": [
+        "music-3241"
+      ],
+      "startingPlayerId": "player-35b232b7-1c16-4f74-8435-70fb7e75dd46",
+      "turnIndex": 1,
+      "correctGuessPlayer": "player-35b232b7-1c16-4f74-8435-70fb7e75dd46"
+    },
+    "createdAt": "2026-03-20T04:07:23.911Z",
+    "updatedAt": "2026-03-20T04:07:40.174Z"
+  },
+  "game-a4b24dba-1301-467a-ac81-be9d7a7188d7": {
+    "id": "game-a4b24dba-1301-467a-ac81-be9d7a7188d7",
+    "roomCode": "IWDR",
+    "status": "playing",
+    "config": {
+      "maxPlayers": 4,
+      "minPlayers": 2,
+      "winningCards": 3,
+      "musicTags": [],
+      "maxRounds": 100
+    },
+    "players": [
+      {
+        "id": "player-18601bf0-99cd-4e8d-afe0-2986677cad88",
+        "name": "玩家 1",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-d4036b29-9541-4672-bccf-ba6220535cc9",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-ea4f895c-9913-4cde-80d4-bfda48adce6f",
+        "name": "玩家 2",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-b2ce6393-2c48-4ce8-81b1-145d705122c9",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-d2adeb8e-bc96-469b-b86c-46629908a44a",
+        "name": "玩家 4",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-07305ece-ca4d-43dd-b7d8-a76b11d071a5",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-699aea84-6f3c-496d-93b3-d15694926d3b",
+        "name": "玩家 3",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-4b6152e2-eb2f-4f04-a940-1be24d728b2d",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      }
+    ],
+    "currentRound": {
+      "roundNumber": 1,
+      "currentPlayer": "player-18601bf0-99cd-4e8d-afe0-2986677cad88",
+      "musicId": "music-856",
+      "phase": "song_guess",
+      "usedMusicIds": [],
+      "startingPlayerId": "player-18601bf0-99cd-4e8d-afe0-2986677cad88",
+      "turnIndex": 0
+    },
+    "createdAt": "2026-03-20T04:07:51.040Z",
+    "updatedAt": "2026-03-20T04:07:51.083Z"
+  },
+  "game-e58ffadc-30d9-4f18-adad-8b151e6f2b55": {
+    "id": "game-e58ffadc-30d9-4f18-adad-8b151e6f2b55",
+    "roomCode": "7L8R",
+    "status": "finished",
+    "config": {
+      "maxPlayers": 2,
+      "minPlayers": 2,
+      "winningCards": 3,
+      "musicTags": [],
+      "maxRounds": 100
+    },
+    "players": [
+      {
+        "id": "player-876a29fb-83ee-41af-a7ca-961636ab1d82",
+        "name": "玩家 1",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-c6b3962f-33f4-4adf-a35b-16018b6a2e26",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          },
+          {
+            "id": "card-5214bea8-a8f7-49f2-990e-d33d058b5390",
+            "musicId": "music-144",
+            "title": "溫嵐《同手同腳》Official 完整版 MV",
+            "artist": "溫嵐",
+            "year": 2013,
+            "position": 1
+          },
+          {
+            "id": "card-e1a94a6f-9838-4acb-9d4c-1903fe7c8678",
+            "musicId": "music-2649",
+            "title": "EXO 엑소 'Monster' MV",
+            "artist": "",
+            "year": 2016,
+            "position": 2
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-7690585f-3d36-4547-8f31-94bddf24a21f",
+        "name": "玩家 2",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-b33a3cda-42fe-49f9-92fc-ef7f13935c14",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          },
+          {
+            "id": "card-85c8d32f-5fdb-4dba-9693-553b13f834c5",
+            "musicId": "music-152",
+            "title": "Twins《莫斯科沒有眼淚》[Official MV]",
+            "artist": "Twins",
+            "year": 2012,
+            "position": 1
+          }
+        ],
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": false
+      }
+    ],
+    "currentRound": {
+      "roundNumber": 4,
+      "currentPlayer": "player-7690585f-3d36-4547-8f31-94bddf24a21f",
+      "musicId": "music-152",
+      "phase": "round_end",
+      "usedMusicIds": [
+        "music-2999",
+        "music-3103",
+        "music-3103",
+        "music-152"
+      ],
+      "startingPlayerId": "player-876a29fb-83ee-41af-a7ca-961636ab1d82",
+      "turnIndex": 2,
+      "correctGuessPlayer": "player-876a29fb-83ee-41af-a7ca-961636ab1d82",
+      "placedPosition": 1,
+      "placementWrong": false
+    },
+    "createdAt": "2026-03-20T04:08:00.051Z",
+    "updatedAt": "2026-03-20T04:08:59.404Z",
+    "winner": "player-876a29fb-83ee-41af-a7ca-961636ab1d82",
+    "finishedAt": "2026-03-20T04:08:59.403Z",
+    "deuce": false
+  },
+  "game-46635d9e-b799-4327-9135-17fd1ff1705a": {
+    "id": "game-46635d9e-b799-4327-9135-17fd1ff1705a",
+    "roomCode": "BVXK",
+    "status": "finished",
+    "config": {
+      "maxPlayers": 2,
+      "minPlayers": 2,
+      "winningCards": 3,
+      "musicTags": [],
+      "maxRounds": 100
+    },
+    "players": [
+      {
+        "id": "player-e5950b4d-ed26-455e-95e2-f90605ae92b8",
+        "name": "玩家 1",
+        "tokens": 5,
+        "cards": [
+          {
+            "id": "card-1464fec3-5a52-47a7-a720-0b9177ad0779",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": true
+      },
+      {
+        "id": "player-b54bc1c2-af7c-4629-8c00-61a885dd2576",
+        "name": "玩家 2",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-2e4a064a-1c48-417d-97ba-cf9211d39185",
+            "musicId": "music-146",
+            "title": "曾經太年輕",
+            "artist": "",
+            "year": 2006,
+            "position": 0
+          },
+          {
+            "id": "card-5075c68f-f962-4201-a750-1653128121da",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 1
+          },
+          {
+            "id": "card-eacb6320-8c90-4a78-bdfb-3b67626828ef",
+            "musicId": "music-3015",
+            "title": "南瓜妮歌迷俱樂部 - 微光",
+            "artist": "南瓜妮歌迷俱樂部",
+            "year": 2012,
+            "position": 2
+          }
+        ],
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": false
+      }
+    ],
+    "currentRound": {
+      "roundNumber": 4,
+      "currentPlayer": "player-b54bc1c2-af7c-4629-8c00-61a885dd2576",
+      "musicId": "music-146",
+      "phase": "round_end",
+      "usedMusicIds": [
+        "music-3015",
+        "music-3253",
+        "music-146"
+      ],
+      "startingPlayerId": "player-e5950b4d-ed26-455e-95e2-f90605ae92b8",
+      "turnIndex": 2,
+      "correctGuessPlayer": "player-e5950b4d-ed26-455e-95e2-f90605ae92b8",
+      "placedPosition": 0,
+      "placementWrong": false
+    },
+    "createdAt": "2026-03-20T04:09:10.591Z",
+    "updatedAt": "2026-03-20T04:10:05.834Z",
+    "winner": "player-b54bc1c2-af7c-4629-8c00-61a885dd2576",
+    "finishedAt": "2026-03-20T04:10:05.834Z",
+    "deuce": false
+  },
+  "game-74b2b4b6-893f-45ce-b74d-99f999d39560": {
+    "id": "game-74b2b4b6-893f-45ce-b74d-99f999d39560",
+    "roomCode": "HP8Y",
+    "status": "playing",
+    "config": {
+      "maxPlayers": 2,
+      "minPlayers": 2,
+      "winningCards": 5,
+      "musicTags": [],
+      "maxRounds": 100,
+      "tokenPointsK": 0
+    },
+    "players": [
+      {
+        "id": "player-5d0b57a7-aa05-4477-9067-9daa9f2a6c1f",
+        "name": "玩家 1",
+        "tokens": 3,
+        "cards": [
+          {
+            "id": "card-8bd26042-cc6f-4ba3-adb8-8096c9938edf",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          },
+          {
+            "id": "card-91482086-18b4-4b26-867b-4e3062e6e591",
+            "musicId": "music-1034",
+            "title": "wannasleep《夜間限定》feat. Li @Limi Official Music Video",
+            "artist": "wannasleep",
+            "year": 2022,
+            "position": 1
+          }
+        ],
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-c273ae95-d3e7-46b4-86cd-158d0732878d",
+        "name": "玩家 2",
+        "tokens": 3,
+        "cards": [
+          {
+            "id": "card-47220cc2-23af-4a1a-931d-bb076a555ae1",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      }
+    ],
+    "currentRound": {
+      "roundNumber": 5,
+      "currentPlayer": "player-5d0b57a7-aa05-4477-9067-9daa9f2a6c1f",
+      "musicId": "music-343",
+      "phase": "song_guess",
+      "usedMusicIds": [
+        "music-2144",
+        "music-1034",
+        "music-1743",
+        "music-343"
+      ],
+      "startingPlayerId": "player-5d0b57a7-aa05-4477-9067-9daa9f2a6c1f",
+      "turnIndex": 0,
+      "correctGuessPlayer": "player-c273ae95-d3e7-46b4-86cd-158d0732878d"
+    },
+    "createdAt": "2026-03-20T04:12:37.553Z",
+    "updatedAt": "2026-03-20T04:13:25.187Z"
+  },
+  "game-44711d21-8fda-4ce5-b443-f11c1b46db9f": {
+    "id": "game-44711d21-8fda-4ce5-b443-f11c1b46db9f",
+    "roomCode": "D74G",
+    "status": "playing",
+    "config": {
+      "maxPlayers": 2,
+      "minPlayers": 2,
+      "winningCards": 5,
+      "musicTags": [],
+      "maxRounds": 100,
+      "tokenPointsK": 2
+    },
+    "players": [
+      {
+        "id": "player-0258e8eb-6e37-4af8-9413-e45cf03093e6",
+        "name": "Bob",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-4e0fcf71-7b17-4c1c-9095-bb13177d8544",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-334e5151-07ec-4110-9353-d262dba3865f",
+        "name": "Alice",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-2537848d-fdf4-4e96-854b-1b48aff1fdb0",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      }
+    ],
+    "currentRound": {
+      "roundNumber": 1,
+      "currentPlayer": "player-0258e8eb-6e37-4af8-9413-e45cf03093e6",
+      "musicId": "music-2905",
+      "phase": "song_guess",
+      "usedMusicIds": [],
+      "startingPlayerId": "player-0258e8eb-6e37-4af8-9413-e45cf03093e6",
+      "turnIndex": 0
+    },
+    "createdAt": "2026-03-20T04:14:32.190Z",
+    "updatedAt": "2026-03-20T04:14:32.313Z"
+  },
+  "game-b974a1bc-0eb8-4ea3-a527-4f732e17a480": {
+    "id": "game-b974a1bc-0eb8-4ea3-a527-4f732e17a480",
+    "roomCode": "O4D3",
+    "status": "finished",
+    "config": {
+      "maxPlayers": 2,
+      "minPlayers": 2,
+      "winningCards": 4,
+      "musicTags": [],
+      "maxRounds": 100,
+      "tokenPointsK": 3
+    },
+    "players": [
+      {
+        "id": "player-60cd1ab2-d43d-4ef8-8692-c773aa80f47f",
+        "name": "玩家 1",
+        "tokens": 3,
+        "cards": [
+          {
+            "id": "card-e2d545da-8f36-4ffc-a13f-b6a5477c5a24",
+            "musicId": "music-1446",
+            "title": "SUPER JUNIOR 슈퍼주니어 '미인아 (Bonamana)' MV",
+            "artist": "",
+            "year": 2010,
+            "position": 0
+          },
+          {
+            "id": "card-367fd479-7df6-4bf3-9b2d-2b5eda368728",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 1
+          },
+          {
+            "id": "card-f0209ffb-9b8f-44e1-9ddc-64667b21aa3c",
+            "musicId": "music-344",
+            "title": "周杰倫 Jay Chou【說好不哭 Won't Cry】with 五月天阿信 (Mayday Ashin) Official MV",
+            "artist": "",
+            "year": 2019,
+            "position": 2
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": true
+      },
+      {
+        "id": "player-93a35f9b-46d4-46bd-b5ea-ad56b9d38c09",
+        "name": "玩家 2",
+        "tokens": 1,
+        "cards": [
+          {
+            "id": "card-955eea86-5516-4e85-90c4-a10ba2641a66",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": false
+      }
+    ],
+    "currentRound": {
+      "roundNumber": 4,
+      "currentPlayer": "player-93a35f9b-46d4-46bd-b5ea-ad56b9d38c09",
+      "musicId": "music-2645",
+      "phase": "round_end",
+      "usedMusicIds": [
+        "music-094",
+        "music-1557",
+        "music-1557",
+        "music-2929",
+        "music-1852",
+        "music-1852"
+      ],
+      "startingPlayerId": "player-60cd1ab2-d43d-4ef8-8692-c773aa80f47f",
+      "turnIndex": 2,
+      "correctGuessPlayer": "player-60cd1ab2-d43d-4ef8-8692-c773aa80f47f",
+      "placedPosition": 0,
+      "placementWrong": true
+    },
+    "createdAt": "2026-03-20T04:40:10.905Z",
+    "updatedAt": "2026-03-20T04:47:15.767Z",
+    "winner": "player-60cd1ab2-d43d-4ef8-8692-c773aa80f47f",
+    "finishedAt": "2026-03-20T04:47:15.767Z",
+    "deuce": false
+  },
+  "game-e5ec016c-10d2-4a4e-b4ea-4555be213f8b": {
+    "id": "game-e5ec016c-10d2-4a4e-b4ea-4555be213f8b",
+    "roomCode": "4SRG",
+    "status": "playing",
+    "config": {
+      "maxPlayers": 2,
+      "minPlayers": 2,
+      "winningCards": 10,
+      "musicTags": [],
+      "maxRounds": 100,
+      "tokenPointsK": 3
+    },
+    "players": [
+      {
+        "id": "player-a48697c7-b082-40d9-819b-10528ad94405",
+        "name": "修",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-e0b96ce6-0357-4f51-a79b-8d537026d4c8",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-f444947a-1e12-46a9-b1a6-bc04ea16c272",
+        "name": "晨",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-07d52f34-5f98-4f5e-a5aa-dd5963c0cb17",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      }
+    ],
+    "currentRound": {
+      "roundNumber": 1,
+      "currentPlayer": "player-a48697c7-b082-40d9-819b-10528ad94405",
+      "musicId": "music-2718",
+      "phase": "song_guess",
+      "usedMusicIds": [],
+      "startingPlayerId": "player-a48697c7-b082-40d9-819b-10528ad94405",
+      "turnIndex": 0
+    },
+    "createdAt": "2026-03-20T04:49:19.128Z",
+    "updatedAt": "2026-03-20T04:49:19.160Z"
+  },
+  "game-f8940d0f-6ba8-43fc-82e0-94a2028a35e3": {
+    "id": "game-f8940d0f-6ba8-43fc-82e0-94a2028a35e3",
+    "roomCode": "KMJE",
+    "status": "playing",
+    "config": {
+      "maxPlayers": 2,
+      "minPlayers": 2,
+      "winningCards": 4,
+      "musicTags": [],
+      "maxRounds": 100,
+      "tokenPointsK": 3
+    },
+    "players": [
+      {
+        "id": "player-1fc62253-95ab-451a-a7cb-28e42f214eb8",
+        "name": "修",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-d6c167d4-55a6-4846-bd9c-a4f0336de3cc",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": true,
+        "guessedCorrectSongInRound": false
+      },
+      {
+        "id": "player-55cd6d87-cc2a-480f-80ac-ab4fa9538a3d",
+        "name": "晨",
+        "tokens": 2,
+        "cards": [
+          {
+            "id": "card-9bdc65fa-3996-4092-945b-02cf85ef48a5",
+            "musicId": "starter",
+            "title": "起始卡牌",
+            "artist": "System",
+            "year": 2012,
+            "position": 0
+          }
+        ],
+        "isCurrentPlayer": false,
+        "guessedCorrectSongInRound": false
+      }
+    ],
+    "currentRound": {
+      "roundNumber": 1,
+      "currentPlayer": "player-1fc62253-95ab-451a-a7cb-28e42f214eb8",
+      "musicId": "music-1680",
+      "phase": "song_guess",
+      "usedMusicIds": [],
+      "startingPlayerId": "player-1fc62253-95ab-451a-a7cb-28e42f214eb8",
+      "turnIndex": 0
+    },
+    "createdAt": "2026-03-20T04:49:24.428Z",
+    "updatedAt": "2026-03-20T04:49:24.454Z"
   }
 }

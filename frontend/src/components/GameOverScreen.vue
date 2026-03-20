@@ -12,7 +12,7 @@
           >
             <span class="rank-pos">{{ idx + 1 }}.</span>
             <span class="rank-name">{{ player.name }}</span>
-            <span class="rank-cards">{{ player.cards.length }} 張卡牌</span>
+            <span class="rank-cards">{{ getScore(player) }} 分</span>
           </div>
         </div>
         <button class="btn-restart" @click="$emit('restart')">
@@ -26,11 +26,18 @@
 <script setup lang="ts">
 import type { Player } from '@/types'
 
-defineProps<{
+const props = defineProps<{
   visible: boolean
   winnerName: string
   ranking: Player[]
+  tokenPointsK?: number
 }>()
+
+function getScore(p: Player) {
+  const k = props.tokenPointsK || 0
+  const bonus = k > 0 ? Math.floor(p.tokens / k) : 0
+  return p.cards.length + bonus
+}
 
 defineEmits<{ restart: [] }>()
 </script>
