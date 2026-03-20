@@ -64,9 +64,9 @@ defineEmits<{ nextRound: [] }>()
 }
 
 .panel-card {
-  background: rgba(15, 12, 40, 0.92);
+  background: rgba(var(--surface), 0.92);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 255, 255, 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.12);
   border-radius: 12px;
   padding: clamp(12px, 1.5vh, 20px) clamp(14px, 1.5vw, 24px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -74,16 +74,16 @@ defineEmits<{ nextRound: [] }>()
 }
 
 .deuce-banner {
-  background: linear-gradient(135deg, rgba(255, 107, 203, 0.15), rgba(255, 80, 80, 0.1));
-  border: 1px solid rgba(255, 107, 203, 0.3);
+  background: linear-gradient(135deg, rgba(var(--secondary-rgb), 0.15), rgba(255, 80, 80, 0.1));
+  border: 1px solid rgba(var(--secondary-rgb), 0.3);
   border-radius: 8px;
   padding: 8px;
   margin-bottom: 14px;
-  color: #ff6bcb;
+  color: var(--secondary);
   font-size: 1.1em;
   font-weight: 800;
   letter-spacing: 2px;
-  text-shadow: 0 0 12px rgba(255, 107, 203, 0.3);
+  text-shadow: 0 0 12px rgba(var(--secondary-rgb), 0.3);
 }
 
 .song-reveal {
@@ -93,10 +93,10 @@ defineEmits<{ nextRound: [] }>()
 .reveal-badge {
   display: inline-block;
   padding: 2px 12px;
-  background: rgba(0, 255, 255, 0.1);
-  border: 1px solid rgba(0, 255, 255, 0.2);
+  background: rgba(var(--accent-rgb), 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.2);
   border-radius: 12px;
-  color: #00ffff;
+  color: var(--accent);
   font-size: 0.7em;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -116,12 +116,12 @@ defineEmits<{ nextRound: [] }>()
 }
 
 .song-year {
-  color: #00ffff;
+  color: var(--accent);
   font-size: clamp(1.1em, 1.8vw, 1.6em);
   font-weight: 800;
   margin-top: 6px;
   font-family: 'Courier New', monospace;
-  text-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+  text-shadow: 0 0 12px rgba(var(--accent-rgb), 0.4);
 }
 
 .result-msg {

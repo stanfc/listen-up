@@ -130,12 +130,12 @@ const seatStyle = computed(() => ({
 
 /* Current player highlight */
 .is-current .player-info {
-  background: rgba(0, 255, 255, 0.15);
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  background: rgba(var(--accent-rgb), 0.15);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
 }
 
 .is-current .player-name {
-  color: #00ffff;
+  color: var(--accent);
 }
 
 /* TransitionGroup animations */

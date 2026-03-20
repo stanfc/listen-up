@@ -2,7 +2,12 @@ import * as fs from 'fs'
 import * as path from 'path'
 import { Game, GameDatabase, Music } from './types'
 
-const GAMES_DB_PATH = path.join(__dirname, '../data/games.json')
+// If /data volume exists (Fly.io), use it for games; otherwise fall back to local
+const VOLUME_PATH = '/data'
+const useVolume = fs.existsSync(VOLUME_PATH)
+const GAMES_DB_PATH = useVolume
+  ? path.join(VOLUME_PATH, 'games.json')
+  : path.join(__dirname, '../data/games.json')
 const MUSIC_DB_PATH = path.join(__dirname, '../data/music_new.json')
 
 // Initialize games database if not exists

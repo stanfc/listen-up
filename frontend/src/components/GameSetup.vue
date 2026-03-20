@@ -79,7 +79,11 @@
       </div>
 
       <p v-if="error" class="error-message">{{ error }}</p>
+
+      <button class="btn-rules" @click="showRules = true">規則書</button>
     </div>
+
+    <RulesModal :visible="showRules" @close="showRules = false" />
   </div>
 </template>
 
@@ -88,6 +92,7 @@ import { ref, watch, onMounted } from 'vue'
 import { useGameStore } from '@/stores/gameStore'
 import { apiService } from '@/api/client'
 import CosmicBackground from './CosmicBackground.vue'
+import RulesModal from './RulesModal.vue'
 
 const gameStore = useGameStore()
 const emit = defineEmits(['game-started'])
@@ -109,6 +114,7 @@ const availableTags = ref<string[]>([])
 const isLoading = ref(false)
 const error = ref<string | null>(null)
 const rejoinCode = ref('')
+const showRules = ref(false)
 
 onMounted(async () => {
   try {
@@ -188,7 +194,7 @@ async function startGame() {
 .setup-container {
   position: relative;
   z-index: 1;
-  background: rgba(15, 12, 40, 0.9);
+  background: rgba(var(--surface), 0.9);
   backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 16px;
@@ -257,7 +263,7 @@ select {
 
 select:focus {
   outline: none;
-  border-color: rgba(0, 255, 255, 0.4);
+  border-color: rgba(var(--accent-rgb), 0.4);
 }
 
 select option {
@@ -285,7 +291,7 @@ select option {
 
 .name-input:focus {
   outline: none;
-  border-color: rgba(0, 255, 255, 0.4);
+  border-color: rgba(var(--accent-rgb), 0.4);
 }
 
 .name-input::placeholder {
@@ -311,14 +317,14 @@ select option {
 }
 
 .tag-btn:hover {
-  border-color: rgba(0, 255, 255, 0.3);
+  border-color: rgba(var(--accent-rgb), 0.3);
   color: rgba(255, 255, 255, 0.8);
 }
 
 .tag-btn.active {
-  background: rgba(0, 255, 255, 0.15);
-  color: #00ffff;
-  border-color: rgba(0, 255, 255, 0.4);
+  background: rgba(var(--accent-rgb), 0.15);
+  color: var(--accent);
+  border-color: rgba(var(--accent-rgb), 0.4);
 }
 
 .btn-start {
@@ -399,12 +405,30 @@ select option {
 
 .btn-rejoin:hover:not(:disabled) {
   background: rgba(255, 255, 255, 0.12);
-  border-color: rgba(0, 255, 255, 0.3);
+  border-color: rgba(var(--accent-rgb), 0.3);
 }
 
 .btn-rejoin:disabled {
   opacity: 0.4;
   cursor: not-allowed;
+}
+
+.btn-rules {
+  width: 100%;
+  padding: 10px;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  font-size: 0.85em;
+  cursor: pointer;
+  margin-top: 12px;
+  transition: all 0.2s;
+}
+
+.btn-rules:hover {
+  color: rgba(255, 255, 255, 0.7);
+  border-color: rgba(var(--accent-rgb), 0.2);
 }
 
 .error-message {

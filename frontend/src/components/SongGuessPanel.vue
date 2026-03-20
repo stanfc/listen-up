@@ -112,9 +112,9 @@ defineExpose({ reset })
 }
 
 .panel-card {
-  background: rgba(15, 12, 40, 0.92);
+  background: rgba(var(--surface), 0.92);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 255, 255, 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.12);
   border-radius: 12px;
   padding: clamp(10px, 1.5vh, 16px) clamp(12px, 1.5vw, 20px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
@@ -132,13 +132,13 @@ defineExpose({ reset })
   text-align: center;
   margin-bottom: 12px;
   padding: 10px;
-  background: rgba(0, 255, 255, 0.05);
+  background: rgba(var(--accent-rgb), 0.05);
   border-radius: 8px;
-  border: 1px solid rgba(0, 255, 255, 0.1);
+  border: 1px solid rgba(var(--accent-rgb), 0.1);
 }
 
 .song-title {
-  color: #00ffff;
+  color: var(--accent);
   font-size: clamp(0.75em, 1.1vw, 1em);
   font-weight: 700;
 }
@@ -187,11 +187,11 @@ defineExpose({ reset })
 }
 
 .btn-accent {
-  background: rgba(0, 255, 255, 0.15);
-  color: #00ffff;
-  border: 1px solid rgba(0, 255, 255, 0.3);
+  background: rgba(var(--accent-rgb), 0.15);
+  color: var(--accent);
+  border: 1px solid rgba(var(--accent-rgb), 0.3);
 }
-.btn-accent:hover:not(:disabled) { background: rgba(0, 255, 255, 0.25); }
+.btn-accent:hover:not(:disabled) { background: rgba(var(--accent-rgb), 0.25); }
 
 .btn-success {
   background: rgba(72, 187, 120, 0.15);

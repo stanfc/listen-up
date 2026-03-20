@@ -48,7 +48,7 @@ defineEmits<{ restart: [] }>()
 }
 
 .game-over-card {
-  background: rgba(15, 12, 40, 0.95);
+  background: rgba(var(--surface), 0.95);
   border: 1px solid rgba(255, 215, 0, 0.3);
   border-radius: 16px;
   padding: 28px 24px;

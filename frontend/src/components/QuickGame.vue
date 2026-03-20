@@ -7,6 +7,7 @@
       :round-number="gameStore.currentGame?.currentRound.roundNumber || 0"
       :current-player-name="currentPlayer?.name || ''"
       @reset="resetGame"
+      @rules="showRules = true"
     />
 
     <div class="table-area">
@@ -14,9 +15,6 @@
         :players="gameStore.gamePlayers"
         :round-number="gameStore.currentGame?.currentRound.roundNumber || 0"
         :is-playable="gameStore.currentPhase === 'song_guess' && !gameStore.isGameFinished"
-        :youtube-id="currentMusic?.youtubeId"
-        :show-video="showMusicVideo"
-        @play="handlePlay"
       />
     </div>
 
@@ -79,6 +77,15 @@
       :ranking="finalRanking"
       @restart="resetGame"
     />
+
+    <RulesModal :visible="showRules" @close="showRules = false" />
+
+    <!-- Floating video window — at root level for highest z-index -->
+    <VideoWindow
+      ref="videoWindowRef"
+      :youtube-id="currentMusic?.youtubeId"
+      :visible="showMusicVideo"
+    />
   </div>
 </template>
 
@@ -95,6 +102,8 @@ import CardPlacementPanel from './CardPlacementPanel.vue'
 import ChallengePanel from './ChallengePanel.vue'
 import RoundEndPanel from './RoundEndPanel.vue'
 import GameOverScreen from './GameOverScreen.vue'
+import VideoWindow from './VideoWindow.vue'
+import RulesModal from './RulesModal.vue'
 
 const gameStore = useGameStore()
 
@@ -104,11 +113,13 @@ const isSubmitting = ref(false)
 const pendingCard = ref<Card | null>(null)
 const lastResult = ref<any>(null)
 const showGameOver = ref(false)
+const showRules = ref(false)
 
 // Refs for child reset
 const songGuessRef = ref<InstanceType<typeof SongGuessPanel> | null>(null)
 const cardPlacementRef = ref<InstanceType<typeof CardPlacementPanel> | null>(null)
 const challengeRef = ref<InstanceType<typeof ChallengePanel> | null>(null)
+const videoWindowRef = ref<InstanceType<typeof VideoWindow> | null>(null)
 
 // Computed
 const currentPlayer = computed(() =>
@@ -225,7 +236,7 @@ async function handleChallenge(challengerId: string, position: number) {
   isSubmitting.value = true
   try {
     const result = await gameStore.challenge(challengerId, position)
-    lastResult.value = { ...result, goodForPlayer: !result.success }
+    lastResult.value = { ...result, goodForPlayer: result.placementWasCorrect }
     // Now reveal music + show video
     await gameStore.revealMusic()
     showMusicVideo.value = true
@@ -282,6 +293,7 @@ function resetUIState() {
   songGuessRef.value?.reset()
   cardPlacementRef.value?.reset()
   challengeRef.value?.reset()
+  videoWindowRef.value?.reset()
 }
 
 function resetGame() {

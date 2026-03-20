@@ -3,7 +3,6 @@ import { computed } from 'vue'
 import GameSetup from './components/GameSetup.vue'
 import QuickGame from './components/QuickGame.vue'
 import { useGameStore } from './stores/gameStore'
-
 const gameStore = useGameStore()
 const isGameActive = computed(() => gameStore.isGamePlaying || gameStore.isGameFinished)
 </script>
@@ -16,6 +15,16 @@ const isGameActive = computed(() => gameStore.isGamePlaying || gameStore.isGameF
 </template>
 
 <style>
+:root {
+  --accent: #00ffff;
+  --accent-rgb: 0, 255, 255;
+  --secondary: #ff6bcb;
+  --secondary-rgb: 255, 107, 203;
+  --bg-from: #0f0c29;
+  --bg-to: #1a1a3e;
+  --surface: 15, 12, 40;
+}
+
 * {
   margin: 0;
   padding: 0;

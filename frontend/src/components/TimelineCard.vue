@@ -82,7 +82,7 @@ const cardStyle = computed(() => ({
 
 .card-front {
   transform: rotateY(180deg);
-  background: linear-gradient(135deg, #0f0c29, #302b63);
+  background: linear-gradient(135deg, var(--bg-from), var(--bg-to));
   border: 1.5px solid var(--card-color, #00ffff);
   box-shadow: 0 0 6px rgba(0, 255, 255, 0.15);
 }

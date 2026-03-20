@@ -93,9 +93,9 @@ defineExpose({ reset })
 }
 
 .panel-card {
-  background: rgba(15, 12, 40, 0.92);
+  background: rgba(var(--surface), 0.92);
   backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 255, 255, 0.12);
+  border: 1px solid rgba(var(--accent-rgb), 0.12);
   border-radius: 12px;
   padding: clamp(12px, 1.5vh, 20px) clamp(14px, 1.5vw, 24px);
   box-shadow: 0 -4px 40px rgba(0, 0, 0, 0.5);
@@ -136,14 +136,14 @@ defineExpose({ reset })
   opacity: 0;
   font-size: 1em;
   font-weight: 700;
-  color: rgba(0, 255, 255, 0.6);
+  color: rgba(var(--accent-rgb), 0.6);
   transition: opacity 0.2s;
 }
 
 .insert-gap:hover {
   width: 36px;
-  background: rgba(0, 255, 255, 0.08);
-  border: 1px dashed rgba(0, 255, 255, 0.3);
+  background: rgba(var(--accent-rgb), 0.08);
+  border: 1px dashed rgba(var(--accent-rgb), 0.3);
 }
 
 .insert-gap:hover .gap-icon {
@@ -152,14 +152,14 @@ defineExpose({ reset })
 
 .insert-gap.active {
   width: 36px;
-  background: rgba(255, 107, 203, 0.12);
-  border: 2px solid #ff6bcb;
-  box-shadow: 0 0 10px rgba(255, 107, 203, 0.2);
+  background: rgba(var(--secondary-rgb), 0.12);
+  border: 2px solid var(--secondary);
+  box-shadow: 0 0 10px rgba(var(--secondary-rgb), 0.2);
 }
 
 .insert-gap.active .gap-icon {
   opacity: 1;
-  color: #ff6bcb;
+  color: var(--secondary);
 }
 
 .pending-info {

@@ -27,7 +27,7 @@ const starsStyle = computed(() => {
   position: fixed;
   inset: 0;
   z-index: 0;
-  background: radial-gradient(ellipse at 20% 50%, #1a0a3e 0%, #0a0a1a 50%, #000 100%);
+  background: radial-gradient(ellipse at 20% 50%, var(--bg-to) 0%, var(--bg-from) 50%, #000 100%);
   overflow: hidden;
 }
 
@@ -43,7 +43,7 @@ const starsStyle = computed(() => {
   background:
     radial-gradient(ellipse at 70% 20%, rgba(100, 0, 200, 0.12) 0%, transparent 50%),
     radial-gradient(ellipse at 20% 70%, rgba(0, 80, 200, 0.08) 0%, transparent 45%),
-    radial-gradient(ellipse at 50% 50%, rgba(0, 255, 255, 0.03) 0%, transparent 40%);
+    radial-gradient(ellipse at 50% 50%, rgba(var(--accent-rgb), 0.03) 0%, transparent 40%);
 }
 
 @keyframes twinkle {
