@@ -7,12 +7,12 @@ export class ValidationError extends Error {
 
 // Validate game configuration
 export function validateGameConfig(maxPlayers: number, winningCards: number, musicTags: string[]): void {
-  if (!Number.isInteger(maxPlayers) || maxPlayers < 2 || maxPlayers > 8) {
-    throw new ValidationError('最大玩家數必須介於 2 到 8 之間', 'INVALID_MAX_PLAYERS')
+  if (!Number.isInteger(maxPlayers) || maxPlayers < 2 || maxPlayers > 20) {
+    throw new ValidationError('最大玩家數必須介於 2 到 20 之間', 'INVALID_MAX_PLAYERS')
   }
 
-  if (!Number.isInteger(winningCards) || winningCards < 3 || winningCards > 10) {
-    throw new ValidationError('勝利所需卡牌數必須介於 3 到 10 之間', 'INVALID_WINNING_CARDS')
+  if (!Number.isInteger(winningCards) || winningCards < 1 || winningCards > 999) {
+    throw new ValidationError('勝利所需卡牌數無效', 'INVALID_WINNING_CARDS')
   }
 
   if (!Array.isArray(musicTags)) {

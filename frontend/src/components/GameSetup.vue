@@ -2,20 +2,24 @@
   <div class="game-setup">
     <CosmicBackground />
     <div class="setup-container">
-      <h1 class="setup-logo">Listen Up!</h1>
-      <p class="setup-subtitle">音樂時間線遊戲</p>
+      <div class="logo-area">
+        <img src="/logo_without_bg.png" alt="Listen Up!" class="setup-logo-img" />
+        <h1 class="setup-logo">Listen Up!</h1>
+        <p class="setup-subtitle">音樂時間線遊戲</p>
+      </div>
 
       <div class="form-group">
         <label>玩家人數</label>
         <select v-model.number="playerCount">
-          <option v-for="n in 7" :key="n + 1" :value="n + 1">{{ n + 1 }} 位玩家</option>
+          <option v-for="n in 19" :key="n + 1" :value="n + 1">{{ n + 1 }} 位玩家</option>
         </select>
       </div>
 
       <div class="form-group">
         <label>勝利所需卡牌數</label>
         <select v-model.number="winningCards">
-          <option v-for="n in 8" :key="n + 2" :value="n + 2">{{ n + 2 }} 張卡牌</option>
+          <option v-for="n in 19" :key="n + 1" :value="n + 1">{{ n + 1 }} 張卡牌</option>
+          <option :value="999">無限</option>
         </select>
       </div>
 
@@ -34,10 +38,15 @@
 
       <div class="form-group">
         <label>擴充規則</label>
-        <div class="expansion-toggle">
-          <label class="toggle-label">
-            <input type="checkbox" v-model="tokenPointsEnabled" />
-            <span>代幣換分：每 </span>
+        <div class="expansion-row">
+          <button
+            :class="['switch', { on: tokenPointsEnabled }]"
+            @click="tokenPointsEnabled = !tokenPointsEnabled"
+          >
+            <span class="switch-knob"></span>
+          </button>
+          <span class="expansion-text" :class="{ dimmed: !tokenPointsEnabled }">
+            代幣換分：每
             <select
               v-model.number="tokenPointsK"
               :disabled="!tokenPointsEnabled"
@@ -45,8 +54,8 @@
             >
               <option v-for="n in 5" :key="n" :value="n">{{ n }}</option>
             </select>
-            <span> 個代幣 = 1 分</span>
-          </label>
+            個代幣 = 1 分
+          </span>
         </div>
       </div>
 
@@ -250,20 +259,29 @@ async function startGame() {
   }
 }
 
-.setup-logo {
+.logo-area {
   text-align: center;
+  margin-bottom: 24px;
+}
+
+.setup-logo-img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 8px;
+  image-rendering: pixelated;
+}
+
+.setup-logo {
   font-family: 'Segoe Script', 'Brush Script MT', cursive;
   font-style: italic;
   color: rgba(255, 255, 255, 0.9);
-  font-size: 2.5em;
+  font-size: 2em;
   margin-bottom: 4px;
 }
 
 .setup-subtitle {
-  text-align: center;
   color: rgba(255, 255, 255, 0.4);
   font-size: 0.85em;
-  margin-bottom: 30px;
   letter-spacing: 2px;
   text-transform: uppercase;
 }
@@ -453,34 +471,63 @@ select option {
   cursor: not-allowed;
 }
 
-.expansion-toggle {
+.expansion-row {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
-.toggle-label {
+.switch {
+  position: relative;
+  width: 38px;
+  height: 20px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s;
+  padding: 0;
+}
+
+.switch.on {
+  background: rgba(var(--accent-rgb, 0, 255, 255), 0.5);
+}
+
+.switch-knob {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: white;
+  transition: transform 0.2s;
+}
+
+.switch.on .switch-knob {
+  transform: translateX(18px);
+}
+
+.expansion-text {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85em;
   display: flex;
   align-items: center;
   gap: 4px;
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 0.88em;
-  cursor: pointer;
 }
 
-.toggle-label input[type="checkbox"] {
-  accent-color: var(--accent, #00ffff);
-  width: 16px;
-  height: 16px;
-  margin-right: 4px;
+.expansion-text.dimmed {
+  opacity: 0.4;
 }
 
 .inline-select {
-  width: 48px;
+  width: 44px;
   padding: 2px 4px;
   background: rgba(255, 255, 255, 0.06);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 6px;
-  font-size: 0.95em;
+  font-size: 0.9em;
   color: rgba(255, 255, 255, 0.9);
   text-align: center;
 }

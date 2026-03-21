@@ -27,12 +27,37 @@
 </template>
 
 <script setup lang="ts">
-import { ref, reactive, computed, onUnmounted } from 'vue'
+import { ref, reactive, computed, onUnmounted, watch } from 'vue'
 
-defineProps<{
+const props = defineProps<{
   youtubeId?: string
   visible: boolean
 }>()
+
+// Override media session to hide song name from notifications
+function hideMediaInfo() {
+  if ('mediaSession' in navigator) {
+    navigator.mediaSession.metadata = new MediaMetadata({
+      title: 'Listen Up!',
+      artist: '猜猜看',
+    })
+  }
+}
+
+// Re-apply whenever YouTube changes it (poll since iframe can't be listened to)
+let mediaInterval: ReturnType<typeof setInterval> | null = null
+
+watch(() => props.youtubeId, () => {
+  if (mediaInterval) clearInterval(mediaInterval)
+  if (props.youtubeId) {
+    hideMediaInfo()
+    mediaInterval = setInterval(hideMediaInfo, 1000)
+  }
+}, { immediate: true })
+
+onUnmounted(() => {
+  if (mediaInterval) clearInterval(mediaInterval)
+})
 
 const minimized = ref(false)
 const pos = reactive({ x: -1, y: -1 })

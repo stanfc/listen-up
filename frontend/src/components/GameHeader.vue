@@ -1,6 +1,7 @@
 <template>
   <header class="game-hud">
     <div class="hud-left">
+      <img src="/logo_without_bg.png" alt="" class="logo-icon" />
       <span class="logo">Listen Up!</span>
     </div>
     <div class="hud-center">
@@ -11,6 +12,14 @@
       <span class="hud-item current-player">{{ currentPlayerName }}</span>
     </div>
     <div class="hud-right">
+      <button class="icon-btn" @click="toggleFullscreen" :title="isFullscreen ? '退出全螢幕' : '全螢幕'">
+        <svg v-if="!isFullscreen" viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z"/>
+        </svg>
+        <svg v-else viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
+          <path d="M5 16h3v3h2v-5H5v2zm3-8H5v2h5V5H8v3zm6 11h2v-3h3v-2h-5v5zm2-11V5h-2v5h5V8h-3z"/>
+        </svg>
+      </button>
       <button class="icon-btn" @click="$emit('rules')" title="規則書">
         <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
           <path d="M6 2c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V8l-6-6H6zm7 7V3.5L18.5 9H13zM8 12h8v2H8v-2zm0 4h8v2H8v-2z"/>
@@ -26,6 +35,8 @@
 </template>
 
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
+
 defineProps<{
   roomCode: string
   roundNumber: number
@@ -33,6 +44,23 @@ defineProps<{
 }>()
 
 defineEmits<{ reset: [], rules: [] }>()
+
+const isFullscreen = ref(!!document.fullscreenElement)
+
+function toggleFullscreen() {
+  if (document.fullscreenElement) {
+    document.exitFullscreen()
+  } else {
+    document.documentElement.requestFullscreen().catch(() => {})
+  }
+}
+
+function onFullscreenChange() {
+  isFullscreen.value = !!document.fullscreenElement
+}
+
+onMounted(() => document.addEventListener('fullscreenchange', onFullscreenChange))
+onUnmounted(() => document.removeEventListener('fullscreenchange', onFullscreenChange))
 </script>
 
 <style scoped>
@@ -55,6 +83,18 @@ defineEmits<{ reset: [], rules: [] }>()
   .game-hud {
     padding: 8px 20px;
   }
+}
+
+.hud-left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.logo-icon {
+  width: 24px;
+  height: 24px;
+  image-rendering: pixelated;
 }
 
 .logo {
