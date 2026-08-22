@@ -4,8 +4,6 @@
   "description": "Spotify 華語金曲爬蟲 — 自動搜尋並建立猜歌王歌單",
   "type": "module",
   "scripts": {
-    "start": "node index.js",
-    "dry-run": "node index.js --dry-run",
     "verify": "node verify.js",
     "verify:report": "node verify.js --report",
     "verify:auto": "node verify.js --auto",

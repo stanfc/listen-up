@@ -6,7 +6,12 @@ export class ValidationError extends Error {
 }
 
 // Validate game configuration
-export function validateGameConfig(maxPlayers: number, winningCards: number, musicTags: string[]): void {
+export function validateGameConfig(
+  maxPlayers: number,
+  winningCards: number,
+  musicTags: string[],
+  yearSkew?: number
+): void {
   if (!Number.isInteger(maxPlayers) || maxPlayers < 2 || maxPlayers > 20) {
     throw new ValidationError('最大玩家數必須介於 2 到 20 之間', 'INVALID_MAX_PLAYERS')
   }
@@ -21,6 +26,10 @@ export function validateGameConfig(maxPlayers: number, winningCards: number, mus
 
   if (musicTags.length > 0 && musicTags.some(tag => typeof tag !== 'string' || tag.trim().length === 0)) {
     throw new ValidationError('所有音樂標籤必須為非空字串', 'INVALID_TAG_FORMAT')
+  }
+
+  if (yearSkew !== undefined && (typeof yearSkew !== 'number' || yearSkew < -1 || yearSkew > 1)) {
+    throw new ValidationError('年份傾斜必須介於 -1 到 1 之間', 'INVALID_YEAR_SKEW')
   }
 }
 

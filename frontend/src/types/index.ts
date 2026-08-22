@@ -67,6 +67,7 @@ export interface GameConfig {
   musicTags: string[]
   maxRounds?: number
   tokenPointsK?: number
+  yearSkew?: number
 }
 
 // Game State
@@ -102,6 +103,7 @@ export interface CreateGameRequest {
   winningCards: number
   musicTags: string[]
   tokenPointsK?: number
+  yearSkew?: number
 }
 
 export interface CreateGameResponse {

@@ -55,6 +55,7 @@ export interface GameConfig {
   musicTags: string[]
   maxRounds?: number
   tokenPointsK?: number  // Every k tokens = 1 point. 0 or undefined = disabled
+  yearSkew?: number      // -1..1, skews which years get picked. 0 = uniform, 1 = newest year 2x as likely as oldest, -1 = reversed
 }
 
 export interface GameRound {

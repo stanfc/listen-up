@@ -45,7 +45,8 @@ export const useGameStore = defineStore('game', () => {
         maxPlayers: config.maxPlayers,
         winningCards: config.winningCards,
         musicTags: config.musicTags,
-        tokenPointsK: config.tokenPointsK
+        tokenPointsK: config.tokenPointsK,
+        yearSkew: config.yearSkew
       })
 
       currentGame.value = {

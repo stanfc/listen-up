@@ -250,6 +250,7 @@ defineExpose({ reset })
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-content: safe center;
   gap: 3px;
   overflow-x: auto;
   padding: 6px 0;

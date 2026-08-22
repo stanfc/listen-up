@@ -111,9 +111,36 @@ export function startGame(game: Game): Game {
 }
 
 /**
+ * Weight for a year at normalized rank t (0 = oldest, 1 = newest) given a skew in [-1, 1].
+ * skew = 0  → uniform (weight 1 everywhere)
+ * skew = 1  → newest year is 2x as likely as oldest, linear (arithmetic) in between
+ * skew = -1 → oldest year is 2x as likely as newest, linear in between
+ */
+function yearWeight(t: number, skew: number): number {
+  const s = Math.max(-1, Math.min(1, skew))
+  const ratio = 1 + Math.abs(s) // 1..2
+  return s >= 0
+    ? 1 + (ratio - 1) * t         // favors newest
+    : 1 + (ratio - 1) * (1 - t)   // favors oldest
+}
+
+/**
+ * Pick one item from a list using per-item weights (weights need not sum to 1).
+ */
+function weightedPick<T>(items: T[], weights: number[]): T {
+  const total = weights.reduce((sum, w) => sum + w, 0)
+  let r = Math.random() * total
+  for (let i = 0; i < items.length; i++) {
+    r -= weights[i]
+    if (r <= 0) return items[i]
+  }
+  return items[items.length - 1]
+}
+
+/**
  * Get next unplayed music with year + tag balanced weighting.
  * 1. Start from the music pool (filtered by game config tags)
- * 2. Pick a random year from the pool → subset by year
+ * 2. Pick a year from the pool (weighted by config.yearSkew) → subset by year
  * 3. Collect all non-year tags from that subset, pick a random one → smaller subset
  * 4. Pick a random song from the final subset
  */
@@ -130,14 +157,18 @@ export function getNextMusic(game: Game): Music | null {
 
   if (availableMusic.length === 0) return null
 
-  // Step 1: Group by year, pick a random year
+  // Step 1: Group by year, pick a year (weighted by yearSkew across oldest→newest)
   const byYear: Record<number, Music[]> = {}
   for (const m of availableMusic) {
     if (!byYear[m.year]) byYear[m.year] = []
     byYear[m.year].push(m)
   }
-  const years = Object.keys(byYear).map(Number)
-  const randomYear = years[Math.floor(Math.random() * years.length)]
+  const years = Object.keys(byYear).map(Number).sort((a, b) => a - b)
+  const skew = game.config.yearSkew ?? 0
+  const weights = years.map((_, i) =>
+    yearWeight(years.length > 1 ? i / (years.length - 1) : 0, skew)
+  )
+  const randomYear = weightedPick(years, weights)
   let pool = byYear[randomYear]
 
   // Step 2: Collect non-year tags from this year's pool, pick a random one

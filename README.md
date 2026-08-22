@@ -1,306 +1,191 @@
-# 🎵 金曲猜歌王
+# 🎵 Listen Up!（金曲猜歌王）
 
-一個基於 Hitster 桌遊規則的本地多人音樂猜歌遊戲，採用 Vue.js + Express.js 架構。
+一個基於 [Hitster](https://hitstergame.com/) 桌遊規則的多人音樂猜歌遊戲。玩家聽歌猜歌名，並依發行年份把卡牌插入自己的時間線，率先插滿指定張數者獲勝。前端 Vue 3 + TypeScript，後端 Express + TypeScript，透過 Fly.io 部署為單一服務。
 
 ## 專案特性
 
-- ✅ **多人遊戲**: 支援 2-8 人同時遊戲
-- ✅ **音樂猜測**: 猜歌名、猜年份，獲取音樂卡牌
-- ✅ **卡牌排序**: 按時間順序排列卡牌，達到目標數量即獲勝
-- ✅ **代幣系統**: 透過代幣獲得遊戲優勢（延長播放、年份提示）
-- ✅ **標籤過濾**: 按不同風格/年代過濾音樂
-- ✅ **類型安全**: 使用 TypeScript 確保程式碼品質
-- ✅ **響應式設計**: 優美的使用者介面，支援各種螢幕
+- **本地同樂**：一台裝置、一個畫面，2-20 人輪流操作即可開玩，不需要每人各自登入
+- **房號續玩**：每場遊戲有 4 碼房號，中斷後可用房號重新載入遊戲狀態
+- **猜歌 → 放卡 → 挑戰**：符合 Hitster 規則的三段式回合（見下方〈遊戲規則〉）
+- **挑戰機制**：其他玩家可花代幣挑戰當前玩家的卡牌放置位置，猜對可直接搶卡
+- **代幣系統**：猜對歌名、換歌、挑戰都會消耗或獲得代幣；可選擇開啟「代幣換分」擴充規則
+- **平手延長賽（deuce）**：多人同時達標時自動進入延長賽直到分出勝負
+- **標籤過濾**：依年代、語言等標籤篩選歌單
+- **龐大歌曲庫**：`backend/data/music_new.json` 收錄 3645 首華語歌曲（涵蓋 1940-2026），透過 `song-crawler/` 工具鏈自動蒐集與驗證
 
 ## 專案結構
 
 ```
-猜歌王/
-├── frontend/                 # Vue.js 前端
-│   ├── src/
-│   │   ├── components/      # Vue 元件
-│   │   │   ├── GameSetup.vue
-│   │   │   └── GameBoard.vue
-│   │   ├── stores/          # Pinia 狀態管理
-│   │   │   └── gameStore.ts
-│   │   ├── api/             # API 客戶端
-│   │   │   └── client.ts
-│   │   ├── types/           # TypeScript 類型定義
-│   │   │   └── index.ts
-│   │   ├── App.vue
-│   │   └── main.ts
-│   ├── package.json
-│   └── vite.config.ts
+listen-up/
+├── frontend/                      # Vue 3 + TypeScript + Vite
+│   └── src/
+│       ├── components/
+│       │   ├── GameSetup.vue      # 進場畫面：設定人數/勝利條件/擴充規則/標籤、房號續玩
+│       │   ├── QuickGame.vue      # 主遊戲畫面（猜歌、放卡、挑戰、回合結束）
+│       │   ├── SongGuessPanel.vue / CardPlacementPanel.vue / ChallengePanel.vue / RoundEndPanel.vue
+│       │   ├── PlayerSeat.vue / TableLayout.vue / TimelineCard.vue / CenterDeck.vue / VideoWindow.vue
+│       │   └── GameHeader.vue / GameOverScreen.vue / RulesModal.vue / CosmicBackground.vue
+│       │   （GameBoard.vue、HelloWorld.vue 為舊版遺留元件，App.vue 未使用）
+│       ├── stores/gameStore.ts    # Pinia 全域狀態
+│       ├── api/client.ts          # Axios API 客戶端
+│       └── types/index.ts
 │
-├── backend/                 # Express.js 後端
-│   ├── src/
-│   │   ├── types.ts         # 類型定義
-│   │   ├── database.ts      # 資料持久化
-│   │   ├── validation.ts    # 資料驗證
-│   │   ├── gameLogic.ts     # 遊戲邏輯
-│   │   ├── api.ts           # API 路由
-│   │   └── server.ts        # 伺服器入口
-│   ├── data/
-│   │   ├── music.json       # 音樂資料庫
-│   │   └── games.json       # 遊戲狀態（自動產生）
-│   ├── package.json
-│   └── tsconfig.json
+├── backend/                       # Express 5 + TypeScript
+│   └── src/
+│       ├── types.ts               # Game / Player / Music / GamePhase 等型別
+│       ├── database.ts            # JSON 檔案持久化（游戲存 /data 或本地，音樂讀 music_new.json）
+│       ├── validation.ts
+│       ├── gameLogic.ts           # 核心規則：猜歌、放卡、挑戰、換歌、勝負判定
+│       ├── api.ts                 # Express 路由
+│       ├── spotify.ts             # Spotify API 輔助（供 song-crawler 共用邏輯參考）
+│       └── server.ts              # 入口，同時 serve 前端靜態檔（SPA fallback）
+│   └── data/
+│       ├── music_new.json         # 目前遊戲實際讀取的歌曲庫（3645 首，來自 YouTube 播放清單爬蟲）
+│       ├── music.json             # 較早期、已用 Spotify 資料驗證過的子集（352 首），目前未被後端讀取
+│       ├── music_new_failed.json  # 爬蟲/驗證失敗的項目，供人工複查
+│       └── games.json             # 遊戲狀態（自動產生，本機開發用；正式環境掛載在 Fly volume `/data`）
 │
-└── .kiro/                   # 需求規格文件
-    └── specs/
-        └── music-guessing-game/
-            ├── requirements.md
-            ├── design.md
-            └── tasks.md
+├── song-crawler/
+│   ├── yt-playlist-crawler.js      # 主要工具：給一個 YouTube 播放清單網址，爬歌並寫入 music_new.json（遊戲實際讀取的檔案）
+│   ├── check-music.js              # 檢視 music_new.json 資料
+│   ├── youtube-crawler.js / verify.js / verify-year.js / restore-youtube-ids.js
+│   │                               # 操作的是 music.json（未被後端讀取的舊子集），僅供維護該份參考資料用
+│   └── spotify.js / llm.js / playlist.js / config.js
+│
+├── generate_100_songs.js / add_chinese_songs.js / songs_data_verified.json
+│                                   # 早期一次性資料產生腳本，已被 song-crawler/ 取代，僅供參考
+│
+├── .kiro/specs/music-guessing-game/   # 最初的需求規格文件（requirements/design/tasks）
+├── Dockerfile                     # 三階段建置：前端 → 後端 → 產出 image
+├── fly.toml                       # Fly.io 部署設定
+└── .github/workflows/fly-deploy.yml   # push 到 main 自動部署到 Fly.io
 ```
+
+## 技術棧
+
+| 層級 | 技術 |
+|------|------|
+| 前端框架 | Vue 3（Composition API）+ TypeScript + Vite |
+| 狀態管理 | Pinia |
+| HTTP 客戶端 | Axios |
+| 後端框架 | Express 5 + TypeScript（`ts-node` 開發、`tsc` 編譯） |
+| 資料儲存 | JSON 檔案（`games.json` / `music_new.json`），正式環境掛載 Fly volume |
+| 資料產生/驗證 | Node.js 腳本 + Google Gemini（`@google/genai`）+ Spotify Web API |
+| 部署 | Docker（多階段建置）＋ Fly.io，GitHub Actions 自動部署 |
 
 ## 快速開始
 
-### 環境要求
-- Node.js >= 16
-- npm >= 8
-
-### 步驟 1: 安裝後端依賴
-
 ```bash
-cd backend
-npm install
+npm run install-all   # 安裝根目錄 + backend + frontend 依賴
+npm run dev            # 同時啟動後端 (:3000) 與前端 (:5173)
 ```
 
-### 步驟 2: 啟動後端服務
-
-```bash
-npm run dev
-```
-
-伺服器將在 `http://localhost:3000` 執行
-
-輸出範例：
-```
-Server is running on http://localhost:3000
-Health check: http://localhost:3000/api/health
-```
-
-### 步驟 3: 在另一個終端安裝前端依賴
-
-```bash
-cd frontend
-npm install
-```
-
-### 步驟 4: 啟動前端開發伺服器
-
-```bash
-npm run dev
-```
-
-前端將在 `http://localhost:5173` 執行
-
-### 步驟 5: 開啟瀏覽器
-
-造訪 `http://localhost:5173` 開始遊戲！
+開啟 http://localhost:5173 即可開玩。詳細步驟、疑難排解、如何新增歌曲請見 [QUICK_START.md](./QUICK_START.md)。
 
 ## 遊戲規則
 
-> **注意**: 本遊戲中卡牌上的年份為該歌曲的 **YouTube 上架年份**，而非原始發行年份。
+> 卡牌上的年份為歌曲的**上架/發行年份**（依 `music_new.json` 中的 `year` 欄位，多數取自 YouTube 上架資訊）。
 
-### 遊戲設定
+### 開局設定（GameSetup 畫面）
 
-1. **建立房間**: 設定玩家數量（2-8 人）、獲勝所需卡牌數、音樂標籤（年代/風格）
-2. **輸入玩家名稱**: 每位玩家輸入自己的名稱
-3. **開始遊戲**: 系統隨機決定玩家順序，每位玩家獲得 1 張起始卡牌與 2 個代幣
+1. 設定玩家人數（2-20 人）與勝利所需卡牌數（2-20 張，或「無限」）
+2. 輸入每位玩家名稱
+3. 可選擇開啟「代幣換分」擴充規則：每 N 個代幣折算 1 分（N 可調整）
+4. 選擇音樂標籤過濾歌單（不選 = 全部）
+5. 也可以直接輸入房號「加入」既有的進行中遊戲
 
 ### 每回合流程
 
-每位玩家的回合依序經歷以下四個階段：
+每位玩家的回合依序經歷以下階段：
 
-#### 1. 猜歌階段
-- 系統播放一首歌曲（僅播放音訊），所有玩家一起聽
-- 主持玩家可以選擇：
-  - **「顯示影片」** — 顯示 YouTube 影片揭曉答案
-  - **「[玩家名] 猜對」** — 某位玩家猜對歌名，該玩家獲得 +1 代幣
-  - **「無人猜對」** — 沒有人猜對，不獎勵代幣
-  - **「換歌」** — 花費 1 代幣換一首新歌
-
-#### 2. 放置卡牌階段
-- 該首歌曲成為一張新卡牌，當前玩家需將卡牌插入自己的時間線中
-- 時間線上的卡牌必須按照 **YouTube 上架年份** 由早到晚排列
-- 玩家選擇一個位置插入卡牌（此時不會立即揭曉對錯）
-
-#### 3. 挑戰階段
-- 其他玩家可以花費 **1 個代幣**挑戰該放置：
-  - 若放置**正確**，挑戰者失去 1 代幣，卡牌留在原位
-  - 若放置**錯誤**且挑戰者指出正確位置，挑戰者**搶走該卡牌**加入自己的時間線
-  - 若放置**錯誤**但挑戰者也指錯位置，雙方都失敗，卡牌丟棄且挑戰者失去代幣
-- 若無人挑戰：放置正確則卡牌加入時間線，放置錯誤則卡牌丟棄
-
-#### 4. 回合結束
-- 揭曉答案（歌名、演唱者、YouTube 上架年份）
-- 進入下一位玩家的回合
-
-### 勝利條件
-
-- 當所有玩家都完成一輪後，系統檢查是否有人達到設定的卡牌數量
-- 若有**唯一一位**玩家擁有最多卡牌且達標 → 該玩家**獲勝**
-- 若多位玩家同時達標且卡牌數相同 → 進入**平手延長賽**，繼續遊戲直到分出勝負
+1. **SONG_GUESS（猜歌）** — 播放歌曲，當前玩家可選擇：
+   - 輸入歌名嘗試搶答：猜對 → +1 代幣，可繼續放卡；猜錯 → 無懲罰，直接進入放卡
+   - 「跳過」→ 直接進入放卡，不嘗試猜歌名
+   - 花 1 代幣「換歌」→ 放棄本首歌，重抽一首
+2. **CARD_PLACEMENT（放卡）** — 將這首歌的卡牌插入自己時間線上的任一位置；此時系統**不會**立即告知對錯
+3. **CHALLENGE（挑戰）** — 其他玩家可花 1 代幣挑戰這次放置，並指出他們認為正確的位置：
+   - 若原放置**正確**且被挑戰 → 挑戰者失去代幣，卡牌照舊留在當前玩家時間線上
+   - 若原放置**錯誤**且挑戰者猜對位置 → 挑戰者**搶走卡牌**，插入自己的時間線
+   - 若原放置**錯誤**且挑戰者也猜錯 → 卡牌丟棄，挑戰者也失去代幣
+   - 若無人挑戰 → 放對則卡牌留下，放錯則卡牌直接丟棄
+4. **ROUND_END（回合結束）** — 揭曉答案（歌名、演唱者、年份、專輯封面），進入下一位玩家回合
 
 ### 代幣系統
 
-- **初始代幣**: 每位玩家開始時獲得 2 個代幣（上限 5 個）
-- **獲得代幣**: 猜對歌名獲得 +1 代幣
-- **花費代幣**: 挑戰其他玩家的放置（1 代幣）、換歌（1 代幣）
+- 初始代幣：每位玩家開局獲得 2 個（未開啟「代幣換分」時上限 5 個，開啟後上限提高）
+- 獲得代幣：猜對歌名 +1
+- 花費代幣：換歌 -1、挑戰他人放置 -1
+- 開啟「代幣換分」擴充規則時，代幣也會折算進總分，一併納入勝負判定
+
+### 勝利條件
+
+- 每輪所有玩家都完成一輪後檢查是否有人達到設定的卡牌數（或换算後的分數）
+- 唯一領先且達標者獲勝
+- 多人同時達標且同分 → 進入 **deuce（延長賽）**，繼續遊戲直到某輪結束後只剩單一領先者
 
 ## API 端點
 
-### 遊戲管理
-
 ```
-POST /api/games                      # 建立遊戲房間
-GET  /api/games/:gameId              # 取得遊戲狀態
-POST /api/games/:gameId/players      # 新增玩家
-POST /api/games/:gameId/start        # 開始遊戲
-POST /api/games/:gameId/next-round   # 開始下一輪
-```
-
-### 遊戲操作
-
-```
-GET  /api/games/:gameId/music        # 取得當前音樂
-POST /api/games/:gameId/guess        # 提交歌名或年份猜測
-POST /api/games/:gameId/card-placement  # 提交卡牌排序
-```
-
-### 資料查詢
-
-```
-GET  /api/music/tags                 # 取得所有音樂標籤
-GET  /api/health                     # 健康檢查
+POST   /api/games                         建立遊戲房間
+GET    /api/games/room/:roomCode          依房號查詢遊戲（續玩用）
+GET    /api/games/:gameId                 取得遊戲狀態
+POST   /api/games/:gameId/players         新增玩家
+POST   /api/games/:gameId/start           開始遊戲
+GET    /api/games/:gameId/music           取得當前歌曲（只回傳 youtubeId/spotifyId，不含答案）
+GET    /api/games/:gameId/music/reveal    揭曉當前歌曲完整資訊（title/artist/year/albumArt）
+POST   /api/games/:gameId/guess           提交歌名猜測
+POST   /api/games/:gameId/skip-song-guess 跳過猜歌，直接進入放卡
+POST   /api/games/:gameId/card-placement  提交卡牌放置位置
+POST   /api/games/:gameId/challenge       挑戰當前放置
+POST   /api/games/:gameId/skip-challenge  無人挑戰，揭曉放置結果
+POST   /api/games/:gameId/change-song     花 1 代幣換歌
+POST   /api/games/:gameId/next-round      進入下一輪
+GET    /api/music/tags                    取得所有音樂標籤
+GET    /api/health                        健康檢查
 ```
 
-## 核心功能實作
-
-### 後端特性
-
-✅ **遊戲房間管理** - 建立房間、管理玩家、追蹤遊戲狀態
-✅ **音樂資料庫** - 本地 JSON 儲存，支援標籤過濾
-✅ **遊戲邏輯** - 猜測驗證、年份判定、卡牌排序、代幣系統
-✅ **資料驗證** - 輸入驗證、錯誤處理、例外管理
-✅ **本地持久化** - 使用 JSON 檔案模擬資料庫
-
-### 前端特性
-
-✅ **元件化架構** - 使用 Vue 3 Composition API
-✅ **狀態管理** - Pinia store 管理全域遊戲狀態
-✅ **API 整合** - Axios 與後端通訊
-✅ **響應式 UI** - 美觀的遊戲介面
-✅ **錯誤處理** - 使用者友善的錯誤提示
-
-## 資料模型
-
-### 遊戲物件
-
-```typescript
-Game {
-  id: string                    # 遊戲 ID
-  roomCode: string             # 房間代碼
-  status: 'waiting'|'playing'|'finished'
-  config: GameConfig           # 遊戲設定
-  players: Player[]            # 玩家列表
-  currentRound: GameRound      # 當前輪次
-  createdAt: string           # 建立時間
-  updatedAt: string           # 更新時間
-  finishedAt?: string         # 結束時間
-  winner?: string             # 獲勝者 ID
-}
-```
-
-### 音樂物件
+## 資料模型（節錄，詳見 `backend/src/types.ts`）
 
 ```typescript
 Music {
   id: string
-  title: string               # 歌曲名稱
-  artist: string              # 藝術家
-  year: number               # 發行年份
-  s3Key: string              # 音樂檔案路徑
-  previewStart: number       # 預覽開始時間（秒）
-  previewDuration: number    # 預覽時長（秒）
-  tags: string[]             # 標籤（風格、年代等）
-  difficulty: 'easy'|'medium'|'hard'
+  title: string
+  artist: string
+  year: number
+  spotifyId: string
+  youtubeId: string
+  albumArt: string
+  tags: string[]
+  difficulty: 'easy' | 'medium' | 'hard'
+}
+
+GameRound {
+  roundNumber: number
+  currentPlayer: string
+  musicId: string
+  phase: 'song_guess' | 'card_placement' | 'challenge' | 'round_end'
+  usedMusicIds: string[]
+  pendingCard?: Card          // SONG_GUESS 之後、CARD_PLACEMENT 前的暫存卡牌
+  challengeCard?: Card        // CARD_PLACEMENT 之後、等待挑戰揭曉的卡牌
+  placementWrong?: boolean    // 後端預先算好，前端不會提前看到
+  startingPlayerId: string
+  turnIndex: number
 }
 ```
 
-## 測試遊戲
+## 部署
 
-### 測試情境
+- **Fly.io**：`fly.toml` 定義 app `listen-up-purple-pond-1943`（東京 nrt），256MB VM，掛載持久化 volume `/data` 存放 `games.json`，閒置自動關機、有請求自動開機
+- **Docker**：三階段建置（見 `Dockerfile`）— 分別建 frontend dist 與 backend dist，最終 image 只含後端編譯產物、`public/`（前端靜態檔）與音樂資料，`CMD node dist/server.js`；後端同時 serve `/api/*` 與前端 SPA
+- **CI/CD**：`.github/workflows/fly-deploy.yml` — push 到 `main` 即自動 `flyctl deploy --remote-only`
 
-1. **基本流程**: 建立 2 人遊戲，完成一個完整回合
-2. **多人遊戲**: 4 人遊戲，測試玩家輪轉
-3. **錯誤處理**: 輸入無效資料，測試驗證功能
-4. **邊界情況**: 玩家數量限制、卡牌排序驗證
+## 已知落差 / 後續可做
 
-### 除錯提示
+- 目前沒有自動化測試（單元測試、整合測試皆缺）；`backend/test-all.mjs` 與 `backend/src/test-*.ts` 是手動跑的探索性腳本，不是測試套件
+- `music_new.json` 中有相當比例的歌曲 `spotifyId` 為空字串（`music_new_failed.json` 記錄了驗證失敗的項目），可用 `song-crawler/verify.js`、`verify-year.js` 持續校正歌名/藝人/年份
+- `frontend/src/components/GameBoard.vue`、`HelloWorld.vue` 是舊版流程留下的未使用元件，可考慮清理
+- 根目錄的 `generate_100_songs.js`、`add_chinese_songs.js`、`songs_data_verified.json` 是 `song-crawler/` 出現前的一次性腳本，功能已被取代
 
-- 使用瀏覽器開發者工具的 Network 標籤查看 API 請求
-- 在後端 `data/games.json` 中查看遊戲狀態
-- 後端主控台顯示詳細的操作日誌
-
-## 下一步開發
-
-### 計畫中的功能
-
-- [ ] 音樂庫管理介面
-- [ ] 遊戲暫停/恢復
-- [ ] 玩家離線重連
-- [ ] 遊戲重播記錄
-- [ ] 排行榜和統計
-- [ ] 多語言支援
-- [ ] 音訊視覺化
-- [ ] AWS 部署整合
-
-### 效能最佳化
-
-- 實作音樂檔案快取
-- 最佳化元件渲染效能
-- 新增虛擬捲動（如果卡牌很多）
-- CDN 加速音樂檔案
-
-### 安全性改善
-
-- 新增房間密碼保護
-- 實作玩家認證
-- API 限流和防濫用
-- 資料加密儲存
-
-## 開發記錄
-
-### 已完成（第 1-3 階段）
-
-✅ Vue 3 + TypeScript 專案設定
-✅ Express.js 後端框架
-✅ 資料模型和類型定義
-✅ 遊戲邏輯核心實作
-✅ RESTful API 端點
-✅ Pinia 狀態管理
-✅ 前端主介面元件
-
-### 待完成（第 4-7 階段）
-
-- [ ] 代幣系統完整實作
-- [ ] 卡牌拖曳排序 UI
-- [ ] 完整的錯誤處理
-- [ ] 單元測試和端對端測試
-- [ ] 效能最佳化和除錯
-- [ ] 文件完善
-
-## 授權條款
+## 授權
 
 MIT License
-
-## 貢獻
-
-歡迎提交 Issue 和 Pull Request！
-
----
-
-**享受遊戲！🎉🎵**

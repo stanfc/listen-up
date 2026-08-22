@@ -60,6 +60,23 @@
       </div>
 
       <div class="form-group">
+        <label>年份傾向 <span class="label-hint">{{ yearSkewLabel }}</span></label>
+        <input
+          type="range"
+          v-model.number="yearSkew"
+          min="-1"
+          max="1"
+          step="0.1"
+          class="skew-slider"
+        />
+        <div class="skew-scale">
+          <span>😌 懷舊</span>
+          <span>⚖️ 均衡</span>
+          <span>🔥 年輕</span>
+        </div>
+      </div>
+
+      <div class="form-group">
         <label>音樂標籤 <span class="label-hint">（不選 = 全選）</span></label>
         <div class="tags-container">
           <button
@@ -115,7 +132,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, onMounted } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useGameStore } from '@/stores/gameStore'
 import { apiService } from '@/api/client'
 import CosmicBackground from './CosmicBackground.vue'
@@ -151,6 +168,15 @@ const rejoinCode = ref('')
 const showRules = ref(false)
 const tokenPointsEnabled = ref(saved.tokenPointsEnabled || false)
 const tokenPointsK = ref(saved.tokenPointsK || 3)
+const yearSkew = ref(saved.yearSkew ?? 0)
+
+const yearSkewLabel = computed(() => {
+  const v = yearSkew.value
+  if (v === 0) return '（均衡：每個年份機率一樣）'
+  const side = v > 0 ? '較新' : '較舊'
+  const ratio = (1 + Math.abs(v)).toFixed(1)
+  return `（最${side}的年份機率是最${v > 0 ? '舊' : '新'}的 ${ratio} 倍）`
+})
 
 function saveSettings() {
   localStorage.setItem('gameSetup', JSON.stringify({
@@ -160,6 +186,7 @@ function saveSettings() {
     selectedTags: selectedTags.value,
     tokenPointsEnabled: tokenPointsEnabled.value,
     tokenPointsK: tokenPointsK.value,
+    yearSkew: yearSkew.value,
   }))
 }
 
@@ -209,7 +236,8 @@ async function startGame() {
       winningCards: winningCards.value,
       musicTags: selectedTags.value,
       maxRounds: 100,
-      tokenPointsK: tokenPointsEnabled.value ? tokenPointsK.value : 0
+      tokenPointsK: tokenPointsEnabled.value ? tokenPointsK.value : 0,
+      yearSkew: yearSkew.value
     }
 
     await gameStore.createGame(config)
@@ -354,6 +382,20 @@ select option {
 
 .name-input::placeholder {
   color: rgba(255, 255, 255, 0.3);
+}
+
+.skew-slider {
+  width: 100%;
+  accent-color: var(--accent);
+  cursor: pointer;
+}
+
+.skew-scale {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 0.75em;
 }
 
 .tags-container {
