@@ -230,19 +230,24 @@ async function startGame() {
   error.value = null
   saveSettings()
   try {
-    const config = {
-      maxPlayers: playerCount.value,
-      minPlayers: 2,
-      winningCards: winningCards.value,
-      musicTags: selectedTags.value,
-      maxRounds: 100,
-      tokenPointsK: tokenPointsEnabled.value ? tokenPointsK.value : 0,
-      yearSkew: yearSkew.value
+    // If a previous attempt already created the game (and possibly added
+    // some players) before failing, resume from there instead of creating
+    // a brand-new room and orphaning the first one.
+    if (!gameStore.gameId) {
+      const config = {
+        maxPlayers: playerCount.value,
+        minPlayers: 2,
+        winningCards: winningCards.value,
+        musicTags: selectedTags.value,
+        maxRounds: 100,
+        tokenPointsK: tokenPointsEnabled.value ? tokenPointsK.value : 0,
+        yearSkew: yearSkew.value
+      }
+      await gameStore.createGame(config)
     }
 
-    await gameStore.createGame(config)
-
-    for (let i = 0; i < playerCount.value; i++) {
+    const alreadyAdded = gameStore.currentGame?.players.length || 0
+    for (let i = alreadyAdded; i < playerCount.value; i++) {
       const name = playerNames.value[i]?.trim() || `玩家 ${i + 1}`
       await gameStore.addPlayer(name)
     }
@@ -251,7 +256,7 @@ async function startGame() {
     await gameStore.loadCurrentMusic()
     emit('game-started')
   } catch (err: any) {
-    error.value = err.message || '遊戲啟動失敗'
+    error.value = err?.response?.data?.message || err.message || '遊戲啟動失敗'
   } finally {
     isLoading.value = false
   }

@@ -1,5 +1,11 @@
 <template>
   <div class="game-root">
+    <Transition name="error-toast">
+      <div v-if="gameStore.error" class="error-toast" @click="gameStore.error = null">
+        {{ gameStore.error }}
+      </div>
+    </Transition>
+
     <CosmicBackground />
 
     <GameHeader
@@ -92,7 +98,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { useGameStore } from '@/stores/gameStore'
 import type { Card } from '@/types'
 
@@ -285,6 +291,7 @@ async function nextRound() {
 
     if (result?.finished) {
       // Game ended after full round check
+      showMusicVideo.value = false
       showGameOver.value = true
     } else {
       await gameStore.loadCurrentMusic()
@@ -318,6 +325,16 @@ onMounted(async () => {
     await gameStore.loadCurrentMusic()
   }
 })
+
+let errorTimer: ReturnType<typeof setTimeout> | null = null
+watch(() => gameStore.error, (message) => {
+  if (errorTimer) clearTimeout(errorTimer)
+  if (message) {
+    errorTimer = setTimeout(() => {
+      gameStore.error = null
+    }, 4000)
+  }
+})
 </script>
 
 <style scoped>
@@ -326,6 +343,34 @@ onMounted(async () => {
   height: 100vh;
   height: 100dvh;
   overflow: hidden;
+}
+
+.error-toast {
+  position: fixed;
+  top: max(12px, env(safe-area-inset-top));
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10000;
+  max-width: min(90vw, 480px);
+  padding: 10px 20px;
+  border-radius: 8px;
+  background: rgba(200, 40, 40, 0.95);
+  color: #fff;
+  font-size: 0.9rem;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+}
+
+.error-toast-enter-active,
+.error-toast-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.error-toast-enter-from,
+.error-toast-leave-to {
+  opacity: 0;
+  transform: translateX(-50%) translateY(-10px);
 }
 
 .table-area {

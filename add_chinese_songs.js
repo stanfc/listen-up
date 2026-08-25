@@ -147,19 +147,23 @@ const musicJsonPath = path.join(__dirname, 'backend/data/music.json');
 let existingMusic = [];
 let nextId = 1;
 
-try {
+if (fs.existsSync(musicJsonPath)) {
   const content = fs.readFileSync(musicJsonPath, 'utf-8');
-  existingMusic = JSON.parse(content);
+  try {
+    existingMusic = JSON.parse(content);
+  } catch (err) {
+    console.error(`❌ ${musicJsonPath} 存在但無法解析為 JSON，可能已損毀。為避免覆蓋既有資料，已中止執行。`);
+    console.error(err.message);
+    process.exit(1);
+  }
   // 找到最大的 ID 號
   const maxId = existingMusic.reduce((max, song) => {
     const num = parseInt(song.id.split('-')[1]);
     return num > max ? num : max;
   }, 0);
   nextId = maxId + 1;
-} catch (err) {
-  console.log('無法讀取現有 music.json，將創建新文件');
-  existingMusic = [];
-  nextId = 1;
+} else {
+  console.log('找不到現有 music.json，將創建新文件');
 }
 
 // 轉換為 JSON 格式

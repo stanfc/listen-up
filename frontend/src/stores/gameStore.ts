@@ -124,6 +124,9 @@ export const useGameStore = defineStore('game', () => {
       currentMusic.value = response
       revealedMusic.value = null // Reset revealed info for new round
     } catch (err: any) {
+      // Clear stale music rather than leaving the previous round's song
+      // displayed while the server has already moved on.
+      currentMusic.value = null
       error.value = '載入音樂失敗'
       console.error(err)
     }

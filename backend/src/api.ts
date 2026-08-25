@@ -9,7 +9,10 @@ import { Game, GameStatus, GamePhase, GuessType } from './types'
 const app = express() as any
 
 // Middleware
-app.use(cors())
+// ALLOWED_ORIGIN can restrict CORS to a specific frontend origin in production;
+// unset (the default) preserves the previous allow-all behavior for local/dev use.
+const allowedOrigin = process.env.ALLOWED_ORIGIN
+app.use(cors(allowedOrigin ? { origin: allowedOrigin } : undefined))
 app.use(express.json())
 
 
@@ -324,7 +327,6 @@ app.post('/api/games/:gameId/card-placement', (req: Request, res: Response, next
 
     validation.validateGameId(gameId)
     validation.validatePlayerId(playerId)
-    validation.validateCardPosition(position, 20) // Max 20 cards
 
     const game = db.getGame(gameId)
     if (!game) {
@@ -333,6 +335,12 @@ app.post('/api/games/:gameId/card-placement', (req: Request, res: Response, next
         message: '找不到遊戲'
       })
     }
+
+    const player = game.players.find(p => p.id === playerId)
+    if (!player) {
+      return res.status(404).json({ code: 'PLAYER_NOT_FOUND', message: '找不到玩家' })
+    }
+    validation.validateCardPosition(position, player.cards.length)
 
     const result = gameLogic.processCardPlacement(game, playerId, position)
     db.updateGame(gameId, game)
@@ -363,6 +371,12 @@ app.post('/api/games/:gameId/challenge', (req: Request, res: Response, next: Nex
     if (!game) {
       return res.status(404).json({ code: 'GAME_NOT_FOUND', message: '找不到遊戲' })
     }
+
+    const currentPlayer = game.players.find(p => p.id === game.currentRound.currentPlayer)
+    if (!currentPlayer) {
+      return res.status(404).json({ code: 'PLAYER_NOT_FOUND', message: '找不到當前玩家' })
+    }
+    validation.validateCardPosition(position, currentPlayer.cards.length)
 
     const result = gameLogic.challengePlacement(game, challengerId, position)
     db.updateGame(gameId, game)
@@ -496,7 +510,7 @@ app.use((err: any, req: Request, res: Response, next: NextFunction) => {
 
   res.status(500).json({
     code: 'INTERNAL_ERROR',
-    message: err.message || '內部伺服器錯誤'
+    message: '內部伺服器錯誤'
   })
 })
 

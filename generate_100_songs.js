@@ -170,11 +170,17 @@ const musicData = finalSongs.map((song, index) => {
 const musicJsonPath = path.join(__dirname, 'backend/data/music.json');
 let existingMusic = [];
 
-try {
+if (fs.existsSync(musicJsonPath)) {
   const content = fs.readFileSync(musicJsonPath, 'utf-8');
-  existingMusic = JSON.parse(content);
-} catch (err) {
-  console.log('無法讀取現有 music.json');
+  try {
+    existingMusic = JSON.parse(content);
+  } catch (err) {
+    console.error(`❌ ${musicJsonPath} 存在但無法解析為 JSON，可能已損毀。為避免覆蓋既有資料，已中止執行。`);
+    console.error(err.message);
+    process.exit(1);
+  }
+} else {
+  console.log('找不到現有 music.json，將創建新文件');
 }
 
 // 合併資料

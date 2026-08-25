@@ -20,6 +20,20 @@ const client = axios.create({
   }
 })
 
+// Surface the backend's actual validation message (err.response.data.message)
+// through err.message, so every call site's generic `catch (err) { err.message }`
+// shows the real reason instead of axios's "Request failed with status code 400".
+client.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    const backendMessage = error?.response?.data?.message
+    if (backendMessage) {
+      error.message = backendMessage
+    }
+    return Promise.reject(error)
+  }
+)
+
 export const apiService = {
   // Games
   async createGame(data: CreateGameRequest): Promise<CreateGameResponse> {

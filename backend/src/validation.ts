@@ -24,11 +24,15 @@ export function validateGameConfig(
     throw new ValidationError('音樂標籤必須為陣列', 'INVALID_MUSIC_TAGS')
   }
 
+  if (musicTags.length > 50) {
+    throw new ValidationError('音樂標籤數量過多', 'TOO_MANY_MUSIC_TAGS')
+  }
+
   if (musicTags.length > 0 && musicTags.some(tag => typeof tag !== 'string' || tag.trim().length === 0)) {
     throw new ValidationError('所有音樂標籤必須為非空字串', 'INVALID_TAG_FORMAT')
   }
 
-  if (yearSkew !== undefined && (typeof yearSkew !== 'number' || yearSkew < -1 || yearSkew > 1)) {
+  if (yearSkew !== undefined && (!Number.isFinite(yearSkew) || yearSkew < -1 || yearSkew > 1)) {
     throw new ValidationError('年份傾斜必須介於 -1 到 1 之間', 'INVALID_YEAR_SKEW')
   }
 }

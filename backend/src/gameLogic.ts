@@ -102,10 +102,11 @@ export function startGame(game: Game): Game {
 
   // Get first music
   const music = getNextMusic(game)
-  if (music) {
-    game.currentRound.musicId = music.id
-    game.currentRound.phase = GamePhase.SONG_GUESS
+  if (!music) {
+    throw new Error('找不到符合篩選條件的音樂，請調整音樂標籤設定')
   }
+  game.currentRound.musicId = music.id
+  game.currentRound.phase = GamePhase.SONG_GUESS
 
   return game
 }

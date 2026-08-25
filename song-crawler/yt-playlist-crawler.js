@@ -15,7 +15,7 @@
 
 import fs from 'fs'
 import path from 'path'
-import { execSync } from 'child_process'
+import { execFileSync } from 'child_process'
 import * as OpenCC from 'opencc-js'
 
 // 簡體 → 繁體（台灣）
@@ -82,7 +82,9 @@ function releaseLock() {
  * 安全讀取 JSON 檔（帶 lock）
  */
 function readJsonSafe(filePath) {
-  waitForLock()
+  if (!waitForLock()) {
+    throw new Error(`無法取得檔案鎖（${LOCK_FILE}），可能有其他程序正在寫入，請稍後再試`)
+  }
   try {
     if (fs.existsSync(filePath)) {
       return JSON.parse(fs.readFileSync(filePath, 'utf8'))
@@ -97,7 +99,9 @@ function readJsonSafe(filePath) {
  * 安全寫入 JSON 檔（帶 lock，先讀再合併再寫）
  */
 function saveResults(newItems, failedItems) {
-  waitForLock()
+  if (!waitForLock()) {
+    throw new Error(`無法取得檔案鎖（${LOCK_FILE}），可能有其他程序正在寫入，請稍後再試`)
+  }
   try {
     // 讀取最新的檔案內容（可能被另一個 process 更新過）
     let existing = []
@@ -144,8 +148,7 @@ function fetchPlaylistVideos(url) {
   console.log('🎬 正在從 YouTube 播放列表爬取視頻...')
 
   try {
-    const command = `yt-dlp -j --flat-playlist "${url}"`
-    const output = execSync(command, { encoding: 'utf8', maxBuffer: 50 * 1024 * 1024 })
+    const output = execFileSync('yt-dlp', ['-j', '--flat-playlist', url], { encoding: 'utf8', maxBuffer: 50 * 1024 * 1024 })
 
     const videos = []
     let adSkipped = 0
@@ -180,8 +183,9 @@ function fetchPlaylistVideos(url) {
  */
 function fetchUploadYear(videoId) {
   try {
-    const output = execSync(
-      `yt-dlp --print upload_date --no-download "https://www.youtube.com/watch?v=${videoId}"`,
+    const output = execFileSync(
+      'yt-dlp',
+      ['--print', 'upload_date', '--no-download', `https://www.youtube.com/watch?v=${videoId}`],
       { encoding: 'utf8', timeout: 15000, stdio: ['pipe', 'pipe', 'pipe'] }
     ).trim()
     if (/^\d{8}$/.test(output)) {

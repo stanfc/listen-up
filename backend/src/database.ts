@@ -21,12 +21,27 @@ function initGamesDb() {
 export function loadGames(): GameDatabase {
   initGamesDb()
   const data = fs.readFileSync(GAMES_DB_PATH, 'utf-8')
-  return JSON.parse(data || '{}')
+  try {
+    return JSON.parse(data || '{}')
+  } catch (err) {
+    // Corrupted file (e.g. process was killed mid-write) — don't crash the
+    // whole server. Back up the bad file for manual recovery and start fresh.
+    console.error(`Failed to parse ${GAMES_DB_PATH}, backing up and starting fresh:`, err)
+    try {
+      fs.copyFileSync(GAMES_DB_PATH, `${GAMES_DB_PATH}.corrupted-${Date.now()}`)
+    } catch (backupErr) {
+      console.error('Failed to back up corrupted games database:', backupErr)
+    }
+    return {}
+  }
 }
 
-// Save all games
+// Save all games (atomic: write to a temp file then rename, so a crash
+// mid-write can't leave games.json truncated/invalid)
 export function saveGames(games: GameDatabase): void {
-  fs.writeFileSync(GAMES_DB_PATH, JSON.stringify(games, null, 2))
+  const tmpPath = `${GAMES_DB_PATH}.tmp`
+  fs.writeFileSync(tmpPath, JSON.stringify(games, null, 2))
+  fs.renameSync(tmpPath, GAMES_DB_PATH)
 }
 
 // Get single game
@@ -129,12 +144,26 @@ export function cleanupOldGames(maxAgeMs: number = 24 * 60 * 60 * 1000): number 
   return removed
 }
 
-// Generate room code
-export function generateRoomCode(): string {
+// Generate a single random room code (not guaranteed unique)
+function randomRoomCode(): string {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
   let code = ''
   for (let i = 0; i < 4; i++) {
     code += chars.charAt(Math.floor(Math.random() * chars.length))
+  }
+  return code
+}
+
+// Generate a room code guaranteed not to collide with any existing game
+export function generateRoomCode(): string {
+  const games = loadGames()
+  const existingCodes = new Set(Object.values(games).map(g => g.roomCode))
+
+  let code = randomRoomCode()
+  let attempts = 0
+  while (existingCodes.has(code) && attempts < 100) {
+    code = randomRoomCode()
+    attempts++
   }
   return code
 }
